@@ -2,9 +2,9 @@ package dao_test
 
 import (
 	"fmt"
-	"github.com/Sfeir/golang-200/dao"
-	"github.com/Sfeir/golang-200/model"
 	"github.com/satori/go.uuid"
+	"github.com/sfeir-open-source/sfeir-school-go/dao"
+	"github.com/sfeir-open-source/sfeir-school-go/model"
 	"os"
 	"testing"
 	"time"

@@ -1,8 +1,8 @@
 package web
 
 import (
-	"github.com/Sfeir/golang-200/dao"
-	"github.com/Sfeir/golang-200/model"
+	"github.com/sfeir-open-source/sfeir-school-go/dao"
+	"github.com/sfeir-open-source/sfeir-school-go/model"
 	logger "github.com/sirupsen/logrus"
 	"net/http"
 	"strconv"

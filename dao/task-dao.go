@@ -2,7 +2,7 @@ package dao
 
 import (
 	"errors"
-	"github.com/Sfeir/golang-200/model"
+	"github.com/sfeir-open-source/sfeir-school-go/model"
 )
 
 const (

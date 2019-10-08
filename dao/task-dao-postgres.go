@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"github.com/Sfeir/golang-200/model"
 	"github.com/satori/go.uuid"
+	"github.com/sfeir-open-source/sfeir-school-go/model"
 )
 
 // compilation time interface check

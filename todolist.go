@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/Sfeir/golang-200/dao"
-	"github.com/Sfeir/golang-200/utils"
-	"github.com/Sfeir/golang-200/web"
+	"github.com/sfeir-open-source/sfeir-school-go/dao"
+	"github.com/sfeir-open-source/sfeir-school-go/utils"
+	"github.com/sfeir-open-source/sfeir-school-go/web"
 	logger "github.com/sirupsen/logrus"
 	"gopkg.in/urfave/cli.v1"
 	"os"

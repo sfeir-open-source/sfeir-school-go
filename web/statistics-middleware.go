@@ -1,7 +1,7 @@
 package web
 
 import (
-	"github.com/Sfeir/golang-200/statistics"
+	"github.com/sfeir-open-source/sfeir-school-go/statistics"
 	"net/http"
 	"time"
 )

@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.0 
+- 19/10/08 chore(dep): move to go modules for master branch
+
 ## v0.0.4
 - 18/03/10 feat(dao): add postgresql and db migration support for dao
            fix(make): add support for windows in Makefile

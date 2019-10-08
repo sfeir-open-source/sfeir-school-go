@@ -1,4 +1,4 @@
-# Golang 200
+# SFEIR School Go
 
 This project is meant to help learning go. It provides a basic implementation of a REST microservice exposing a CRUD API.
 Data are persisted in a MongoDB NoSQL database and the application is deployed in Docker.

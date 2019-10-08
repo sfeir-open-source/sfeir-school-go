@@ -1,8 +1,8 @@
 package dao
 
 import (
-	"github.com/Sfeir/golang-200/model"
 	"github.com/satori/go.uuid"
+	"github.com/sfeir-open-source/sfeir-school-go/model"
 	logger "github.com/sirupsen/logrus"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"

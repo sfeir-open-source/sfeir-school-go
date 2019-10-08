@@ -10,13 +10,13 @@ services:
             - todolist-postgresql-db:postgresql
         ports:
             - "8021:8020"
-        command: -port 8020
-                 -logl debug
-                 -logf text
-                 -statd 15s
-                 -dbt postgresql
-                 -mp /migrations
-                 -db postgres://todos:password@postgresql:5432/todos?sslmode=disable&connect_timeout=5
+        command: --port 8020
+                 --logl debug
+                 --logf text
+                 --statd 15s
+                 --dbt postgresql
+                 --mp /migrations
+                 --db postgres://todos:password@postgresql:5432/todos?sslmode=disable&connect_timeout=5
         volumes:
             - ../etc/migrations:/migrations
 
@@ -29,12 +29,12 @@ services:
                 - todolist-mongodb-db:mongodb
             ports:
                 - "8020:8020"
-            command: -port 8020
-                     -logl debug
-                     -logf text
-                     -statd 15s
-                     -dbt mongodb
-                     -db mongodb://mongodb/tasks
+            command: --port 8020
+                     --logl debug
+                     --logf text
+                     --statd 15s
+                     --dbt mongodb
+                     --db mongodb://mongodb/tasks
 
     # postgresql database
     todolist-postgresql-db:
