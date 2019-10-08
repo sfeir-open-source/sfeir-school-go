@@ -7,7 +7,7 @@ import (
 	"github.com/sfeir-open-source/sfeir-school-go/utils"
 	"github.com/sfeir-open-source/sfeir-school-go/web"
 	logger "github.com/sirupsen/logrus"
-	"gopkg.in/urfave/cli.v1"
+	"github.com/urfave/cli"
 	"os"
 	"strconv"
 	"time"
