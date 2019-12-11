@@ -66,38 +66,38 @@ func main() {
 	bob.friend.age = *pAgeB + 1
 
 	// Indiquez true ou false en troisième argument
-	assert("Q8", john.age == 19, REPLACEME)
-	assert("Q8", bob.age == 19, REPLACEME)
+	assert("Q81", john.age == 19, REPLACEME)
+	assert("Q82", bob.age == 19, REPLACEME)
 
 	bob.friend = &bob
 	bob.friend.age = 20
 
 	// Indiquez true ou false en troisième argument
-	assert("Q81", john.age == 20, REPLACEME)
-	assert("Q82", bob.age == 20, REPLACEME)
+	assert("Q91", john.age == 20, REPLACEME)
+	assert("Q92", bob.age == 20, REPLACEME)
 
 	bob.friend = &bob
 	pFriend := bob.friend
 	bob.friend.friend = &john
 
 	//Indiquez true ou false en troisième argument
-	assert("Q91", bob.friend == pFriend, REPLACEME)
-	assert("Q92", bob.friend == pJohn, REPLACEME)
+	assert("Q101", bob.friend == pFriend, REPLACEME)
+	assert("Q102", bob.friend == pJohn, REPLACEME)
 
 	eric := john
 
 	// Indiquez true ou false en troisième argument
-	assert("Q101", eric == john, REPLACEME)
-	assert("Q102", &eric == &john, REPLACEME)
-	assert("Q103", *&eric == *&john, REPLACEME)
+	assert("Q111", eric == john, REPLACEME)
+	assert("Q112", &eric == &john, REPLACEME)
+	assert("Q113", *&eric == *&john, REPLACEME)
 
 	eric.name = "Eric"
 
 	// Indiquez true ou false en troisième argument
-	assert("Q111", john.name == "Eric", REPLACEME)
-	assert("Q112", eric == john, REPLACEME)
-	assert("Q113", &eric == &john, REPLACEME)
-	assert("Q114", *&eric == *&john, REPLACEME)
+	assert("Q121", john.name == "Eric", REPLACEME)
+	assert("Q122", eric == john, REPLACEME)
+	assert("Q123", &eric == &john, REPLACEME)
+	assert("Q124", *&eric == *&john, REPLACEME)
 
 }
 
