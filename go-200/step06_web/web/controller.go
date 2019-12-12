@@ -45,11 +45,21 @@ func NewTaskController(taskDAO dao.TaskDAO) *TaskController {
 	// TODO add the create route as a Post with no ID, calling create method
 	// Create
 
-	// TODO add the update route as a Put with an ID url param, calling update method
 	// Update
-
-	// TODO add the delete route as a Delete with an ID url param, calling Delete method
+	routes = append(routes, Route{
+		Name:        "Update a task",
+		Method:      http.MethodPut,
+		Pattern:     "/{id}",
+		HandlerFunc: controller.Update,
+	})
 	// Delete
+	routes = append(routes, Route{
+		Name:        "Delete a task",
+		Method:      http.MethodDelete,
+		Pattern:     "/{id}",
+		HandlerFunc: controller.Delete,
+	})
+
 	controller.Routes = routes
 
 	return &controller
@@ -142,9 +152,9 @@ func (tc *TaskController) Update(w http.ResponseWriter, r *http.Request) {
 	taskID := URLParamAsString("id", r)
 
 	// task to be created
-	task := &model.Task{}
+	task := model.Task{}
 	// get the content body
-	err := GetJSONContent(task, r)
+	err := GetJSONContent(&task, r)
 
 	if err != nil {
 		logger.WithField("error", err).Warn("unable to decode task to update")
@@ -154,9 +164,9 @@ func (tc *TaskController) Update(w http.ResponseWriter, r *http.Request) {
 
 	// save task
 	task.ID = taskID
-	err = tc.taskDao.Update(task)
+	task, err = tc.taskDao.Update(task)
 	if err != nil {
-		logger.WithField("error", err).WithField("task", *task).Warn("unable to create task")
+		logger.WithField("error", err).WithField("task", task).Warn("unable to create task")
 		SendJSONError(w, "Error while updating task", http.StatusInternalServerError)
 		return
 	}

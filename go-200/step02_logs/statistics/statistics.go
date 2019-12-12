@@ -1,7 +1,6 @@
 package statistics
 
 import (
-	"fmt"
 	logger "github.com/sirupsen/logrus"
 	"time"
 )
@@ -12,7 +11,7 @@ const (
 
 // Statistics is the worker to persist the request statistics
 type Statistics struct {
-	statistics    chan uint8
+	statistics    chan bool
 	counter       uint32
 	start         time.Time
 	loggingPeriod time.Duration
@@ -21,7 +20,7 @@ type Statistics struct {
 // NewStatistics creates a new statistics structure and launches its worker routine
 func NewStatistics(loggingPeriod time.Duration) *Statistics {
 	sw := Statistics{
-		statistics:    make(chan uint8, statisticsChannelSize),
+		statistics:    make(chan bool, statisticsChannelSize),
 		counter:       0,
 		start:         time.Now(),
 		loggingPeriod: loggingPeriod,
@@ -31,23 +30,23 @@ func NewStatistics(loggingPeriod time.Duration) *Statistics {
 }
 
 // PlusOne is used to send a statistics hit increment
-func (sw *Statistics) PlusOne() {
-	sw.statistics <- uint8(1)
+func (s *Statistics) PlusOne() {
+	s.statistics <- true
 }
 
-func (sw *Statistics) run() {
-	ticker := time.NewTicker(sw.loggingPeriod)
+func (s *Statistics) run() {
+	ticker := time.NewTicker(s.loggingPeriod)
 	for {
 		select {
-		case stat := <-sw.statistics:
+		case stat := <-s.statistics:
 			logger.WithField("stat", stat).Debug("new count received")
-			sw.counter += uint32(stat)
+			s.counter++
 		case <-ticker.C:
-			elapsed := time.Since(sw.start)
-			logger.WithField("elapsed time", elapsed).WithField("count", sw.counter).
-				WithField("request per second", fmt.Sprintf("%.2f", float64(sw.counter)/elapsed.Seconds())).Warn("request monitoring")
-			sw.counter = 0
-			sw.start = time.Now()
+			elapsed := time.Since(s.start)
+			rate := float64(s.counter) / elapsed.Seconds()
+			logger.WithField("request_rate", rate).Warn("request monitoring")
+			s.counter = 0
+			s.start = time.Now()
 		}
 	}
 }

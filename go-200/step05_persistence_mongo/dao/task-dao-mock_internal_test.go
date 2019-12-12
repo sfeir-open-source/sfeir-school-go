@@ -10,7 +10,7 @@ import (
 func TestDAOMockInternal(t *testing.T) {
 
 	daoMock := &TaskDAOMock{
-		storage: make(map[string]*model.Task),
+		storage: make(map[string]model.Task),
 	}
 
 	toSave := model.Task{
@@ -23,9 +23,9 @@ func TestDAOMockInternal(t *testing.T) {
 		DueDate:      time.Date(2017, 02, 02, 0, 0, 0, 0, time.UTC),
 	}
 
-	daoMock.Create(&toSave)
+	daoMock.Create(toSave)
 
-	tasks, err := daoMock.getBy(func(task *model.Task) bool {
+	tasks, err := daoMock.getBy(func(task model.Task) bool {
 		return task.Status == model.StatusTodo
 	})
 

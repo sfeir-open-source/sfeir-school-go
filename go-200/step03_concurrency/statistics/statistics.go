@@ -8,7 +8,7 @@ const (
 	statisticsChannelSize = 1000
 )
 
-// TODO define a Statistics struct with an uint8 chan, an uint32 counter, a start time and logging period duration
+// TODO define a Statistics struct with an bool chan, an uint32 counter, a start time and logging period duration
 // Statistics is the worker to persist the request statistics
 type Statistics struct {
 }

@@ -36,8 +36,8 @@ type Task struct {
 	Description  string       `json:"description" bson:"description"`
 	Status       TaskStatus   `json:"status" bson:"status"`
 	Priority     TaskPriority `json:"priority" bson:"priority"`
-	CreationDate time.Time    `json:"creationDate" bson:"creationDate"`
-	DueDate      time.Time    `json:"dueDate" bson:"dueDate"`
+	CreationDate time.Time    `json:"creation_date" bson:"creation_date"`
+	DueDate      time.Time    `json:"due_date" bson:"due_date"`
 }
 
 // NewTask sets a new ID of the Task as a string
@@ -45,8 +45,11 @@ func NewTask(title, description string) *Task {
 	return &Task{
 		ID:           uuid.New().String(),
 		CreationDate: time.Now(),
+		DueDate:      time.Now().Add(24 * time.Hour),
 		Status:       StatusTodo,
 		Priority:     PriorityMedium,
+		Title:        title,
+		Description:  description,
 	}
 }
 

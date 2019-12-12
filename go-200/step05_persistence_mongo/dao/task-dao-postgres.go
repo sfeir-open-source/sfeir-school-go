@@ -24,30 +24,30 @@ func NewTaskDAOPostgres(db *sql.DB) TaskDAO {
 }
 
 // GetByID returns a task by its ID
-func (s *TaskDAOPostgres) GetByID(ID string) (*model.Task, error) {
+func (s *TaskDAOPostgres) GetByID(ID string) (model.Task, error) {
 
 	// check ID
 	if _, err := uuid.Parse(ID); err != nil {
-		return nil, ErrInvalidUUID
+		return model.Task{}, ErrInvalidUUID
 	}
 
 	// query db
 	rows, err := s.db.Query(`SELECT * FROM todos WHERE uuid=$1`, ID)
 	if err != nil {
-		return nil, err
+		return model.Task{}, err
 	}
 
 	results, err := mapRows(rows)
 
 	if len(results) == 0 {
-		return nil, ErrNotFound
+		return model.Task{}, ErrNotFound
 	}
 
 	if len(results) > 1 {
-		return nil, errors.New("too many results for UUID " + ID)
+		return model.Task{}, errors.New("too many results for UUID " + ID)
 	}
 
-	return &results[0], nil
+	return results[0], nil
 }
 
 // GetAll returns all tasks with paging capability
@@ -115,7 +115,7 @@ func (s *TaskDAOPostgres) GetByStatusAndPriority(status model.TaskStatus, priori
 }
 
 // Create saves the task
-func (s *TaskDAOPostgres) Create(task *model.Task) error {
+func (s *TaskDAOPostgres) Create(task model.Task) (model.Task, error) {
 
 	// check task has an ID, if not create one
 	if len(task.ID) == 0 {
@@ -125,16 +125,16 @@ func (s *TaskDAOPostgres) Create(task *model.Task) error {
 	query := `INSERT INTO todos(uuid,title,description,status,priority,creation_date,due_date) VALUES($1,$2,$3,$4,$5,$6,$7)`
 	stmt, err := s.db.Prepare(query)
 	if err != nil {
-		return err
+		return model.Task{}, err
 	}
 
 	_, err = stmt.Exec(task.ID, task.Title, task.Description, task.Status, task.Priority, task.CreationDate, task.DueDate)
 
-	return err
+	return task, err
 }
 
 // Update updates a task
-func (s *TaskDAOPostgres) Update(task *model.Task) error {
+func (s *TaskDAOPostgres) Update(task model.Task) (model.Task, error) {
 
 	// check task has an ID, if not create the task
 	if len(task.ID) == 0 {
@@ -143,21 +143,21 @@ func (s *TaskDAOPostgres) Update(task *model.Task) error {
 
 	_, err := s.GetByID(task.ID)
 	if err != nil && err != ErrNotFound {
-		return err
+		return model.Task{}, err
 	}
 
 	query := `UPDATE todos SET title=$2,description=$3,status=$4,priority=$5,creation_date=$6,due_date=$7 WHERE uuid=$1`
 	res, err := s.db.Exec(query, task.ID, task.Title, task.Description, task.Status, task.Priority, task.CreationDate, task.DueDate)
 	if err != nil {
-		return err
+		return model.Task{}, err
 	}
 
 	_, err = res.RowsAffected()
 	if err != nil {
-		return err
+		return model.Task{}, err
 	}
 
-	return nil
+	return task, nil
 }
 
 // Delete deletes a tasks by its ID

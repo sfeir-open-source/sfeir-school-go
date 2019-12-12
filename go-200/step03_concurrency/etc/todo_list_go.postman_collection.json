@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"title\": \"Sfeir School Golang-200\",\n  \"description\": \"Create Golang-200 repository, slides and exam\",\n  \"status\": 0,\n  \"priority\": 1,\n  \"creationDate\": \"2016-11-01T09:00:00Z\",\n  \"dueDate\": \"2016-12-16T09:00:00Z\"\n}\n"
+					"raw": "{\n  \"title\": \"Sfeir School Golang-200\",\n  \"description\": \"Create Golang-200 repository, slides and exam\",\n  \"status\": 0,\n  \"priority\": 1,\n  \"creation_date\": \"2016-11-01T09:00:00Z\",\n  \"due_date\": \"2016-12-16T09:00:00Z\"\n}\n"
 				},
 				"description": ""
 			},
@@ -63,7 +63,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"title\": \"Sfeir School Golang-200\",\n  \"description\": \"Create Golang-200 repository, slides. No exam\",\n  \"status\": 0,\n  \"priority\": 2,\n  \"creationDate\": \"2016-11-01T09:00:00Z\",\n  \"dueDate\": \"2016-03-23T09:00:00Z\"\n}\n"
+					"raw": "{\n  \"title\": \"Sfeir School Golang-200\",\n  \"description\": \"Create Golang-200 repository, slides. No exam\",\n  \"status\": 0,\n  \"priority\": 2,\n  \"creation_date\": \"2016-11-01T09:00:00Z\",\n  \"due_date\": \"2016-03-23T09:00:00Z\"\n}\n"
 				},
 				"description": ""
 			},

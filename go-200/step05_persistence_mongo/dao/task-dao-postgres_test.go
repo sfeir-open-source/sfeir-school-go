@@ -36,7 +36,7 @@ func TestDAOPostgres(t *testing.T) {
 		DueDate:      time.Date(2017, 02, 02, 0, 0, 0, 0, time.UTC),
 	}
 
-	err = daoPostgre.Create(&toSave)
+	toSave, err = daoPostgre.Create(toSave)
 	if err != nil {
 		t.Error(err)
 	}
@@ -55,7 +55,7 @@ func TestDAOPostgres(t *testing.T) {
 		t.Error(err)
 	}
 
-	if !toSave.Equal(*oneTask) {
+	if !toSave.Equal(oneTask) {
 		t.Error("Failed to save and retrieve task by ID")
 	}
 
@@ -90,7 +90,7 @@ func TestDAOPostgres(t *testing.T) {
 
 	oneTask.Title = "Use Go(lang)"
 	oneTask.Description = "Let's build a REST service in Go !"
-	err = daoPostgre.Update(oneTask)
+	oneTask, err = daoPostgre.Update(oneTask)
 	if err != nil {
 		t.Error(err)
 	}

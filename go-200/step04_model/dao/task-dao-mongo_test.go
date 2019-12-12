@@ -30,7 +30,7 @@ func TestDAOMongo(t *testing.T) {
 		DueDate:      time.Date(2017, 02, 02, 0, 0, 0, 0, time.UTC),
 	}
 
-	err = daoMongo.Create(&toSave)
+	toSave, err = daoMongo.Create(toSave)
 	if err != nil {
 		t.Error(err)
 	}
@@ -58,7 +58,7 @@ func TestDAOMongo(t *testing.T) {
 
 	oneTask.Title = "Use Go(lang)"
 	oneTask.Description = "Let's build a REST service in Go !"
-	err = daoMongo.Update(oneTask)
+	oneTask, err = daoMongo.Update(oneTask)
 	if err != nil {
 		t.Error(err)
 	}

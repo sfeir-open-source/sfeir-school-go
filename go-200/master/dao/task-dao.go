@@ -22,7 +22,7 @@ var (
 type TaskDAO interface {
 
 	// GetByID returns a task by its ID
-	GetByID(ID string) (*model.Task, error)
+	GetByID(ID string) (model.Task, error)
 
 	// GetAll returns all tasks with paging capability
 	GetAll(start, end int) ([]model.Task, error)
@@ -37,10 +37,10 @@ type TaskDAO interface {
 	GetByStatusAndPriority(status model.TaskStatus, priority model.TaskPriority) ([]model.Task, error)
 
 	// Create creates a new task
-	Create(task *model.Task) error
+	Create(task model.Task) (model.Task, error)
 
 	// Update updates a task
-	Update(task *model.Task) error
+	Update(task model.Task) (model.Task, error)
 
 	// Delete deletes a tasks by its ID
 	Delete(ID string) error

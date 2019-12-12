@@ -25,7 +25,7 @@ func TestDAOMock(t *testing.T) {
 		DueDate:      time.Date(2017, 02, 02, 0, 0, 0, 0, time.UTC),
 	}
 
-	err = daoMock.Create(&toSave)
+	toSave, err = daoMock.Create(toSave)
 	if err != nil {
 		t.Error(err)
 	}
@@ -51,7 +51,7 @@ func TestDAOMock(t *testing.T) {
 		DueDate:      time.Date(2017, 02, 02, 0, 0, 0, 0, time.UTC),
 	}
 
-	err = daoMock.Create(&toSave2)
+	toSave2, err = daoMock.Create(toSave2)
 	if err != nil {
 		t.Error(err)
 	}
@@ -70,7 +70,7 @@ func TestDAOMock(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	if toSave != *oneTask {
+	if !toSave.Equal(oneTask) {
 		t.Error("Got wrong task by ID")
 	}
 

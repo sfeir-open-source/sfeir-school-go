@@ -20,28 +20,31 @@ var MockedTask = model.Task{
 	DueDate:      time.Date(2017, 01, 02, 0, 0, 0, 0, time.UTC),
 }
 
+// FilterFunc is the function type used to filter tasks
+type FilterFunc func(task model.Task) bool
+
 // TaskDAOMock is the mocked implementation of the TaskDAO
 type TaskDAOMock struct {
-	storage map[string]*model.Task
+	storage map[string]model.Task
 }
 
 // NewTaskDAOMock creates a new TaskDAO with a mocked implementation
 func NewTaskDAOMock() TaskDAO {
 	daoMock := &TaskDAOMock{
-		storage: make(map[string]*model.Task),
+		storage: make(map[string]model.Task),
 	}
 
 	// Adds some fake data
-	daoMock.Create(&MockedTask)
+	daoMock.Create(MockedTask)
 
 	return daoMock
 }
 
 // GetByID returns a task by its ID
-func (s *TaskDAOMock) GetByID(ID string) (*model.Task, error) {
+func (s *TaskDAOMock) GetByID(ID string) (model.Task, error) {
 	task, ok := s.storage[ID]
 	if !ok {
-		return nil, ErrNotFound
+		return task, ErrNotFound
 	}
 	return task, nil
 }
@@ -58,7 +61,7 @@ func (s *TaskDAOMock) GetAll(start, end int) ([]model.Task, error) {
 		return []model.Task{}, nil
 	}
 
-	tasks, err := s.getBy(func(task *model.Task) bool {
+	tasks, err := s.getBy(func(task model.Task) bool {
 		return true
 	})
 
@@ -72,31 +75,31 @@ func (s *TaskDAOMock) GetAll(start, end int) ([]model.Task, error) {
 
 // GetByTitle returns all tasks by title
 func (s *TaskDAOMock) GetByTitle(title string) ([]model.Task, error) {
-	return s.getBy(func(task *model.Task) bool {
+	return s.getBy(func(task model.Task) bool {
 		return task.Title == title
 	})
 }
 
 // GetByStatus returns all tasks by status
 func (s *TaskDAOMock) GetByStatus(status model.TaskStatus) ([]model.Task, error) {
-	return s.getBy(func(task *model.Task) bool {
+	return s.getBy(func(task model.Task) bool {
 		return task.Status == status
 	})
 }
 
 // GetByStatusAndPriority returns all tasks by status and priority
 func (s *TaskDAOMock) GetByStatusAndPriority(status model.TaskStatus, priority model.TaskPriority) ([]model.Task, error) {
-	return s.getBy(func(task *model.Task) bool {
+	return s.getBy(func(task model.Task) bool {
 		return task.Status == status && task.Priority == priority
 	})
 }
 
 // getBy returns all tasks that meet filtering conditions
-func (s *TaskDAOMock) getBy(filter func(task *model.Task) bool) ([]model.Task, error) {
+func (s *TaskDAOMock) getBy(filter FilterFunc) ([]model.Task, error) {
 	var tasks []model.Task
 	for _, task := range s.storage {
 		if filter(task) {
-			tasks = append(tasks, *task)
+			tasks = append(tasks, task)
 		}
 	}
 
@@ -108,16 +111,16 @@ func (s *TaskDAOMock) getBy(filter func(task *model.Task) bool) ([]model.Task, e
 }
 
 // Create saves the task
-func (s *TaskDAOMock) Create(task *model.Task) error {
+func (s *TaskDAOMock) Create(task model.Task) (model.Task, error) {
 	if len(task.ID) == 0 {
 		task.ID = uuid.New().String()
 	}
 	s.storage[task.ID] = task
-	return nil
+	return task, nil
 }
 
 // Update updates or creates a task
-func (s *TaskDAOMock) Update(task *model.Task) error {
+func (s *TaskDAOMock) Update(task model.Task) (model.Task, error) {
 	// check ID
 	if len(task.ID) == 0 {
 		task.ID = uuid.New().String()

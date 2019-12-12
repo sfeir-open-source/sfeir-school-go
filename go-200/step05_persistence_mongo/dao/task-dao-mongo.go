@@ -53,14 +53,15 @@ func NewTaskDAOMongo(client *mongo.Client) TaskDAO {
 }
 
 // GetByID returns a task by its ID
-func (s *TaskDAOMongo) GetByID(ID string) (*model.Task, error) {
+func (s *TaskDAOMongo) GetByID(ID string) (model.Task, error) {
+
+	task := model.Task{}
 
 	// check ID
 	if _, err := uuid.Parse(ID); err != nil {
-		return nil, ErrInvalidUUID
+		return task, ErrInvalidUUID
 	}
 
-	task := model.Task{}
 	c := s.client.Database(todolist).Collection(tasks)
 	result := c.FindOne(context.TODO(), bson.M{"id": ID})
 
@@ -68,18 +69,18 @@ func (s *TaskDAOMongo) GetByID(ID string) (*model.Task, error) {
 	err := result.Err()
 	if err != nil {
 		if err == mongo.ErrNoDocuments {
-			return nil, ErrNotFound
+			return task, ErrNotFound
 		}
-		return nil, err
+		return task, err
 	}
 
 	// decode result and handle error
 	err = result.Decode(&task)
 	if err != nil {
-		return nil, err
+		return task, err
 	}
 
-	return &task, err
+	return task, err
 }
 
 // getAllTasksByQuery returns tasks by query and paging capability
@@ -92,7 +93,7 @@ func (s *TaskDAOMongo) getAllTasksByQuery(query interface{}, start, end int) ([]
 	// TODO retrieve collection
 
 	// perform request
-	var tasks []model.Task
+	var tks []model.Task
 	var opt *options.FindOptions
 
 	// check pagination option
@@ -116,14 +117,13 @@ func (s *TaskDAOMongo) getAllTasksByQuery(query interface{}, start, end int) ([]
 	// marshall results
 	// TODO use the cursor to marshall all the tasks in the slice
 	// TODO handle error
-	err = cur.All(context.TODO(), &tasks)
 
 	// if no result found wrap with dao known error
-	if len(tasks) == 0 {
+	if len(tks) == 0 {
 		return nil, ErrNotFound
 	}
 
-	return tasks, err
+	return tks, err
 }
 
 // GetAll returns all tasks with paging capability
@@ -147,7 +147,7 @@ func (s *TaskDAOMongo) GetByStatusAndPriority(status model.TaskStatus, priority 
 }
 
 // Create saves the task
-func (s *TaskDAOMongo) Create(task *model.Task) error {
+func (s *TaskDAOMongo) Create(task model.Task) (model.Task, error) {
 
 	// check task has an ID, if not create one
 	if len(task.ID) == 0 {
@@ -158,11 +158,11 @@ func (s *TaskDAOMongo) Create(task *model.Task) error {
 	c := s.client.Database(todolist).Collection(tasks)
 	_, err := c.InsertOne(context.TODO(), task)
 
-	return err
+	return task, err
 }
 
 // Update updates a task
-func (s *TaskDAOMongo) Update(task *model.Task) error {
+func (s *TaskDAOMongo) Update(task model.Task) (model.Task, error) {
 
 	// check ID
 	// check task has an ID, if not create one
@@ -174,7 +174,7 @@ func (s *TaskDAOMongo) Update(task *model.Task) error {
 	c := s.client.Database(todolist).Collection(tasks)
 	_, err := c.ReplaceOne(context.TODO(), bson.M{"id": task.ID}, task)
 
-	return err
+	return task, err
 }
 
 // Delete deletes a tasks by its ID

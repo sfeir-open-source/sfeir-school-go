@@ -134,9 +134,9 @@ func (tc *TaskController) Get(w http.ResponseWriter, r *http.Request) {
 // Create create an entity
 func (tc *TaskController) Create(w http.ResponseWriter, r *http.Request) {
 	// task to be created
-	task := &model.Task{}
+	task := model.Task{}
 	// get the content body
-	err := GetJSONContent(task, r)
+	err := GetJSONContent(&task, r)
 
 	if err != nil {
 		logger.WithField("error", err).Warn("unable to decode task to create")
@@ -145,9 +145,9 @@ func (tc *TaskController) Create(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// save task
-	err = tc.taskDao.Create(task)
+	task, err = tc.taskDao.Create(task)
 	if err != nil {
-		logger.WithField("error", err).WithField("task", *task).Warn("unable to create task")
+		logger.WithField("error", err).WithField("task", task).Warn("unable to create task")
 		SendJSONError(w, "Error while creating task", http.StatusInternalServerError)
 		return
 	}
@@ -162,9 +162,9 @@ func (tc *TaskController) Update(w http.ResponseWriter, r *http.Request) {
 	taskID := URLParamAsString("id", r)
 
 	// task to be created
-	task := &model.Task{}
+	task := model.Task{}
 	// get the content body
-	err := GetJSONContent(task, r)
+	err := GetJSONContent(&task, r)
 
 	if err != nil {
 		logger.WithField("error", err).Warn("unable to decode task to update")
@@ -174,9 +174,9 @@ func (tc *TaskController) Update(w http.ResponseWriter, r *http.Request) {
 
 	// save task
 	task.ID = taskID
-	err = tc.taskDao.Update(task)
+	task, err = tc.taskDao.Update(task)
 	if err != nil {
-		logger.WithField("error", err).WithField("task", *task).Warn("unable to create task")
+		logger.WithField("error", err).WithField("task", task).Warn("unable to create task")
 		SendJSONError(w, "Error while updating task", http.StatusInternalServerError)
 		return
 	}

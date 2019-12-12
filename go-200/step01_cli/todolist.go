@@ -121,7 +121,7 @@ func main() {
 		// init log options from command line params
 		err := utils.InitLog(logLevel, logFormat)
 		if err != nil {
-			logger.Warn("error setting log level, using debug as default")
+			logger.WithField("error", err).Warn("error setting log level, using debug as default")
 		}
 
 		// parse the database type

@@ -20,6 +20,7 @@ all: clean build ## Clean and build the project
 
 clean: ## Clean the project
 	@go clean -r -cache -testcache ./...
+	@go mod tidy
 	@rm -Rf .tmp .DS_Store *.log *.out *.mem *.test build/
 
 build: format ## Build all libraries and binaries
