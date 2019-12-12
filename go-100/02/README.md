@@ -11,6 +11,6 @@ Vous pouvez également écrire plusieurs déclarations d'importation, comme :
 
 Mais on préfèrera utiliser la déclaration d'importation factorisée.
 
-## Chemin d'importation et nom du package 
+## Chemin d'importation et nom du package
 
-Par convention, le nom du package est le même que le dernier élément du chemin d'importation. Par exemple, le package "math/rand" comprend les fichiers qui commencent avec la déclaration du package rand.
+Par convention, le nom du package est le même que le dernier élément du chemin d'importation. Par exemple, le package `math/rand` comprend les fichiers qui commencent avec la déclaration du package `rand`.

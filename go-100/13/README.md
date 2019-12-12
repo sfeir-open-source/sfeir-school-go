@@ -1,10 +1,10 @@
 # Structures
 
-Une struct est une collection de champs. Les champs de la structure sont accessibles à l'aide d'un point.
+Une `struct` est une collection de champs. Les champs de la structure sont accessibles à l'aide d'un point.
 
 Une structure littérale dénote une valeur de structure nouvellement allouée en énumérant les valeurs de ses champs.
 
-Vous pouvez lister seulement un sous-ensemble de champs en utilisant la syntaxe Nom:. (Et l'ordre des champs nommés n'est pas pertinent.)
+Vous pouvez lister seulement un sous-ensemble de champs en utilisant la syntaxe `Nom:`. (Et l'ordre des champs nommés n'est pas pertinent.)
 
     type Vertex struct {
         X, Y int

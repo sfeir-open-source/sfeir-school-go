@@ -7,7 +7,7 @@ Les valeurs de fonction peuvent être utilisées comme arguments de fonctions et
 Les fonctions de Go peuvent être des fermetures. Une fermeture est une valeur de la fonction qui fait référence à des variables à partir de l'extérieur de son corps.
 La fonction peut accéder et assigner les variables référencées, dans ce sens, la fonction est «lié» aux variables.
 
-Par exemple, la fonction de adder renvoie une fermeture. Chaque fermeture est liée à sa propre variable sum.
+Par exemple, la fonction de `adder` renvoie une fermeture. Chaque fermeture est liée à sa propre variable `sum`.
 
     func adder() func(int) int {
         sum := 0
