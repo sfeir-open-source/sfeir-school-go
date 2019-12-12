@@ -1,6 +1,6 @@
 # Switch
 
-Le switch s'écrit comme cela :
+Le `switch` s'écrit comme cela :
 
     switch expression {
     case a:
@@ -11,9 +11,9 @@ Le switch s'écrit comme cela :
         ...
     }
 
-Un cas ("case") est terminé automatiquement, sauf s'il finit par une déclaration fallthrough.
+Un cas (`case`) est terminé automatiquement, sauf s'il finit par une déclaration `fallthrough`.
 
-Le switch évalue les cas de haut en bas, en s'arrêtant quand un cas correspond.
+Le `switch` évalue les cas de haut en bas, en s'arrêtant quand un cas correspond.
 
 (Par exemple,
 
@@ -21,4 +21,4 @@ Le switch évalue les cas de haut en bas, en s'arrêtant quand un cas correspond
     case 0:
     case f():
     }
-n'appelle pas f si i==0.)
+n'appelle pas `f` si `i==0`.)

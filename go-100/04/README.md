@@ -1,5 +1,5 @@
 # Les fonctions
-Une fonction est déclarée à l'aide du mot clé func.
+Une fonction est déclarée à l'aide du mot clé `func`.
 
     func nomDeLaFonction() {
     }

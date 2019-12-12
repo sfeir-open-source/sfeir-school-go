@@ -1,9 +1,9 @@
 # Les types
 
-Il est possible de déclarer un nouveau type à l'aide du mot clé type et d'un type sous-jacent
+Il est possible de déclarer un nouveau type à l'aide du mot clé `type` et d'un type sous-jacent
 
     type nom typeSousJacent
-    
+
 Exemples :
 
     type distance float64
