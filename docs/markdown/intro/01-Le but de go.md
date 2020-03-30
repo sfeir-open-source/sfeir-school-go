@@ -2,78 +2,94 @@
 
 # Avant de se lancer
 
-<b>Le but de Go</b>
-<ul>
-    <li>Rassembler les bonnes idées provenant d’autres langages,</li>
-    <li>Abolir les fonctionnalités débouchant sur un code complexe et peu fiable…</li>
-</ul>
-<p>...dans le but d’écrire du code simple, expressif, robuste et efficace.</p>
+**Le but de Go**
+
+- Rassembler les bonnes idées provenant d’autres langages,
+- Abolir les fonctionnalités débouchant sur un code complexe et peu fiable…
+
+...dans le but d’écrire du code simple, expressif, robuste et efficace.
+
+Notes:
+- Principalement inspiré du C.
+- Particulièrement bénéfique sur de gros projets, avec de grandes équipes.
 
 ##--##
-
+<!-- .slide: class="sfeir-bg-white-3" -->
 # Avant de se lancer
 
-<b>Un langage généraliste</b>
-<ul>
-    <li>Comme le C, il sera adapté dans pratiquement tous les domaines de programmation.</li>
-    <li>Idéal pour le cloud.</li>
-    <li>Déjà utilisé dans le graphisme, les applications mobiles, le machine learning, WASM, ...</li>
-</ul>
+**Un langage généraliste**
+- Comme le C, il sera adapté dans pratiquement tous les domaines de programmation.
+- Idéal pour le cloud.
+- Déjà utilisé dans le graphisme, les applications mobiles, le machine learning, WASM, ...
+
 
 ##--##
-
+<!-- .slide: class="sfeir-bg-white-3" -->
 # Avant de se lancer
 
-<b>Déjà adopté par des grands</b>
-<ul>
-    <li>Google</li>
-    <li>Docker</li>
-    <li>Kubernetes</li>
-    <li>Dropbox</li>
-    <li>Spotify</li>
-    <li>Hashicorp</li>
-    <li>SoundCloud</li>
-    <li>etc...</li>
-</ul>
+Déjà adopté par des grands
+- Google
+- Docker
+- Kubernetes
+- Dropbox
+- Spotify
+- Hashicorp
+- SoundCloud
+- etc...
+
 
 ##--##
+<!-- .slide: class="sfeir-bg-white-3" -->
+# Le language
+
+**Déjà adopté par des grands**
+
+- Né en 2009 chez Google (après les processeurs multi-coeurs) et OSS
+- Binaire compilé autoporteur (début plugin depuis Go 1.8)
+- Orienté objet
+- Garbage collector (sub millisecond pour 17 Go de heap)
+- Pointeurs 😱
+- Goroutines
+  - Assimilable à un thread
+  - Mais ce n’est **PAS** un thread ⇒ **beaucoup plus léger**
+
+- Channels
+- **Do not communicate by sharing memory; share memory by communicating.**
+Synchronisation
+Multiplexage (**select**)
+
+
+Notes:
+- OFU
+- CSP (1977) Communicating sequential processes
+
+##--##
+<!-- .slide: class="sfeir-bg-white-3" -->
+
+<style>
+.special-Intro-01-le-but-de-go-bottom-image {
+  position: initial;
+  margin-top: 11% !important;
+  margin-left: 15% !important;
+}
+</style>
 
 # Le language
 
-<b>Déjà adopté par des grands</b>
-<ul>
-    <li>Né en 2009 chez Google (après les processeurs multi-coeurs) et OSS</li>
-    <li>Binaire compilé autoporteur (début plugin depuis Go 1.8)</li>
-    <li>Orienté objet</li>
-    <li>Garbage collector (sub millisecond pour 17 Go de heap)</li>
-    <li>Pointeurs 😱</li>
-    <li>Goroutines</li>
-        <ul>
-            <li>Assimilable à un thread</li>
-            <li>Mais ce n’est <b>PAS</b> un thread ⇒ <b>beaucoup plus léger</b></li>
-        </ul>
-    <li>Channels</li>
-    <ul>
-        <li><b>Do not communicate by sharing memory; share memory by communicating.</b></li>
-        <li>Synchronisation</li>
-        <li>Multiplexage (<b>select</b>)</li>
-    </ul>
-</ul>
+**Les mots clés**
+- **Dépendances :** import package
+- **Conditionnelles :** if else switch case fallthrough break default goto select
+- **Itérations :** for range continue
+- **Type :** var func interface struct chan const type map make
+- **Misc :** defer go return panic recover
 
-##--##
+![h-350](./assets/images/mots_clés.JPG)<!-- .element: class="special-Intro-01-le-but-de-go-bottom-image" -->
+![h-350](./assets/images/i_know.JPG)<!-- .element: class="special-Intro-01-le-but-de-go-bottom-image" -->
+Notes:
+- OFU
+- moins de 30 mots-clés
+- Public/private (exporté/non exporté) => Majuscule/minuscule
 
-# Le language
-
-<b>Les mots clés</b>
-<ul>
-    <li><b>Dépendances :</b> import package</li>
-    <li><b>Conditionnelles :</b> if else switch case fallthrough break default goto select</li>
-    <li><b>Itérations :</b> for range continue</li>
-    <li><b>Type :</b> var func interface struct chan const type map make</li>
-    <li><b>Misc :</b> defer go return panic recover</li>
-</ul>
-![h-350](./assets/images/mots_clés.JPG)<!-- .element: class="bottom-image" -->
-![h-350](./assets/images/i_know.JPG)<!-- .element: class="bottom-image" -->
 
 
 

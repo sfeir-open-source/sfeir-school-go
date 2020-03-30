@@ -7,20 +7,26 @@
 ##==##
 
 <!-- .slide: class="school-presentation" -->
-
-<div class="wifi">
-    <span class="key">wifi:</span><span>SSID</span><br>
-    <span class="key">mdp:</span><span>PWD_WIFI</span>
-</div>
-
 ##==##
 
 # Déroulement de la formation
 
-<div class="title-page"><!-- .element: class="centeredLines" -->
-**C'est quand la pause ?**<br>
-**Quand est-ce qu'on mange ?**<br>
-**Tour de table ...**<br>
-**Feuille de présence**<br>
-</div>
+
+**C'est quand la pause ?**
+
+
+**Quand est-ce qu'on mange ?**
+
+
+**Tour de table ...**
+
+
+**Feuille de présence**
+
+
+
+Notes:
+- 1h30 / 2h en fonctions des parties
+- 12h sandwich à l’extérieur
+- Théorie, exo, qqun correction au tableau
 
