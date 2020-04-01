@@ -14,12 +14,9 @@
 
 - C'est quand la pause ?
 
-
 - Quand est-ce qu'on mange ?
 
-
 - Tour de table ...
-
 
 - Feuille de présence
 
