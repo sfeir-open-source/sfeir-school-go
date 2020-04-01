@@ -1,5 +1,9 @@
 <!-- .slide: class="sfeir-bg-white-3" -->
-
+<style>
+pre.big-code-shell{
+    font-size: 0.90em !important;
+}
+</style>
 # Installation de l'environnement
 
 ## Installation de Go
@@ -11,7 +15,7 @@
     $ GOPATH=$HOME/go
     $ GOPATH=%USERPROFILE%\go
 ```
-
+<!-- .element: class="big-code-shell" -->
 
 Notes:
 Normalement, l’installateur ajoute Go au PATH, mais si ce n’est pas le cas, il faut le faire manuellement.
