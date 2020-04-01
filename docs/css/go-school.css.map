@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "go-school.css",
+	"sources": [
+		"../scss/go-school.scss"
+	],
+	"names": [],
+	"mappings": "AAIA,AAAA,OAAO,CAAA;EACH,UAAU,EAAE,iBAAiB,GAChC"
+}
