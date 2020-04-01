@@ -12,16 +12,16 @@
 # Déroulement de la formation
 
 
-**C'est quand la pause ?**
+- C'est quand la pause ?
 
 
-**Quand est-ce qu'on mange ?**
+- Quand est-ce qu'on mange ?
 
 
-**Tour de table ...**
+- Tour de table ...
 
 
-**Feuille de présence**
+- Feuille de présence
 
 
 
