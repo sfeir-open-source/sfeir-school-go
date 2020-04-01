@@ -2,7 +2,7 @@
 
 # Installation de l'environnement
 
-**Installation de Go**
+## Installation de Go
 - Téléchargez Go 1.13 pour votre environnement : [https://golang.org/dl/](https://golang.org/dl/)
 - Suivez les instructions d’installation : [https://golang.org/doc/install](https://golang.org/doc/install)
 - Vérifiez l’installation dans un terminal : `$ go version`
@@ -21,7 +21,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Installation de l'environnement
 
-**Récupération des sources**
+## Récupération des sources
 - Votre workspace de base contient
   - **bin :** binaires de vos appli
   - **pkg :** vos objets à linker
@@ -40,7 +40,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Installation de l'environnement
 
-**Installation de Visual Studio Code**
+## Installation de Visual Studio Code
 - Télé-chargez et installez VSC pour votre environnement: [https://code.visualstudio.com](https://code.visualstudio.com/)
 - Installez le plugin Go: <img src="./assets/images/plugins.JPG">, puis chercher “go”.
 
@@ -49,7 +49,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Installation de l'environnement
 
-**Les commandes de Go**
+## Les commandes de Go
 - **build** compile packages et dépendances
 - **fmt** lance gofmt sur les sources
 - **test** lance les tests
@@ -62,7 +62,8 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Installation de l'environnement
 
-**Installation de Visual Studio Code**
+## Installation de Visual Studio Code
+
 - En ouvrant un fichier **.go**, le message *“Analysis Tools Missing"* apparaîtra : cliquez dessus pour compléter l’installation automatiquement.
 - Il est conseillé d’activer la sauvegarde automatique.
 

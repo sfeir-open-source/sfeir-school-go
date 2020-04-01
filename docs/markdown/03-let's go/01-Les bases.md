@@ -7,7 +7,7 @@ pre.big-code-hello-world{
 </style>
 # Les bases - 01
 
-**Hello, 世界**
+## Hello, 世界
 
 ```Go
 package main
@@ -32,7 +32,7 @@ Go supporte nativement l’UTF8. Tous les fichiers sources doivent être encodé
 
 # Les bases - 01
 
-**Hello, 世界**
+## Hello, 世界
 
 Remarque : comme on s’y attend, 世界 signifie “monde”, mais ces caractères ne sont pas disponibles en ANSI.
 
@@ -50,7 +50,7 @@ On peut aussi nommer une variable Δt par exemple.
 
 # Les bases - 01
 
-**Compilation, exécution**
+## Compilation, exécution
 
 Placez vous dans le répertoire 01, puis :
 - Compilez le programme : `$ go build main.go`
@@ -74,7 +74,7 @@ GOOS=linux GOARCH=amd64
 
 # Les bases - 02
 
-**Imports**
+## Imports
 
 - En Go, il est **interdit** d’importer un package sans l’utiliser.
 - Pour importer plusieurs packages, on préférera la notation factorisée.
@@ -86,7 +86,7 @@ GOOS=linux GOARCH=amd64
 
 # Les bases - 03
 
-**Exporter un identifiant**
+## Exporter un identifiant
 
 Pour qu’un identifiant (de variable, fonction, type, etc.) soit visible en dehors du package dans lequel il est déclaré, il doit commencer par une majuscule. Il n’y a pas de mot clé “public”, “private”, ou autre en Go.
 
@@ -98,7 +98,7 @@ Pour qu’un identifiant (de variable, fonction, type, etc.) soit visible en deh
 
 # Les bases - 04
 
-**Les fonctions**
+## Les fonctions
 
 Une fonction est déclarée à l’aide du mot clé **func** suivi du nom de la fonction. Le corps de la fonction est compris entre { et }. Le caractère ‘{‘ doit être obligatoirement sur la même ligne que le mot clé **func**.
 
@@ -112,7 +112,7 @@ Une fonction est déclarée à l’aide du mot clé **func** suivi du nom de la 
 
 # Les bases - 04
 
-**Les fonctions**
+## Les fonctions
 
 Une fonction peut prendre zéro ou plusieurs arguments.
 
@@ -130,7 +130,7 @@ pre.big-code{
 </style>
 # Les bases - 04
 
-**Les fonctions**
+## Les fonctions
 
 Une fonction peut retourner une valeur.
 
@@ -148,7 +148,7 @@ func maFonction(n int, s string) string {
 
 # Les bases - 04
 
-**Les fonctions**
+## Les fonctions
 
 En Go, une fonction peut aussi retourner **plusieurs** valeurs.
 
@@ -166,7 +166,7 @@ func maFonction(n int, s string) (string, bool) {
 
 # Les bases - 04
 
-**Les fonctions**
+## Les fonctions
 
 Les valeurs de retour peuvent aussi être nommées.
 
@@ -204,7 +204,7 @@ pre.big-code{
 
 # Les bases - 04
 
-**Les fonctions**
+## Les fonctions
 
 Lorsque deux ou plusieurs paramètres de fonction consécutifs partagent un type, vous pouvez omettre le type de tous sauf le dernier.
 
@@ -220,7 +220,7 @@ func maFonction(a bool, b, c, d int, e, f string) { ... }
 
 # Les bases - 05
 
-**Les variables**
+## Les variables
 
 On déclare une (ou plusieurs) variable avec l’instruction **var** suivi du nom de la variable, puis du type et de sa valeur initiale.
 
@@ -234,7 +234,7 @@ Le type peut être omis si on donne une valeur initiale, et vice versa.
 
 # Les bases - 05
 
-**Les variables**
+## Les variables
 
 Concrètement, voici trois façons de déclarer une même variable :
 
@@ -260,7 +260,7 @@ Les déclarations de variables peuvent être « factorisé », en blocs, comme l
 
 # Les bases - 05
 
-**Les variables**
+## Les variables
 
 Il est possible de factoriser la déclaration de plusieurs variables à l’aide de parenthèses :
 
@@ -279,7 +279,7 @@ var (
 
 # Les bases - 05
 
-**Les variables**
+## Les variables
 
 On peut aussi déclarer plusieurs variables sur une même ligne :
 
@@ -300,7 +300,7 @@ var x, y, z float64
 
 # Les bases - 05
 
-**Les variables**
+## Les variables
 
 A l’intérieur d’une fonction, on peut utiliser la déclaration *courte* :
 
@@ -318,7 +318,7 @@ func plop() {
 
 # Les bases - 05
 
-**Les variables**
+## Les variables
 
 Attention, gardez à l’esprit que <span style="color:blue">:=</span> est une <span style="color:blue">déclaration+assignation</span>, tandis que <span style="color:green">=</span> est une <span style="color:green">assignation</span>
 
@@ -330,7 +330,7 @@ Pour cette raison, il est <span style="color:red">impossible</span> d’assigner
 
 # Les bases - 05
 
-**Les variables**
+## Les variables
 
 **A savoir :** comme pour la déclaration, on peut assigner plusieurs variables sur une même ligne :
 
@@ -346,7 +346,7 @@ x, y = y, x
 
 # Les bases - 06
 
-**Les types de base**
+## Les types de base
 
 - bool
 - string
@@ -361,7 +361,7 @@ x, y = y, x
 
 # Les bases - 06
 
-**Les types de base**
+## Les types de base
 
 - **byte** qui est un alias de int8
 - **rune** qui est un alias de int32 et représente un “code point” Unicode
@@ -373,7 +373,7 @@ x, y = y, x
 
 # Les bases - 06
 
-**Les types de base**
+## Les types de base
 
 - **float32, float64**
 - **complex64, complex128**
@@ -386,7 +386,7 @@ Le type **complex64** est un nombre complexe dont la partie réelle et la partie
 
 # Les bases - 06
 
-**Les valeurs zéro**
+## Les valeurs zéro
 
 Chaque type a une **valeur zéro**. Une variable déclarée sans valeur initiale (ex: var nom type) aura pour valeur la **valeur zéro** de son type.
 Les valeurs zéro des types de base sont :
@@ -403,7 +403,7 @@ pre.big-code{
 </style>
 # Les bases - 06
 
-**Les conversions de type**
+## Les conversions de type
 
 En Go, toute conversion de type doit être **explicite**.
 
@@ -421,7 +421,7 @@ var f float64 = float64(i)
 
 # Les bases - 07
 
-**Les constantes**
+## Les constantes
 
 - Les constantes sont déclarées comme des variables, mais avec le mot-clé **const**.
 
@@ -435,7 +435,7 @@ var f float64 = float64(i)
 
 # Les bases - 07
 
-**Les constantes**
+## Les constantes
 
 A savoir : les constantes numériques sont des valeurs de haute précision.
 
@@ -457,7 +457,7 @@ Les déclarations de constantes peuvent être « factorisé », en blocs, comme 
 
 # Les bases - 07
 
-**Les constantes**
+## Les constantes
 
 A savoir : mot clé **<span style="color: green">iota</span>**
 

@@ -2,7 +2,7 @@
 
 # Avant de se lancer
 
-**Le but de Go**
+## Le but de Go
 
 - Rassembler les bonnes idées provenant d’autres langages,
 - Abolir les fonctionnalités débouchant sur un code complexe et peu fiable…
@@ -17,7 +17,7 @@ Notes:
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Avant de se lancer
 
-**Un langage généraliste**
+## Un langage généraliste
 - Comme le C, il sera adapté dans pratiquement tous les domaines de programmation.
 - Idéal pour le cloud.
 - Déjà utilisé dans le graphisme, les applications mobiles, le machine learning, WASM, ...
@@ -42,7 +42,7 @@ Déjà adopté par des grands
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Le language
 
-**Déjà adopté par des grands**
+## Déjà adopté par des grands
 
 - Né en 2009 chez Google (après les processeurs multi-coeurs) et OSS
 - Binaire compilé autoporteur (début plugin depuis Go 1.8)
@@ -76,7 +76,7 @@ Notes:
 
 # Le language
 
-**Les mots clés**
+## Les mots clés
 - **Dépendances :** import package
 - **Conditionnelles :** if else switch case fallthrough break default goto select
 - **Itérations :** for range continue

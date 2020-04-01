@@ -2,7 +2,7 @@
 
 # Les bases - 09
 
-**Les boucles**
+## Les boucles
 
 - Go a une seule structure de boucle, la boucle **for**.
 - Elle a trois composantes séparées par des points-virgules:
@@ -16,7 +16,7 @@
 
 # Les bases - 09
 
-**Les boucles**
+## Les boucles
 
 Comme pour l’instruction **if**, il n'y a pas de parenthèses entourant les trois composantes de la déclaration **for** et les accolades { } sont exigées.
 
@@ -33,7 +33,7 @@ for i := 0; i < 10; i++ {
 
 # Les bases - 09
 
-**Les boucles**
+## Les boucles
 
 La déclaration d'initialisation sera souvent une déclaration de variable courte et les variables ainsi déclarées ne sont visibles que dans le cadre de la déclaration **for**.
 
@@ -45,7 +45,7 @@ L'itération de la boucle sera arrêtée une fois que la condition booléenne se
 
 # Les bases - 09
 
-**Les boucles**
+## Les boucles
 
 La déclaration d'initialisation et d'aboutissement sont facultatifs.
 
@@ -74,7 +74,7 @@ Notes:
 
 # Les bases - 09
 
-**Les boucles**
+## Les boucles
 
 La condition peut elle aussi être omise.
 On obtient ainsi une boucle infinie :
@@ -87,7 +87,7 @@ On obtient ainsi une boucle infinie :
 
 # Les bases - 09 - Exercice
 
-**Les boucles**
+## Les boucles
 
 Écrire une fonction implémentant l'algorithme de la conjecture de Syracuse qui prend en paramètre :
 - un entier de départ
@@ -113,7 +113,7 @@ si n est impair, n = n*3 + 1
 
 # Les bases - 10
 
-**Switch**
+## Switch
 
 Le switch fait exactement ce qu’on attend de lui. Comme pour le if ou le for, une expression peut être ajoutée avant la condition.
 ```Go
@@ -131,7 +131,7 @@ switch initialisation; expression {
 
 # Les bases - 10
 
-**Switch**
+## Switch
 
 En Go, un **case** se termine automatiquement (l’instruction **break** est inutile).
 Si, au contraire, nous voulons que la **case** suivante soit exécutée, il faut ajouter le mot clé **fallthrough**.
@@ -142,7 +142,7 @@ Si, au contraire, nous voulons que la **case** suivante soit exécutée, il faut
 
 # Les bases - 10
 
-**Switch**
+## Switch
 
 Si l’on omet la condition, le switch peut permettre d'écrire élégamment de longues chaînes if-then-else.
 

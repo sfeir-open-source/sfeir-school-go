@@ -2,7 +2,7 @@
 
 # Les bases - 11
 
-**Defer**
+## Defer
 
 Une déclaration defer reporte l'exécution d'une fonction jusqu'à ce que la fonction environnante retourne.
 
@@ -14,7 +14,7 @@ Les arguments de l'appel différé sont évalués immédiatement, mais l'appel d
 
 # Les bases - 11
 
-**Defer**
+## Defer
 
 Les appels de fonction différés sont poussés sur une pile (FILO) et sont effectués même en cas de panique.
 
