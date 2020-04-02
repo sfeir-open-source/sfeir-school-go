@@ -7,7 +7,7 @@
 En Go, il n’y a pas de notion d’héritage entre les **struct**, mais la notion d’**interface** est bien présente.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 24
@@ -25,7 +25,7 @@ type Oiseau interface {
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 25
@@ -45,7 +45,7 @@ Les interfaces implicites découple la définition d'une interface de son implé
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 # Orienté Objet - 25
 
@@ -74,7 +74,7 @@ func (t T) M() {
 pour que le type T implémente I.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 25
@@ -103,7 +103,7 @@ type Volant interface { Vole() }
 ⇒ Quelle(s) interface(s) Aigle implémente-t-il ?
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 25
@@ -133,7 +133,7 @@ type Volant interface { Vole() }
 ⇒ **Aigle** implémente à la fois l’interface **Oiseau** et l’interface **Volant**.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 25
@@ -165,7 +165,7 @@ type Volant interface { Vole() }
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 25
@@ -194,7 +194,7 @@ type Volant interface { Vole() }
 ⇒ **A380** implémente seulement l’interface **Volant**.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 26
@@ -227,7 +227,7 @@ func (t *T) M() {
 c’est le type ***T** qui implémente **I**.
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 26
@@ -240,7 +240,7 @@ Sinon, **T** implémenterait des interfaces tandis que ***T** en implémenterait
 
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 27
@@ -256,7 +256,7 @@ Tous les types implémentent l’interface vide puisqu’un type a toujours au m
 Ex: *fmt*.Print prend des arguments de type **interface{}**
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 28
@@ -271,7 +271,7 @@ Cette instruction affirme que la valeur d'interface **i** contient le type concr
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 28
@@ -287,7 +287,7 @@ Mais l’assertion de type peut aussi s’effectuer sous la forme :
 Si i ne détient pas **T**, aucune panique ne sera déclenchée, mais **ok** aura la valeur **false**.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 29
@@ -306,7 +306,7 @@ default: // ici v a le même type que i
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 29 - exercice

@@ -13,7 +13,7 @@ L’expression :
 déclare une variable **a** comme un tableau de dix entiers.
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 15
@@ -29,7 +29,7 @@ Notes:
 La longueur d'un tableau fait partie de son type, de sorte que les tableaux ne peuvent pas être redimensionnés. Cela semble limitatif, mais ne vous inquiétez pas ; Go offre un moyen pratique de travailler avec des tableaux.
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3"-->
 
 # Pour aller plus loin - 16
@@ -50,7 +50,7 @@ cap(s) retourne la capacité du slice **s**.
 La valeur zéro d’un slice est **nil**.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 16
@@ -62,7 +62,7 @@ Les slices peuvent être créés avec la fonction **make**. Cela alloue un table
 `a := make([]int, 5)  // len(a)=5`
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 16
@@ -78,7 +78,7 @@ L’expression :
 récupère les éléments du slice de **low** à **high-1** inclus (ou **high** exclus).
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 16
@@ -107,7 +107,7 @@ récupère les éléments du slice de **low** à **high-1** inclus (ou **high** 
     </div>
   </div>
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 16
@@ -123,7 +123,7 @@ b = b[1:]                 // len(b)=4, cap(b)=4
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 16
@@ -146,7 +146,7 @@ La valeur résultante de append est une tranche contenant tous les éléments de
 Si le tableau de support de s est trop petit pour contenir toutes les valeurs données un plus gros tableau sera alloué. La tranche retourné pointera vers le tableau nouvellement allouée.
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 17
@@ -160,7 +160,7 @@ l'indice
 une **copie** de l'élément à cet indice.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 17
@@ -176,7 +176,7 @@ Est équivalent à :
 	}``
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 17
@@ -192,7 +192,7 @@ On peut aussi omettre la valeur.
 ``for i := range s { }``
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 17 - exercice
@@ -205,7 +205,7 @@ On peut aussi omettre la valeur.
 Notes:
 -> 2h
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 18
@@ -225,7 +225,7 @@ m = make(map[string]Vector)
 `
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Pour aller plus loin - 18
 
@@ -242,7 +242,7 @@ var m = map[string]Vector{
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 18
@@ -284,7 +284,7 @@ ont pas encore été déclarée, vous pouvez utiliser une déclaration courte :
 
 elem, ok := m[key]
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 19
@@ -296,7 +296,7 @@ En Go, les fonctions sont aussi des valeurs. Elles peuvent être passés comme t
 Les valeurs de fonction peuvent être utilisées comme arguments de fonctions ou valeurs de retour. On dit que les fonctions sont **first class citizen** en Go
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 19
@@ -308,7 +308,7 @@ Les fonctions de Go peuvent être des **closures**. Une **closure** (fermeture) 
 La fonction peut accéder et assigner les variables référencées, dans ce sens, la fonction est «liée» aux variables.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 19 - exercice
@@ -324,7 +324,7 @@ func multiplicateurPar(x int) func(int) int { }
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 20
@@ -336,7 +336,7 @@ Il est possible en Go de déclarer plusieurs variables sur une même ligne.
 `a, b, c := 1, "toto", 8`
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 20

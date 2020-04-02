@@ -9,16 +9,18 @@ Un expéditeur peut fermer un canal pour indiquer que plus aucune valeur ne sera
 ```Go
 close(ch)
 ```
+<!-- .element: class="big-code" -->
 
 Les récepteurs peuvent vérifier si un canal a été fermé :
 
 ```Go
 v, ok := <-ch
 ```
+<!-- .element: class="big-code" -->
 
 **ok** est false si le canal est fermé et qu’il n'y a plus de valeur à recevoir.
 
-##--##
+##==##
 
 # Concurrence - 33
 

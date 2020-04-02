@@ -22,7 +22,7 @@ Go supporte nativement l’UTF8. Tous les fichiers sources doivent être encodé
 
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 01
@@ -40,7 +40,7 @@ On peut aussi nommer une variable Δt par exemple.
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 01
@@ -64,7 +64,7 @@ GOOS=linux GOARCH=amd64
 
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 02
@@ -76,7 +76,7 @@ GOOS=linux GOARCH=amd64
 - Par convention, le nom du package est le même que le dernier élément du chemin d'importation.Ex: chemin “math/rand” ⇒ package “rand”
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 03
@@ -88,7 +88,7 @@ Pour qu’un identifiant (de variable, fonction, type, etc.) soit visible en deh
 **⇒ un identifiant est exporté (ie. public) si, et seulement si, il commence par une majuscule.**
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 04
@@ -102,7 +102,7 @@ Une fonction est déclarée à l’aide du mot clé **func** suivi du nom de la 
 `
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 04
@@ -116,7 +116,7 @@ Une fonction peut prendre zéro ou plusieurs arguments.
 Notez que le type vient **après** l'identifiant de la variable.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 04
@@ -134,7 +134,7 @@ func maFonction(n int, s string) string {
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 04
@@ -152,7 +152,7 @@ func maFonction(n int, s string) (string, bool) {
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 04
@@ -185,7 +185,7 @@ return
 Des déclarations de retour nus doivent être utilisés uniquement dans des fonctions courte, comme avec l'exemple montré ici. Ils peuvent nuire à la lisibilité de fonctions plus grande.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 04
@@ -201,7 +201,7 @@ func maFonction(a bool, b, c, d int, e, f string) { ... }
 ```
 <!-- .element: class="big-code" -->
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 05
@@ -215,7 +215,7 @@ On déclare une (ou plusieurs) variable avec l’instruction **var** suivi du no
 Le type peut être omis si on donne une valeur initiale, et vice versa.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 05
@@ -241,7 +241,7 @@ La valeur-zéro du type string est la chaîne vide.
 Les déclarations de variables peuvent être « factorisé », en blocs, comme les imports.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 05
@@ -260,7 +260,7 @@ var (
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 05
@@ -281,7 +281,7 @@ var x, y, z float64
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 05
@@ -299,7 +299,7 @@ func plop() {
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 05
@@ -311,7 +311,7 @@ Attention, gardez à l’esprit que <span style="color:blue">:=</span> est une <
 Pour cette raison, il est <span style="color:red">impossible</span> d’assigner une valeur à une variable <span style="color:red">déjà déclarée</span> en utilisant <span style="color:red">:=</span>
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 05
@@ -327,7 +327,7 @@ Très pratique pour faire un swap :
 x, y = y, x
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 06
@@ -342,7 +342,7 @@ x, y = y, x
 **int** est soit un **int32**, soit un **int64**, dépendamment de la plateforme et du compilateur. Il en va de même pour **uint** qui est soit **uint32** soit **uint64**.
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 06
@@ -354,7 +354,7 @@ x, y = y, x
 - **uintptr** qui est un entier non signé assez grand pour contenir la valeur d’un pointeur (généralement 32 ou 64 bits).
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 06
@@ -367,7 +367,7 @@ x, y = y, x
 Le type **complex64** est un nombre complexe dont la partie réelle et la partie imaginaire sont des **float32**. Le type **complexe128** utilise des **float64**.
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 06
@@ -380,7 +380,7 @@ Les valeurs zéro des types de base sont :
 - false pour les types booléen, et
 - "" (La chaîne vide) pour les chaînes.
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 # Les bases - 06
 
@@ -397,7 +397,7 @@ var f float64 = float64(i)
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 07
@@ -411,7 +411,7 @@ var f float64 = float64(i)
 - Les constantes ne peuvent pas être déclarées avec la syntaxe := .
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 07
@@ -433,7 +433,7 @@ Notes:
 Les déclarations de constantes peuvent être « factorisé », en blocs, comme les imports et les déclarations de variables.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 07
