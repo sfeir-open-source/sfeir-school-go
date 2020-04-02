@@ -9,12 +9,14 @@ Une **goroutine** est un **processus léger** géré par le « Go runtime ».
 ```Go
 go f(x, y, z)
 ```
+<!-- .element: class="big-code" -->
 
 démarre une nouvelle **goroutine** exécutant
 
 ```Go
 f(x, y, z)
 ```
+<!-- .element: class="big-code" -->
 
 L'évaluation de **f**, **x**, **y** et **z** est effectuée dans la goroutine actuelle et l'exécution de **f** est effectuée dans la nouvelle goroutine.
 

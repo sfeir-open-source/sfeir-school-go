@@ -9,7 +9,7 @@ Une déclaration defer reporte l'exécution d'une fonction jusqu'à ce que la fo
 Les arguments de l'appel différé sont évalués immédiatement, mais l'appel de fonction n'est pas exécuté jusqu'à ce que la fonction environnante retourne.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 11

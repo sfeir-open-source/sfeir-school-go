@@ -8,7 +8,7 @@
 ### Developer backend
 ### @sebastienfriess
 
-##--##
+##==##
 
 <!-- .slide: class="speaker-slide" -->
 
@@ -19,7 +19,7 @@
 ## Sylvain DUMAS
 ### Developer backend
 
-##--##
+##==##
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
@@ -32,7 +32,7 @@
 ### Developer backend
 ### @ofuxet
 
-##--##
+##==##
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
@@ -44,7 +44,7 @@
 ## Yohann FACON
 ### Developer backend
 
-##--##
+##==##
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
@@ -56,7 +56,7 @@
 ## Yves DAUTREMAY
 ### Tech lead Java - DevOps
 
-##--##
+##==##
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
@@ -69,7 +69,7 @@
 ### Architecte Java
 ### @ogerardin
 
-##--##
+##==##
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation

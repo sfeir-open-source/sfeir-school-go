@@ -9,7 +9,7 @@ Go ne dispose pas de **classes**.
 Cependant, on peut définir des méthodes sur les types.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 # Orienté Objet - 21
 
@@ -26,7 +26,7 @@ func (v Vertex) Abs() float64 {
 La méthode **Abs** possède un récepteur de type **Vertex** nommé **v**.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 21
@@ -45,7 +45,7 @@ func Abs(v Vertex) float64 {
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 21
@@ -70,7 +70,7 @@ a := Abs(v)
 ```
 <!-- .element: class="big-code" -->
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 21
@@ -89,7 +89,7 @@ func (f MyFloat) IsPositive() bool {
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 21
@@ -111,7 +111,7 @@ puisque float64 est un type défini dans un autre package.
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 21
@@ -136,7 +136,7 @@ Notes:
 Avec un récepteur de valeur, la méthode Scale fonctionnerait sur une copie de la valeur originale Vertex, et n’aurait donc pas l’effet escompté.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 22
@@ -154,7 +154,7 @@ Si on a `func ScaleFunc(v *Vertex, f float64)`
 **ScaleFunc(v, 10)** ne compilera que si **v** est de type ***Vertex**.
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 22
@@ -170,7 +170,7 @@ Il y a deux raisons d'utiliser un récepteur de pointeur :
 ⇒ à l’usage on utilisera le plus souvent des récepteurs de pointeur.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 23
@@ -186,7 +186,7 @@ p.SomeMethod()
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Orienté Objet - 23
@@ -206,7 +206,7 @@ ok := p.IsPositive() // pas d’erreur. ok = false
 
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 23 - exercice

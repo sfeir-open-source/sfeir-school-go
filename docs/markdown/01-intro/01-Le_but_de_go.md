@@ -13,7 +13,7 @@ Notes:
 - Principalement inspiré du C.
 - Particulièrement bénéfique sur de gros projets, avec de grandes équipes.
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Avant de se lancer
 
@@ -23,7 +23,7 @@ Notes:
 - Déjà utilisé dans le graphisme, les applications mobiles, le machine learning, WASM, ...
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Avant de se lancer
 
@@ -38,7 +38,7 @@ Déjà adopté par des grands
 - etc...
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Le language
 
@@ -63,7 +63,7 @@ Notes:
 - OFU
 - CSP (1977) Communicating sequential processes
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 

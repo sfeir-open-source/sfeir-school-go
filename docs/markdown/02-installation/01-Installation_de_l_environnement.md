@@ -18,7 +18,7 @@ Notes:
 Normalement, l’installateur ajoute Go au PATH, mais si ce n’est pas le cas, il faut le faire manuellement.
 GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on va trouver les répertoires src, bin, etc.)
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Installation de l'environnement
 
@@ -37,7 +37,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Installation de l'environnement
 
@@ -46,7 +46,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 - Installez le plugin Go: <img src="./assets/images/plugins.JPG">, puis chercher “go”.
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Installation de l'environnement
 
@@ -59,7 +59,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 - **mod** gestion des dépendances
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 # Installation de l'environnement
 

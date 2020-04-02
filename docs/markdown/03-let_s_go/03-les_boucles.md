@@ -11,7 +11,7 @@
 - La déclaration d'aboutissement : exécutée à la fin de chaque itération
 
 
-##--##
+##==##
 <!-- .slide: class="with-code"-->
 
 # Les bases - 09
@@ -28,7 +28,7 @@ for i := 0; i < 10; i++ {
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 09
@@ -40,7 +40,7 @@ La déclaration d'initialisation sera souvent une déclaration de variable court
 L'itération de la boucle sera arrêtée une fois que la condition booléenne sera évaluée à false.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 09
@@ -69,7 +69,7 @@ Notes:
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 09
@@ -82,7 +82,7 @@ On obtient ainsi une boucle infinie :
 `for { }`
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 09 - Exercice
@@ -108,7 +108,7 @@ si n est impair, n = n*3 + 1
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 10
@@ -126,7 +126,7 @@ switch initialisation; expression {
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 10
@@ -137,7 +137,7 @@ En Go, un **case** se termine automatiquement (l’instruction **break** est inu
 Si, au contraire, nous voulons que la **case** suivante soit exécutée, il faut ajouter le mot clé **fallthrough**.
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Les bases - 10

@@ -14,7 +14,7 @@ Ici, p est un pointeur vers un entier.
 
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 14
@@ -33,7 +33,7 @@ p = &i  // p est un pointeur vers i
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 14
@@ -51,7 +51,7 @@ fmt.Println(*p)   // lire i (=3) par le pointeur p
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 14
@@ -72,7 +72,7 @@ func main() {
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="Go" -->
 
 Si vous appréciez la formation, Envoyez un Tweet !
@@ -83,7 +83,7 @@ Si vous appréciez la formation, Envoyez un Tweet !
 
 @sebastienfriess
 
-##--##
+##==##
 <!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="Go" -->
 
 Si vous appréciez la formation, Envoyez un Tweet !
@@ -95,7 +95,7 @@ Si vous appréciez la formation, Envoyez un Tweet !
 @sebastienfriess
 
 
-##--##
+##==##
 <!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="Go" -->
 
 Si vous appréciez la formation, Envoyez un Tweet !
@@ -107,7 +107,7 @@ Si vous appréciez la formation, Envoyez un Tweet !
 @ogerardin
 
 
-##--##
+##==##
 <!-- .slide:-->
 
 # Pour aller plus loin - 14 - exercice

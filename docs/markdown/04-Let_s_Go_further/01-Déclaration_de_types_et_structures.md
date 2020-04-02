@@ -15,7 +15,7 @@ C’est exactement ce qui est fait dans le package time de Go :
 `type Duration int64`
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 12
@@ -36,7 +36,7 @@ Notes:
 Il est possible de repasser au type sous-jacent par exemple int64(d)
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 # Pour aller plus loin - 13
 
@@ -51,7 +51,7 @@ type Vector struct {
 ```
 <!-- .element: class="big-code" -->
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 13
@@ -67,7 +67,7 @@ v3 := Vector{}        // X:0 et Y:0
 <!-- .element: class="big-code" -->
 
 
-##--##
+##==##
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 13
