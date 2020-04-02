@@ -1,10 +1,5 @@
 <!-- .slide: class="with-code" -->
-<style>
-pre.big-code-hello-world{
-    top: 10% !important;
-    font-size: 0.90em !important;
-}
-</style>
+
 # Les bases - 01
 
 ## Hello, 世界
@@ -19,7 +14,7 @@ func main() { //Go fournit des centaines de packages (fmt, net, http, json, etc.
    fmt.Println("Hello, 世界") //La fonction main est le point d’entrée du programme.
 }
 ```
-<!-- .element: class="big-code-hello-world" -->
+<!-- .element: class="big-code" -->
 
 Notes:
 Demander aux élèves d’ouvrir le fichier 01/main.go dans VSC.
@@ -123,11 +118,7 @@ Notez que le type vient **après** l'identifiant de la variable.
 
 ##--##
 <!-- .slide: class="with-code" -->
-<style>
-pre.big-code{
-    top: 30% !important;
-}
-</style>
+
 # Les bases - 04
 
 ## Les fonctions
@@ -196,11 +187,6 @@ Des déclarations de retour nus doivent être utilisés uniquement dans des fonc
 
 ##--##
 <!-- .slide: class="with-code" -->
-<style>
-pre.big-code{
-    top: 35% !important;
-}
-</style>
 
 # Les bases - 04
 
@@ -396,11 +382,6 @@ Les valeurs zéro des types de base sont :
 
 ##--##
 <!-- .slide: class="with-code" -->
-<style>
-pre.big-code{
-    top: 40% !important;
-}
-</style>
 # Les bases - 06
 
 ## Les conversions de type

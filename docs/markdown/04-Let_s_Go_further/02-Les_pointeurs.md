@@ -30,7 +30,7 @@ var p *int  // p vaut nil
 i := 42
 p = &i  // p est un pointeur vers i
 ```
-<!-- .element: class="big-code-types" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##
@@ -48,7 +48,7 @@ p := &i
 fmt.Println(*p)   // lire i (=3) par le pointeur p
 *p = 21                // définir i par le pointeur p
 ```
-<!-- .element: class="big-code-types" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##
@@ -69,7 +69,7 @@ func main() {
 	fmt.Println(v)  // { X:7, Y:2 }
 }
 ```
-<!-- .element: class="big-code-types" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##

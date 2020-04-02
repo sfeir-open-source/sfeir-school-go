@@ -11,11 +11,6 @@ Cependant, on peut définir des méthodes sur les types.
 
 ##--##
 <!-- .slide: class="with-code" -->
-<style>
-pre.big-code-oop{
-    font-size: 0.90em !important;
-}
-</style>
 # Orienté Objet - 21
 
 ## Les méthodes
@@ -26,7 +21,7 @@ func (v Vertex) Abs() float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 ```
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 La méthode **Abs** possède un récepteur de type **Vertex** nommé **v**.
 
@@ -47,7 +42,7 @@ func Abs(v Vertex) float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 ```
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##
@@ -65,7 +60,7 @@ Méthode :
 v := Vertex{1, 3}
 a := v.Abs()
 ```
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 Fonction :
 
@@ -73,7 +68,7 @@ Fonction :
 v := Vertex{1, 3}
 a := Abs(v)
 ```
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -91,7 +86,7 @@ func (f MyFloat) IsPositive() bool {
 }
 
 ````
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##
@@ -110,7 +105,7 @@ func (f float64) IsPositive() bool {
 	return f >= 0
 }
 ````
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 puisque float64 est un type défini dans un autre package.
 
@@ -133,7 +128,7 @@ func (v *Vertex) Scale(f float64) {
 	v.Y = v.Y * f
 }
 ````
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 
 
@@ -188,7 +183,7 @@ En Go, il est possible d’appeler une méthode sur un pointeur **nil** sans gé
 var p *T = nil
 p.SomeMethod()
 ```
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##
@@ -207,7 +202,7 @@ func (pf *MyFloat) IsPositive() bool {
 var p *MyFloat = nil
 ok := p.IsPositive() // pas d’erreur. ok = false
 ````
-<!-- .element: class="big-code-oop" -->
+<!-- .element: class="big-code" -->
 
 
 

@@ -1,9 +1,4 @@
-<!-- .slide: class="sfeir-bg-white-3" -->
-<style>
-pre.big-code-shell{
-    font-size: 0.90em !important;
-}
-</style>
+<!-- .slide: class="with-code sfeir-bg-white-3" -->
 # Installation de l'environnement
 
 ## Installation de Go
@@ -11,11 +6,13 @@ pre.big-code-shell{
 - Suivez les instructions d’installation : [https://golang.org/doc/install](https://golang.org/doc/install)
 - Vérifiez l’installation dans un terminal : `$ go version`
 - Ajoutez la variable d’environnement GOPATH pour pointer sur votre workspace. Par exemple :
+
+
 ```shell
     $ GOPATH=$HOME/go
     $ GOPATH=%USERPROFILE%\go
 ```
-<!-- .element: class="big-code-shell" -->
+<!-- .element: class="big-code" -->
 
 Notes:
 Normalement, l’installateur ajoute Go au PATH, mais si ce n’est pas le cas, il faut le faire manuellement.

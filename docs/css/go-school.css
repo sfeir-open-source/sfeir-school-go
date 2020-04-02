@@ -1,4 +1,17 @@
 .center {
   text-align: center !important; }
 
-/*# sourceMappingURL=xxx.css.map */
+.reveal .slides section.with-code pre.big-code:not(.literal),
+.reveal .slides section.with-code-dark pre.big-code:not(.literal) {
+  position: relative;
+  top: 0; }
+
+/**
+* Intro
+*/
+.special-Intro-01-le-but-de-go-bottom-image {
+  position: initial;
+  margin-top: 11% !important;
+  margin-left: 15% !important; }
+
+/*# sourceMappingURL=go-school.css.map */

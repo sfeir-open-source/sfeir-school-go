@@ -17,12 +17,7 @@ C’est exactement ce qui est fait dans le package time de Go :
 
 ##--##
 <!-- .slide: class="with-code" -->
-<style>
-pre.big-code-types{
-    top: 10% !important;
-    font-size: 0.90em !important;
-}
-</style>
+
 # Pour aller plus loin - 12
 
 ## Déclaration de type
@@ -35,7 +30,7 @@ var t Duration = 60
 v := d / t // erreur de compilation
 v := float64(d) / float64(t)  // ok
 ```
-<!-- .element: class="big-code-types" -->
+<!-- .element: class="big-code" -->
 
 Notes:
 Il est possible de repasser au type sous-jacent par exemple int64(d)
@@ -54,7 +49,7 @@ type Vector struct {
 	Y int
 }
 ```
-<!-- .element: class="big-code-types" -->
+<!-- .element: class="big-code" -->
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -69,7 +64,7 @@ v1 := Vector{1, 2}  // X:1 et Y:2
 v2 := Vector{X: 1}  // X:1, et Y:0 est implicite
 v3 := Vector{}        // X:0 et Y:0
 ```
-<!-- .element: class="big-code-types" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##
@@ -87,4 +82,4 @@ func main() {
 	fmt.Println(v.X)
 }
 ```
-<!-- .element: class="big-code-types" -->
+<!-- .element: class="big-code" -->

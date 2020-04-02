@@ -82,20 +82,12 @@ récupère les éléments du slice de **low** à **high-1** inclus (ou **high** 
 <!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 16
-<style>
-.row {
-  display: flex !important;
-}
-.col {
-  flex: 1 !important;
-}
-</style>
+
 ## Les slices
 
-  <div class="row">
-    <div class="col"><img class="float-left" src="./assets/images/slice-2-array.png"></div>
-    <div class="col">
-
+  <div class="flex-row">
+    <img class="float-left" src="./assets/images/slice-2-array.png">
+    <div>
                 ```Go
                 var a = make([]byte, 5)
                 len(a) == 5
@@ -103,10 +95,10 @@ récupère les éléments du slice de **low** à **high-1** inclus (ou **high** 
                 ```
     </div>
   </div>
-  <div class="row">
-    <div class="col"><img class="float-left" src="./assets/images/slice-2-array-decoupe.png"></div>
-    <div class="col">
-
+  <br>
+  <div class="flex-row">
+    <img class="float-left" src="./assets/images/slice-2-array-decoupe.png">
+    <div>
             ```Go
             var b = a[2:4]
             len(b) == 2
@@ -235,12 +227,6 @@ m = make(map[string]Vector)
 
 ##--##
 <!-- .slide: class="sfeir-bg-white-3" -->
-<style>
-pre.big-code-maps{
-    top: 10% !important;
-    font-size: 0.90em !important;
-}
-</style>
 # Pour aller plus loin - 18
 
 ## Maps
@@ -253,7 +239,7 @@ var m = map[string]Vector{
 	"Google": Vector{37.42202, -122.08408},
 }
 ```
-<!-- .element: class="big-code-maps" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##

@@ -66,13 +66,6 @@ Notes:
 ##--##
 <!-- .slide: class="sfeir-bg-white-3" -->
 
-<style>
-.special-Intro-01-le-but-de-go-bottom-image {
-  position: initial;
-  margin-top: 11% !important;
-  margin-left: 15% !important;
-}
-</style>
 
 # Le language
 

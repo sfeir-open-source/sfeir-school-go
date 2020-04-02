@@ -47,11 +47,6 @@ Les interfaces implicites découple la définition d'une interface de son implé
 
 ##--##
 <!-- .slide: class="with-code" -->
-<style>
-pre.big-code-interfaces{
-    font-size: 0.90em !important;
-}
-</style>
 # Orienté Objet - 25
 
 ## Les interfaces
@@ -64,7 +59,7 @@ type I interface {
 }
 type T struct { }
 ````
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 
 Alors il suffit de déclarer la méthode :
@@ -74,7 +69,7 @@ func (t T) M() {
 	/*...*/
 }
 ````
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 pour que le type T implémente I.
 
@@ -92,7 +87,7 @@ type Aigle struct {}
 func (a Aigle) Mange() { /*...*/ }
 func (a Aigle) Vole() { /*...*/ }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 Et :
 ```Go
@@ -102,7 +97,7 @@ type Oiseau interface {
 }
 type Volant interface { Vole() }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 
 ⇒ Quelle(s) interface(s) Aigle implémente-t-il ?
@@ -122,7 +117,7 @@ type Aigle struct {}
 func (a Aigle) Mange() { /*...*/ }
 func (a Aigle) Vole() { /*...*/ }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 Et :
 
@@ -133,7 +128,7 @@ type Oiseau interface {
 }
 type Volant interface { Vole() }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 ⇒ **Aigle** implémente à la fois l’interface **Oiseau** et l’interface **Volant**.
 
@@ -151,7 +146,7 @@ En revanche, si on a :
 type A380 struct {}
 func (a A380) Vole() { /*...*/ }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 
 Et :
@@ -163,7 +158,7 @@ type Oiseau interface {
 }
 type Volant interface { Vole() }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 
 ⇒ Quelle(s) interface(s) A380 implémente-t-il ?
@@ -183,7 +178,7 @@ En revanche, si on a :
 type A380 struct {}
 func (a A380) Vole() { /*...*/ }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 Et :
 
@@ -194,7 +189,7 @@ type Oiseau interface {
 }
 type Volant interface { Vole() }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 ⇒ **A380** implémente seulement l’interface **Volant**.
 
@@ -215,7 +210,7 @@ func (t T) M() {
 	fmt.Println(t.S)
 }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 pour que le type **T** implémente **I**.
 
@@ -227,7 +222,7 @@ func (t *T) M() {
 	fmt.Println(t.S)
 }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 c’est le type ***T** qui implémente **I**.
 
@@ -308,7 +303,7 @@ case S:   // ici v est de type S
 default: // ici v a le même type que i
 }
 ```
-<!-- .element: class="big-code-interfaces" -->
+<!-- .element: class="big-code" -->
 
 
 ##--##
