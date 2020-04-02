@@ -79,33 +79,44 @@ récupère les éléments du slice de **low** à **high-1** inclus (ou **high** 
 
 
 ##==##
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column-layout with-code" -->
 
 # Pour aller plus loin - 16
 
 ## Les slices
 
-  <div class="flex-row">
-    <img class="float-left" src="./assets/images/slice-2-array.png">
-    <div>
-                ```Go
-                var a = make([]byte, 5)
-                len(a) == 5
-                cap(a) == 5
-                ```
-    </div>
-  </div>
-  <br>
-  <div class="flex-row">
-    <img class="float-left" src="./assets/images/slice-2-array-decoupe.png">
-    <div>
-            ```Go
-            var b = a[2:4]
-            len(b) == 2
-            cap(b) == 3
-            ```
-    </div>
-  </div>
+##--##
+
+<br><br>
+
+<img src="./assets/images/slice-2-array.png">
+
+<br>
+
+<img src="./assets/images/slice-2-array-decoupe.png">
+
+##--##
+
+<!-- .slide: class="with-code" -->
+
+<br><br>
+
+```Go
+var a = make([]byte, 5)
+len(a) == 5
+cap(a) == 5
+```
+<!-- .element: class="big-code" -->
+
+<br>
+
+```Go
+var b = a[2:4]
+len(b) == 2
+cap(b) == 3
+```
+<!-- .element: class="big-code" -->
+
 
 ##==##
 <!-- .slide: class="with-code" -->
