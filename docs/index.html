@@ -19,20 +19,20 @@
     <!-- ----------------------------------------------------
         ---------------- REVEAL STYLES  -------------------------
         ------------------------------------------------------ -->
-    <link rel="stylesheet" type="text/css" href="./libs/revealjs/reveal.css" />
+    <link rel="stylesheet" type="text/css" href="./web_modules/reveal.js/css/reveal.css" />
     <!--<link rel="stylesheet" href="reveal/css/theme/white.css" id="theme">-->
 
     <!-- For syntax highlighting - hightlightjs -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="./libs/hightlightjs/tomorrow.css"
+      href="./web_modules/highlight.js/styles/tomorrow.css"
     />
 
-    <!-- If the query includes 'print-pdf', use the PDF print sheet - from revealjs -->
+    <!-- If the query includes 'print-pdf', use the PDF print sheet - from reveal.js -->
     <script>
       document.write(
-        '<link rel="stylesheet" href="./libs/revealjs/print/' +
+        '<link rel="stylesheet" href="./web_modules/reveal.js/css/print/' +
           (window.location.search.match(/print-pdf/gi) ? "pdf" : "paper") +
           '.css" type="text/css" media="print">'
       );
@@ -49,224 +49,20 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="./school-theme/css/sfeir-school-theme.css"
+      href="./web_modules/sfeir-school-theme/dist/css/sfeir-school-theme.css"
       id="theme"
     />
-    <script type="module" src="./school-theme/js/sfeir-theme.js"></script>
+    <script type="module" src="./web_modules/sfeir-school-theme/dist/js/sfeir-theme.js"></script>
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./css/go-school.css"
-      id="theme-custo"
-    />
+    <link rel="stylesheet" type="text/css" href="./css/go-school.css" id="theme-custo"/>
+    <script type="module" src="./scripts/dont-touch/reveal-config.js"></script>
   </head>
 
   <body>
     <div class="reveal">
       <!-- Any section element inside of this container is displayed as a slide -->
-      <div class="slides" data-type-show="prez">
-        <!-- #region School -->
-        <section
-          data-markdown="./markdown/00-school/00-TITLE.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/00-school/01-speakers.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <!-- #endregion -->
-        <!-- #region Intro -->
-        <section
-          data-markdown="./markdown/01-intro/00-TITLE.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/01-intro/01-Le_but_de_go.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <!-- #endregion -->
-        <!-- #region Installation -->
-        <section
-          data-markdown="./markdown/02-installation/00-TITLE.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/02-installation/01-Installation_de_l_environnement.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <!-- #endregion -->
-        <!-- #region Let's Go Title -->
-        <section
-          data-markdown="./markdown/03-let_s_go/00-TITLE.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/03-let_s_go/01-Les_bases.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/03-let_s_go/02-if.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/03-let_s_go/03-les_boucles.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/03-let_s_go/04-Defer_Panic_Recover.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <!-- #endregion -->
-        <!-- #region Let's go further Title -->
-        <section
-          data-markdown="./markdown/04-Let_s_Go_further/00-TITLE.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/04-Let_s_Go_further/01-Déclaration_de_types_et_structures.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/04-Let_s_Go_further/02-Les_pointeurs.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/04-Let_s_Go_further/03-Les_tableaux_slices_et_map.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <!-- #endregion -->
-        <!-- #region Orienté Objet -->
-        <section
-          data-markdown="./markdown/05-Orienté_objet/00-TITLE.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/05-Orienté_objet/01-Les_méthodes.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/05-Orienté_objet/02-Les_interfaces.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <!-- #endregion -->
-        <!-- #region Programmation concurrente -->
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/00-TITLE.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/01-Goroutine.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/02-Channels.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/03-Buffered-channels.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/04-Channels-fermeture.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/05-range.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/06-exercice.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/07-select.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/06-Programmation-concurrente/08-exercice.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <!-- #endregion -->
-        <!-- #region Et maintenant ? -->
-        <section
-          data-markdown="./markdown/07-et-maintenant/00-TITLE.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/07-et-maintenant/01-aller-plus-loin.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <section
-          data-markdown="./markdown/07-et-maintenant/02-merci.md"
-          data-separator="##==##"
-          data-separator-vertical="##--##"
-          data-separator-notes="^Notes:"
-        ></section>
-        <!-- #endregion -->
-      </div>
+      <div class="slides" data-type-show="prez"></div>
     </div>
-    <script src="./libs/revealjs/head.min.js"></script>
-    <script src="./libs/revealjs/reveal.js"></script>
-
-    <script src="reveal-config.js"></script>
+    <script src="./web_modules/reveal.js/js/reveal.js"></script>
   </body>
 </html>

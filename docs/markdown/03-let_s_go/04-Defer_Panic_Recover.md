@@ -1,4 +1,3 @@
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 11
 

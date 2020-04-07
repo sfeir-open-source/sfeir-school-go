@@ -1,4 +1,3 @@
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Avant de se lancer
 
@@ -14,7 +13,7 @@ Notes:
 - Particulièrement bénéfique sur de gros projets, avec de grandes équipes.
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
+
 # Avant de se lancer
 
 ## Un langage généraliste
@@ -24,7 +23,7 @@ Notes:
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
+
 # Avant de se lancer
 
 Déjà adopté par des grands
@@ -39,7 +38,7 @@ Déjà adopté par des grands
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
+
 # Le language
 
 ## Déjà adopté par des grands
@@ -64,8 +63,6 @@ Notes:
 - CSP (1977) Communicating sequential processes
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
-
 
 # Le language
 

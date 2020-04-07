@@ -1,85 +1,124 @@
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
+
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
 ![speaker](./assets/images/Sébastien.jpg)
-## Sébastien FRIESS
+
+<h2>Sébastien <span>FRIESS</span></h2>
+
 ### Developer backend
+
+<!-- .element: class="icon-rule icon-first" -->
+
 ### @sebastienfriess
+
+<!-- .element: class="icon-twitter icon-second" -->
 
 ##==##
 
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
+
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
 ![speaker](./assets/images/Sylvain.png)
-## Sylvain DUMAS
+
+<h2>Sylvain <span>DUMAS</span></h2>
+
 ### Developer backend
 
+<!-- .element: class="icon-rule icon-first" -->
+
 ##==##
+
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
 
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
-![speaker](./assets/images/Olivier FUXET.png)
+![speaker](./assets/images/OlivierFuxet.png)
 
-## Olivier FUXET
+<h2>Olivier <span>FUXET</span></h2>
+
 ### Developer backend
+
+<!-- .element: class="icon-rule icon-first" -->
+
 ### @ofuxet
 
+<!-- .element: class="icon-twitter icon-second" -->
+
 ##==##
+
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
 
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
-![speaker](./assets/images/Yohann FACON.png)
+![speaker](./assets/images/YohannFACON.png)
 
-## Yohann FACON
+<h2>Yohann <span>FACON</span></h2>
+
 ### Developer backend
 
+<!-- .element: class="icon-rule icon-first" -->
+
 ##==##
+
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
 
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
-![speaker](./assets/images/Yves DAUTREMAY.png)
+![speaker](./assets/images/YvesDAUTREMAY.png)
 
-## Yves DAUTREMAY
+<h2>Yves <span>DAUTREMAY</span></h2>
+
 ### Tech lead Java - DevOps
 
+<!-- .element: class="icon-rule icon-first" -->
+
 ##==##
+
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
 
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
-![speaker](./assets/images/Olivier GERARDIN.png)
+![speaker](./assets/images/OlivierGERARDIN.png)
 
-## Olivier GERARDIN
+<h2>Olivier <span>GERARDIN</span></h2>
+
 ### Architecte Java
+
+<!-- .element: class="icon-rule icon-first" -->
+
 ### @ogerardin
 
+<!-- .element: class="icon-twitter icon-second" -->
+
 ##==##
+
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
 
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
-![speaker](./assets/images/Antoine POIVEY.png)
+![speaker](./assets/images/AntoinePOIVEY.png)
 
-## Antoine POIVEY
+<h2>Antoine <span>POIVEY</span></h2>
+
 ### Full Stack Developer
+
+<!-- .element: class="icon-rule icon-first" -->
 
 
 

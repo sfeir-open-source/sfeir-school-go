@@ -1,4 +1,3 @@
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 24
 
@@ -26,7 +25,6 @@ type Oiseau interface {
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 25
 
@@ -228,7 +226,6 @@ c’est le type ***T** qui implémente **I**.
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 26
 
@@ -241,7 +238,6 @@ Sinon, **T** implémenterait des interfaces tandis que ***T** en implémenterait
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 27
 
@@ -307,7 +303,6 @@ default: // ici v a le même type que i
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 29 - exercice
 

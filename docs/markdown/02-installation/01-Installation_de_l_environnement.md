@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code sfeir-bg-white-3" -->
+
 # Installation de l'environnement
 
 ## Installation de Go
@@ -19,7 +19,7 @@ Normalement, l’installateur ajoute Go au PATH, mais si ce n’est pas le cas, 
 GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on va trouver les répertoires src, bin, etc.)
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
+
 # Installation de l'environnement
 
 ## Récupération des sources
@@ -38,7 +38,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
+
 # Installation de l'environnement
 
 ## Installation de Visual Studio Code
@@ -47,7 +47,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
+
 # Installation de l'environnement
 
 ## Les commandes de Go
@@ -60,7 +60,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
+
 # Installation de l'environnement
 
 ## Installation de Visual Studio Code

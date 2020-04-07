@@ -7,8 +7,11 @@
     "sass": "node-sass ./scss/go-school.scss -o ./css/ --source-map=true --watch=\"scss\" --recursive=\"scss\"",
     "sass-once": "node-sass ./scss/go-school.scss -o ./css/ --source-map=true ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "live-server --port=4242 --open=\"./index.html\" --watch=\"markdown/\"",
-    "start": "parallelshell \"npm run serve\" \"npm run sass\""
+    "serve": "live-server --port=4242 --open=\"./index.html\" --watch\"markdown,scripts/\"",
+    "start": "parallelshell \"npm run serve\" \"npm run sass\"",
+    "copy-highlight": "cpx \"node_modules/highlight.js/styles/**/*\" \"web_modules/highlight.js/styles\" ",
+    "copy-reveal": "cpx \"node_modules/reveal.js/**/*\" \"web_modules/reveal.js\" ",
+    "prepare": "parallelshell \"npm run copy-reveal\"  \"npm run copy-highlight\" \"snowpack\""
   },
   "repository": {
     "type": "git",
@@ -33,7 +36,20 @@
     "live-server": "^1.2.1",
     "node-sass": "^4.12.0",
     "parallelshell": "3.0.1",
-    "reveal.js": "^3.8.0",
-    "sfeir-school-theme": "^1.0.0"
+    "reveal.js": "^3.9.2",
+    "sfeir-school-theme": "^2.0.1",
+    "lit-html": "^1.2.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "snowpack": "^1.6.0"
+  },
+  "snowpack": {
+    "webDependencies": [
+      "sfeir-school-theme/dist/**/*",
+      "lit-html",
+      "reveal.js/**/^(?!LICENSE)(.*)",
+      "highlight.js/style/**/*"
+    ]
   }
 }

@@ -1,3 +1,3 @@
-<!-- .slide: class="transition-center transition-white sfeir-bg-blue" -->
+<!-- .slide: class="transition-center transition bg-blue" -->
 
 # 5 Orienté Objet
