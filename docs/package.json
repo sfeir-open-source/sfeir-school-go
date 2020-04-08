@@ -7,7 +7,7 @@
     "sass": "node-sass ./scss/go-school.scss -o ./css/ --source-map=true --watch=\"scss\" --recursive=\"scss\"",
     "sass-once": "node-sass ./scss/go-school.scss -o ./css/ --source-map=true ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "live-server --port=4242 --open=\"./index.html\" --watch\"markdown,scripts/\"",
+    "serve": "live-server --port=4242 --open=\"./index.html\" --watch=\"markdown,scripts/\"",
     "start": "parallelshell \"npm run serve\" \"npm run sass\"",
     "copy-highlight": "cpx \"node_modules/highlight.js/styles/**/*\" \"web_modules/highlight.js/styles\" ",
     "copy-reveal": "cpx \"node_modules/reveal.js/**/*\" \"web_modules/reveal.js\" ",
