@@ -1,3 +1,3 @@
-<!-- .slide: class="transition-center transition-white sfeir-bg-blue" -->
+<!-- .slide: class="transition bg-blue" -->
 
 # 1 Pourquoi le Go?

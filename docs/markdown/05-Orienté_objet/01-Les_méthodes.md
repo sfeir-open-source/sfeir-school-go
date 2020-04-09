@@ -1,4 +1,3 @@
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 21
 
@@ -155,7 +154,6 @@ Si on a `func ScaleFunc(v *Vertex, f float64)`
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 22
 
@@ -207,7 +205,6 @@ ok := p.IsPositive() // pas d’erreur. ok = false
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Orienté Objet - 23 - exercice
 

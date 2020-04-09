@@ -1,4 +1,3 @@
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 09
 
@@ -29,7 +28,6 @@ for i := 0; i < 10; i++ {
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 09
 
@@ -127,7 +125,6 @@ switch initialisation; expression {
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 10
 

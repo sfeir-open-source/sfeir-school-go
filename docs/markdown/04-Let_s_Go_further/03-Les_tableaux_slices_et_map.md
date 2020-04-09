@@ -14,7 +14,6 @@ déclare une variable **a** comme un tableau de dix entiers.
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 15
 
@@ -30,7 +29,6 @@ La longueur d'un tableau fait partie de son type, de sorte que les tableaux ne p
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3"-->
 
 # Pour aller plus loin - 16
 
@@ -63,7 +61,6 @@ Les slices peuvent être créés avec la fonction **make**. Cela alloue un table
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 16
 
@@ -158,7 +155,6 @@ Si le tableau de support de s est trop petit pour contenir toutes les valeurs do
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 17
 
@@ -188,7 +184,6 @@ Est équivalent à :
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 17
 
@@ -204,7 +199,6 @@ On peut aussi omettre la valeur.
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 17 - exercice
 
@@ -237,7 +231,7 @@ m = make(map[string]Vector)
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
+
 # Pour aller plus loin - 18
 
 ## Maps
@@ -254,7 +248,6 @@ var m = map[string]Vector{
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 18
 
@@ -296,7 +289,6 @@ ont pas encore été déclarée, vous pouvez utiliser une déclaration courte :
 elem, ok := m[key]
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 19
 
@@ -308,7 +300,6 @@ Les valeurs de fonction peuvent être utilisées comme arguments de fonctions ou
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 19
 
@@ -336,7 +327,6 @@ func multiplicateurPar(x int) func(int) int { }
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 20
 
@@ -348,7 +338,6 @@ Il est possible en Go de déclarer plusieurs variables sur une même ligne.
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Pour aller plus loin - 20
 

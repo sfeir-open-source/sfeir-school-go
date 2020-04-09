@@ -23,7 +23,6 @@ Go supporte nativement l’UTF8. Tous les fichiers sources doivent être encodé
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 01
 
@@ -65,7 +64,6 @@ GOOS=linux GOARCH=amd64
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 02
 
@@ -77,7 +75,6 @@ GOOS=linux GOARCH=amd64
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 03
 
@@ -300,7 +297,6 @@ func plop() {
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 05
 
@@ -312,7 +308,6 @@ Pour cette raison, il est <span style="color:red">impossible</span> d’assigner
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 05
 
@@ -328,7 +323,6 @@ x, y = y, x
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 06
 
@@ -343,7 +337,6 @@ x, y = y, x
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 06
 
@@ -355,7 +348,6 @@ x, y = y, x
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 06
 
@@ -368,7 +360,6 @@ Le type **complex64** est un nombre complexe dont la partie réelle et la partie
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 06
 
@@ -398,7 +389,6 @@ var f float64 = float64(i)
 
 
 ##==##
-<!-- .slide: class="sfeir-bg-white-3" -->
 
 # Les bases - 07
 
