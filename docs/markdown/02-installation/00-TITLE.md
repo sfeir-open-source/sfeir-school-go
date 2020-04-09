@@ -1,3 +1,3 @@
-<!-- .slide: class="transition-center transition bg-blue" -->
+<!-- .slide: class="transition bg-blue" -->
 
 # 2 Installation
