@@ -2,7 +2,7 @@
   "_args": [
     [
       "reveal.js@3.9.2",
-      "C:\\Users\\atallah.c\\Documents\\WORKPLACE\\sfeir-school\\sfeir-school-go\\docs"
+      "/Users/fredericsarron/Documents/sfeir-school/sfeir-school-go/docs"
     ]
   ],
   "_from": "reveal.js@3.9.2",
@@ -27,7 +27,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/reveal.js/-/reveal.js-3.9.2.tgz",
   "_spec": "3.9.2",
-  "_where": "C:\\Users\\atallah.c\\Documents\\WORKPLACE\\sfeir-school\\sfeir-school-go\\docs",
+  "_where": "/Users/fredericsarron/Documents/sfeir-school/sfeir-school-go/docs",
   "author": {
     "name": "Hakim El Hattab",
     "email": "hakim.elhattab@gmail.com",
