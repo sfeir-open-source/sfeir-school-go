@@ -44,6 +44,25 @@ const go200 = [
       '08-objectifs',
     ],
   ],
+  [
+    '02-CLI-args',
+    [
+      '00-title',
+      '01-app-parameters',
+      '02-stdlib-flag',
+      '03-lib-cliv2',
+      '04-lib-cliv2-code-flags',
+      '05-lib-cliv2-code-main',
+      '06-run',
+      '07-exercise',
+      '08-dependencies',
+      '09-gopath',
+      '10-vendor',
+      '11-modules',
+      '12-workflow',
+    ],
+  ],
+  ['03-logging', ['00-title']],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });

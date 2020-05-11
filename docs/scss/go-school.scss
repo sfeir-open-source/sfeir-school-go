@@ -7,6 +7,15 @@
           text-decoration: underline;
         }
       }
+      // don't want scrollbars in code frames
+      // if it"s too high it must be shortened by the code author
+      &.with-code,
+      &.with-code-dark,
+      &.with-code-bg-dark {
+        pre code {
+          max-height: none;
+        }
+      }
     }
   }
 }

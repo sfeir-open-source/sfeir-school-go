@@ -1,5 +1,3 @@
-<!-- .slide: class="go-200--01-environment-06-langage" -->
-
 <style>
     .go-200--01-environment--06-langage--gopherSays {
         position: fixed;
