@@ -1,11 +1,19 @@
-.reveal .slides section {
-    // Do some stuff
+.reveal {
+  .slides {
+    section {
+      a {
+        color: blue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
-.center{
-    text-align: center !important;
+.center {
+  text-align: center !important;
 }
-
 
 .reveal .slides section.with-code pre.big-code:not(.literal),
 .reveal .slides section.with-code-dark pre.big-code:not(.literal) {
@@ -16,7 +24,6 @@
 /**
 * Intro
 */
-
 
 .special-Intro-01-le-but-de-go-bottom-image {
   position: initial;
