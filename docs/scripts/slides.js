@@ -87,6 +87,27 @@ const go200 = [
     ],
   ],
   ['06-modelization', ['00-title', '01-struct', '02-enums', '03-struct-tags', '04-uuid', '05-dates', '06-exercise']],
+  [
+    '07-databases',
+    [
+      '00-title',
+      '01-factory-explanations',
+      '02-factory-illustration',
+      '03-DAO-interface',
+      '04-implementation-mock-01',
+      '05-implementation-mock-02',
+      '06-implementation-mongodb-01',
+      '07-implementation-mongodb-02',
+      '08-implementation-postgresql-01',
+      '09-implementation-postgresql-02',
+      '10-factory-01',
+      '11-factory-02',
+      '12-factory-03',
+      '13-factory-04',
+      '14-DAO-tests',
+      '15-exercise',
+    ],
+  ],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });
@@ -95,6 +116,7 @@ const pathReducerFactory = (baseDir = '') => (acc, [dir, files]) => [
   ...files.map(makeSlide(`${baseDir}${dir}`)),
 ];
 
+// TODO invert order
 export const slides = go200
   .reduce(pathReducerFactory('go-200/'), [])
   .concat(go100.reduce(pathReducerFactory('go-100/'), []));
