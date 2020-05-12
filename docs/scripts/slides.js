@@ -62,7 +62,7 @@ const go200 = [
       '12-workflow',
     ],
   ],
-  ['03-logging', ['00-title']],
+  ['03-logging', ['00-title', '01-disclaimer', '02-stdlib-log', '03-lib-logrus', '04-logrus-code', '05-exercise']],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });

@@ -16,6 +16,14 @@
           max-height: none;
         }
       }
+
+      &.transition {
+        > h2 {
+          // in this school we use h2 to give small shell command or file paths
+          // this is better if not uppercased
+          text-transform: none;
+        }
+      }
     }
   }
 }

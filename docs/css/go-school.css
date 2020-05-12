@@ -6,6 +6,9 @@
 .reveal .slides section.with-code pre code, .reveal .slides section.with-code-dark pre code, .reveal .slides section.with-code-bg-dark pre code {
   max-height: none; }
 
+.reveal .slides section.transition > h2 {
+  text-transform: none; }
+
 .center {
   text-align: center !important; }
 

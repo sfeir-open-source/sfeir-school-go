@@ -2,7 +2,7 @@
 
 ## Le workspace Go : le **GOPATH**
 
-![center h-800](./assets/go-200/images/vendor.png)
+![center h-800](./assets/go-200/images/vendor.webp)
 
 Notes:
 SFR
