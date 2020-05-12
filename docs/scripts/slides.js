@@ -63,6 +63,18 @@ const go200 = [
     ],
   ],
   ['03-logging', ['00-title', '01-disclaimer', '02-stdlib-log', '03-lib-logrus', '04-logrus-code', '05-exercise']],
+  [
+    '04-concurrency',
+    [
+      '00-title',
+      '01-explanations',
+      '02-illustration',
+      '03-struct',
+      '04-constructor',
+      '05-main-go-routine',
+      '06-exercise',
+    ],
+  ],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });

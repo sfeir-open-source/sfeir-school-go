@@ -6,4 +6,4 @@
   - qui utilise **MongoDB** pour sa persistance
   - et cherry on the cake : **containerisée** dans docker
 
-![center](./assets/go-200/images/cake.png)
+![center](./assets/go-200/images/cake.webp)
