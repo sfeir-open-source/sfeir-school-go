@@ -86,6 +86,7 @@ const go200 = [
       '05-exercise',
     ],
   ],
+  ['06-modelization', ['00-title', '01-struct', '02-enums', '03-struct-tags', '04-uuid', '05-dates', '06-exercise']],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });
