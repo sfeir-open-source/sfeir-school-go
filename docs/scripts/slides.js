@@ -75,6 +75,17 @@ const go200 = [
       '06-exercise',
     ],
   ],
+  [
+    '05-tests',
+    [
+      '00-presentation',
+      '01-whitebox',
+      '02-blackbox',
+      // '03-test-counter' // invisible on source slide before conversion
+      '04-coverage',
+      '05-exercise',
+    ],
+  ],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });

@@ -1,4 +1,4 @@
-<!-- .slide: class="transition bg-pink" -->
+<!-- .slide: class="transition bg-green" -->
 
 # Exercice
 
