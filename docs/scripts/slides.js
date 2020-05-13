@@ -8,6 +8,7 @@ const speakers = [
   'YDA',
   'OGE',
   'APO',
+  'FSA',
 ].map((trigram) => `speakers/${trigram}`);
 
 // go100 & go200 : canonical structure for ordered 2-levels filesystem tree
