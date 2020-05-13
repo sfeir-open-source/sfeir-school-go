@@ -112,7 +112,6 @@ const go200 = [
     '08-REST',
     [
       '00-title',
-      '01-poney',
       '02-arch',
       '03-stdlib-http',
       '04-stdlib-http-handle',
@@ -130,6 +129,22 @@ const go200 = [
       '16-exercise',
     ],
   ],
+  [
+    '09-tail',
+    [
+      '00-title',
+      '01-benchmarks-01',
+      '02-benchmarks-02',
+      '03-profiling',
+      '04-http-profiling',
+      '05-docker',
+      '06-poney',
+      '07-well-done',
+      '08-resources',
+      '09-photo-credits',
+      '10-links',
+    ],
+  ],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });
@@ -138,7 +153,7 @@ const pathReducerFactory = (baseDir = '') => (acc, [dir, files]) => [
   ...files.map(makeSlide(`${baseDir}${dir}`)),
 ];
 
-// TODO invert order
-export const slides = go200
-  .reduce(pathReducerFactory('go-200/'), [])
-  .concat(go100.reduce(pathReducerFactory('go-100/'), []));
+export const slides = [].concat(
+  go100.reduce(pathReducerFactory('go-100/'), []),
+  go200.reduce(pathReducerFactory('go-200/'), [])
+);
