@@ -44,7 +44,7 @@ GOPATH doit contenir le chemin vers le répertoire de travail Go (là où l’on
 ## Installation de Visual Studio Code
 
 - Télé-chargez et installez VSC pour votre environnement: [https://code.visualstudio.com](https://code.visualstudio.com/)
-- Installez le plugin Go: <img src="./assets/go-100/images/plugins.JPG">, puis chercher “go”.
+- Installez le plugin Go: <img src="./assets/go-100/images/plugins.jpg">, puis chercher “go”.
 
 ##==##
 
