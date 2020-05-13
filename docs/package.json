@@ -11,7 +11,8 @@
     "start": "parallelshell \"npm run serve\" \"npm run sass\"",
     "copy-highlight": "cpx \"node_modules/highlight.js/styles/**/*\" \"web_modules/highlight.js/styles\" ",
     "copy-reveal": "cpx \"node_modules/reveal.js/**/*\" \"web_modules/reveal.js\" ",
-    "prepare": "parallelshell \"npm run copy-reveal\"  \"npm run copy-highlight\" \"snowpack\""
+    "sync-speakers": "cpx \"markdown/go-100/00-school/speakers/**/*\" \"markdown/go-200/00-school/speakers\"",
+    "prepare": "parallelshell \"npm run copy-reveal\"  \"npm run copy-highlight\" \"snowpack\" \"npm run sync-speakers\""
   },
   "repository": {
     "type": "git",

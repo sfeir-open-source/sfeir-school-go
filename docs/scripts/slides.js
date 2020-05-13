@@ -1,8 +1,19 @@
-// allFiles : canonical structure for ordered 2-levels filesystem tree
-// array of [directory, [file]] pairs
+// add speakers here and run : npm run prepare to make go-200 in sync with go-100
+const speakers = [
+  // comment speakers before presenting
+  'SFR',
+  'SDU',
+  'OFU',
+  'YFA',
+  'YDA',
+  'OGE',
+  'APO',
+].map((trigram) => `speakers/${trigram}`);
 
+// go100 & go200 : canonical structure for ordered 2-levels filesystem tree
+// array of [directory, [file]] pairs
 const go100 = [
-  ['00-school', ['00-title', '01-speakers']],
+  ['00-school', ['00-title', ...speakers]],
   ['01-intro', ['00-title', '01-Le_but_de_go']],
   ['02-installation', ['00-title', '01-Installation_de_l_environnement']],
   ['03-let_s_go', ['01-Les_bases', '02-if', '03-les_boucles', '04-Defer_Panic_Recover']],
@@ -29,7 +40,7 @@ const go100 = [
 ];
 
 const go200 = [
-  ['00-school', ['00-title', '01-speakers', '02-deroulement']],
+  ['00-school', ['00-title', ...speakers, '02-deroulement']],
   [
     '01-environnement',
     [
@@ -147,13 +158,18 @@ const go200 = [
   ],
 ];
 
-const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });
+const makeSlidePath = (dir) => (file) => ({ path: `${dir}/${file}.md` });
 const pathReducerFactory = (baseDir = '') => (acc, [dir, files]) => [
   ...acc,
-  ...files.map(makeSlide(`${baseDir}${dir}`)),
+  ...files.map(makeSlidePath(`${baseDir}${dir}`)),
 ];
 
-export const slides = [].concat(
-  go100.reduce(pathReducerFactory('go-100/'), []),
-  go200.reduce(pathReducerFactory('go-200/'), [])
-);
+const makeSlidePaths = ([slides, baseDir]) => slides.reduce(pathReducerFactory(baseDir), []);
+
+// comment the presentation you don't want to use
+export const slides = [
+  [go100, 'go-100/'],
+  [go200, 'go-200/'],
+]
+  .map(makeSlidePaths)
+  .flat();
