@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # REST
 
@@ -17,3 +17,5 @@ routes = append(routes, Route{
     HandlerFunc: controller.Get,
 })
 ```
+
+<!-- .element: class="big-code" -->

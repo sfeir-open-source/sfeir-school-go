@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Benchmarks
 
@@ -14,6 +14,8 @@ func BenchmarkFibWrong(b *testing.B) {
 }
 ```
 
+<!-- .element: class="big-code" -->
+
 - utiliser le nombre de “runs” comme paramètre
 
 ```go
@@ -21,6 +23,8 @@ func BenchmarkFibWrong2(b *testing.B) {
     Fib(b.N)
 }
 ```
+
+<!-- .element: class="big-code" -->
 
 Notes:
 OFU

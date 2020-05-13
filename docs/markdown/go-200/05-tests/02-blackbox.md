@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Tests simples
 
@@ -18,3 +18,5 @@ func TestExternalStuff(t *testing.T) {
     }
 }
 ```
+
+<!-- .element: class="big-code" -->

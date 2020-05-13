@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Subtests
 
@@ -14,11 +14,15 @@ func TestFoo(t *testing.T) {
 }
 ```
 
+<!-- .element: class="big-code" -->
+
 ```shell
 $ go test -run Foo    # Run top-level tests matching "Foo".
 $ go test -run Foo/A= # Run subtests of Foo matching "A=".
 $ go test -run /A=1   # Run all subtests of a top-level test matching "A=1".
 ```
+
+<!-- .element: class="big-code" -->
 
 Notes:
 OFU

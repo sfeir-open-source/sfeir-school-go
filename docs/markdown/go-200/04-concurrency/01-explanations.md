@@ -7,5 +7,5 @@
 
 <blockquote cite="https://www.youtube.com/watch?v=PAAkCSZUG1c&t=2m48s">
     <p>Don't communicate by sharing memory, share memory by communicating.</p>
-    <footer>—Rob Pike, <cite>Go Proverbs - Rob Pike - Gopherfest - November 18, 2015<br> <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c&t=2m48s">https://www.youtube.com/watch?v=PAAkCSZUG1c&t=2m48s</a></cite></footer>
+    <footer>—Rob Pike, <cite>Go Proverbs - Gopherfest - November 18, 2015<br> <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c&t=2m48s">https://www.youtube.com/watch?v=PAAkCSZUG1c&t=2m48s</a></cite></footer>
 </blockquote>

@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Subtests
 
@@ -17,6 +17,8 @@ func TestFoo(t *testing.T) {
     })
 }
 ```
+
+<!-- .element: class="big-code" -->
 
 Notes:
 OFU

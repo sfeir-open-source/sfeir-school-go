@@ -1,17 +1,22 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Container et Run
 
 - On lance le tout
+
   ```shell
   $ make dockerBuildUp
   $ make dockerLogs
   ```
+
+  <!-- .element: class="big-code" -->
+
 - On test
   ```shell
   $ cd etc
   $ ./apiquery.sh -create
   ```
+  <!-- .element: class="big-code" -->
 
 ou via postman
 

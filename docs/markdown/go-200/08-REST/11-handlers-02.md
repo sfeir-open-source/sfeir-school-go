@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # REST
 
@@ -18,3 +18,5 @@ func (tc *TaskController) Get(w http.ResponseWriter, r *http.Request) {
     SendJSONOk(w, task)
 }
 ```
+
+<!-- .element: class="big-code" -->

@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Modélisation
 
@@ -18,5 +18,7 @@ func (t Task) Equal(task Task) bool {
         t.DueDate.Equal(task.DueDate)
 }
 ```
+
+<!-- .element: class="big-code" -->
 
 Explication pour les dates : https://golang.org/pkg/time/#Time

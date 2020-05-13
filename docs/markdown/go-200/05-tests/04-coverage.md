@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Tests simples
 
@@ -8,3 +8,5 @@
 $ go test -cover -coverprofile=testcover.out
 $ go tool cover -html=testcover.out
 ```
+
+<!-- .element: class="big-code" -->

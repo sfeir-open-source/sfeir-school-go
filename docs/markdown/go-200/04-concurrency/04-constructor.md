@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Concurrence
 
@@ -17,6 +17,8 @@ func NewStatistics(loggingPeriod time.Duration) *Statistics {
     return &sw
 }
 ```
+
+<!-- .element: class="big-code" -->
 
 Notes:
 SFR

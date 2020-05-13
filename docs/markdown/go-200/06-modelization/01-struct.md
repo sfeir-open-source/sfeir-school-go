@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Modélisation
 
@@ -17,3 +17,5 @@ type Task struct {
     DueDate         time.Time // Echéance
 }
 ```
+
+<!-- .element: class="big-code" -->

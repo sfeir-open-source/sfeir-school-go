@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Accès aux données
 
@@ -17,3 +17,5 @@ func NewTaskDAOPostgres(db *sql.DB) TaskDAO {
     }
 }
 ```
+
+<!-- .element: class="big-code" -->

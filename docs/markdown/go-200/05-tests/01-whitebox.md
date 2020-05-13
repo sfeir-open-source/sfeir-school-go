@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Tests simples
 
@@ -15,6 +15,8 @@ func TestInternalStuff(t *testing.T) {
     }
 }
 ```
+
+<!-- .element: class="big-code" -->
 
 Notes:
 OFU

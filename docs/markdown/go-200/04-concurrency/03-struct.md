@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Concurrence
 
@@ -13,6 +13,8 @@ type Statistics struct {
     loggingPeriod time.Duration
 }
 ```
+
+<!-- .element: class="big-code" -->
 
 Notes:
 SFR

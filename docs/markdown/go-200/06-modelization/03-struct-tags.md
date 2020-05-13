@@ -1,4 +1,4 @@
-<!-- .slide: class="with-code-bg-dark" -->
+<!-- .slide: class="with-code" -->
 
 # Modélisation
 
@@ -17,6 +17,8 @@ type Task struct {
     DueDate         time.Time       `json:"due_date" bson:"due_date"`
 }
 ```
+
+<!-- .element: class="big-code" -->
 
 💡Pro tip : Go 1.8 permet le cast de structures identiques ex: `taskDTO = TaskDTO(taskDAO)`
 
