@@ -75,8 +75,8 @@ Notes:
 - **Type :** var func interface struct chan const type map make
 - **Misc :** defer go return panic recover
 
-![h-350](./assets/go-100/images/mots_clés.JPG)<!-- .element: class="special-Intro-01-le-but-de-go-bottom-image" -->
-![h-350](./assets/go-100/images/i_know.JPG)<!-- .element: class="special-Intro-01-le-but-de-go-bottom-image" -->
+![h-350](./assets/go-100/images/fewKeywords.jpg)<!-- .element: class="special-Intro-01-le-but-de-go-bottom-image" -->
+![h-350](./assets/go-100/images/i_know.jpg)<!-- .element: class="special-Intro-01-le-but-de-go-bottom-image" -->
 Notes:
 
 - OFU
