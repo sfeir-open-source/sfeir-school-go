@@ -1,11 +1,39 @@
-.reveal .slides section {
-    // Do some stuff
+.reveal {
+  .slides {
+    section {
+      &:not(.transition) {
+        color: black; // we have white background in this school
+      }
+      a {
+        color: blue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      // don't want scrollbars in code frames
+      // if it"s too high it must be shortened by the code author
+      &.with-code,
+      &.with-code-dark,
+      &.with-code-bg-dark {
+        pre code {
+          max-height: none;
+        }
+      }
+
+      &.transition {
+        > h2 {
+          // in this school we use h2 to give small shell command or file paths
+          // this is better if not uppercased
+          text-transform: none;
+        }
+      }
+    }
+  }
 }
 
-.center{
-    text-align: center !important;
+.center {
+  text-align: center !important;
 }
-
 
 .reveal .slides section.with-code pre.big-code:not(.literal),
 .reveal .slides section.with-code-dark pre.big-code:not(.literal) {
@@ -16,7 +44,6 @@
 /**
 * Intro
 */
-
 
 .special-Intro-01-le-but-de-go-bottom-image {
   position: initial;
