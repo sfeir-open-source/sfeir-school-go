@@ -108,6 +108,28 @@ const go200 = [
       '15-exercise',
     ],
   ],
+  [
+    '08-REST',
+    [
+      '00-title',
+      '01-poney',
+      '02-arch',
+      '03-stdlib-http',
+      '04-stdlib-http-handle',
+      '05-stdlib-http-handler',
+      '06-components',
+      '07-compose-middlewares',
+      '08-negroni',
+      '09-statistics-middleware',
+      '10-handlers-01',
+      '11-handlers-02',
+      '12-unit-tests',
+      '13-end-to-end-tests',
+      '14-subtests',
+      '15-subtests-parallel',
+      '16-exercise',
+    ],
+  ],
 ];
 
 const makeSlide = (dir) => (file) => ({ path: `${dir}/${file}.md` });

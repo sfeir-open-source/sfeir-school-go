@@ -2,11 +2,11 @@
 
 # Exercice
 
-## /dao/task-dao-factory.go
+## _/dao/task-dao-factory.go_
 
-## /dao/task-dao-mock.go
+## _/dao/task-dao-mock.go_
 
-## /dao/task-dao-mongo.go
+## _/dao/task-dao-mongo.go_
 
 <br>
 
@@ -14,4 +14,4 @@ et s'il reste du temps :
 
 <br>
 
-## /dao/task-dao-postgres.go
+## _/dao/task-dao-postgres.go_
