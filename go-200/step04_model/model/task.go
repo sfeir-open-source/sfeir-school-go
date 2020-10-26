@@ -18,13 +18,13 @@ const ()
 
 // Task is the structure to define a task to be done
 type Task struct {
-	ID           string       `json:"id,omitempty" bson:"id"`
-	Title        string       `json:"title" bson:"title"`
-	Description  string       `json:"description" bson:"description"`
+	ID          string `json:"id,omitempty" bson:"id"`
+	Title       string `json:"title" bson:"title"`
+	Description string `json:"description" bson:"description"`
 	// TODO Status
 	// TODO Priority
 	// TODO Creation Date
-	DueDate      time.Time    `json:"due_date" bson:"due_date"`
+	DueDate time.Time `json:"due_date" bson:"due_date"`
 }
 
 // TODO add a NewTask function to create a new pointer to a task when called

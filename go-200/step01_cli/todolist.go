@@ -9,9 +9,7 @@ import (
 	logger "github.com/sirupsen/logrus"
 	"github.com/urfave/cli/v2"
 	"os"
-	"os/signal"
 	"strconv"
-	"syscall"
 	"time"
 )
 
@@ -40,18 +38,6 @@ var (
 			"HwgICAgICAgICAgICB8ICAKICBdICAgICAgICAgICAgIH4gfiAgICAgICAgICAgICB8ICAKICB8ICAgICAgICAgIC" +
 			"AgICAgICAgICAgICAgICAgIHwgICAKICAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgIHwg")
 )
-
-// installExit manages ctrl-c stop signals
-func exitHandler() {
-	// manage ctrl-c exit waiting for https://github.com/urfave/cli/issues/945 to be released
-	sigs := make(chan os.Signal, 1)
-	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
-
-	go func() {
-		<-sigs
-		os.Exit(0)
-	}()
-}
 
 func main() {
 	// new app
@@ -142,9 +128,6 @@ func main() {
 
 		return nil
 	}
-
-	// install exit ctrl-c
-	exitHandler()
 
 	// run the app
 	err = app.Run(os.Args)

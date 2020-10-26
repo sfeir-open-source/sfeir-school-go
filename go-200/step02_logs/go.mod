@@ -11,7 +11,7 @@ require (
 	github.com/meatballhat/negroni-logrus v1.1.0
 	github.com/rs/cors v1.7.0
 	github.com/sirupsen/logrus v1.4.2
-	github.com/urfave/cli/v2 v2.0.0
+	github.com/urfave/cli/v2 v2.2.0
 	github.com/urfave/negroni v1.0.0
 	go.mongodb.org/mongo-driver v1.1.3
 )
