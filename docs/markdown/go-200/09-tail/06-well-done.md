@@ -1,6 +1,6 @@
 # Well Done !
 
-![center h-250](./assets/common/images/logo_sfeir_bleu_orange.png)
+![center h-250](./assets/common/images/logo_sfeir_antracite.png)
 <br>
 
 <div class="flex-row">

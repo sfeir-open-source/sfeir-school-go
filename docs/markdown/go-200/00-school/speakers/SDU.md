@@ -2,7 +2,7 @@
 
 # Présentation
 
-![company](./assets/common/images/logo_sfeir_bleu_orange.png)
+![company](./assets/common/images/logo_sfeir_blanc.png)
 
 ![speaker](./assets/common/images/speakers/SylvainDumas.webp)
 

@@ -2,7 +2,7 @@
 
 # Présentation
 
-![company](./assets/common/images/logo_sfeir_bleu_orange.png)
+![company](./assets/common/images/logo_sfeir_blanc.png)
 
 ![speaker](./assets/common/images/speakers/SebastienFriess.webp)
 
@@ -22,7 +22,7 @@
 
 # Présentation
 
-![company](./assets/common/images/logo_sfeir_bleu_orange.png)
+![company](./assets/common/images/logo_sfeir_blanc.png)
 
 ![speaker](./assets/common/images/speakers/SylvainDumas.webp)
 
@@ -38,7 +38,7 @@
 
 # Présentation
 
-![company](./assets/common/images/logo_sfeir_bleu_orange.png)
+![company](./assets/common/images/logo_sfeir_blanc.png)
 
 ![speaker](./assets/common/images/speakers/OlivierFuxet.webp)
 
@@ -58,7 +58,7 @@
 
 # Présentation
 
-![company](./assets/common/images/logo_sfeir_bleu_orange.png)
+![company](./assets/common/images/logo_sfeir_blanc.png)
 
 ![speaker](./assets/common/images/speakers/YohannFacon.webp)
 
@@ -74,7 +74,7 @@
 
 # Présentation
 
-![company](./assets/common/images/logo_sfeir_bleu_orange.png)
+![company](./assets/common/images/logo_sfeir_blanc.png)
 
 ![speaker](./assets/common/images/speakers/YvesDautremay.webp)
 
@@ -90,7 +90,7 @@
 
 # Présentation
 
-![company](./assets/common/images/logo_sfeir_bleu_orange.png)
+![company](./assets/common/images/logo_sfeir_blanc.png)
 
 ![speaker](./assets/common/images/speakers/OlivierGerardin.webp)
 
@@ -110,7 +110,7 @@
 
 # Présentation
 
-![company](./assets/common/images/logo_sfeir_bleu_orange.png)
+![company](./assets/common/images/logo_sfeir_blanc.png)
 
 ![speaker](./assets/common/images/speakers/AntoinePoivey.webp)
 
