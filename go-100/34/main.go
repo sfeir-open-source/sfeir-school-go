@@ -2,22 +2,19 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
-func count(n int, c chan int) {
-	x := 0
-	for i := 0; i < n; i++ {
-		c <- x
-		x++
-	}
-	close(c)
-}
-
 func main() {
-	c := make(chan int, 2)
-	go count(10, c)
-	for i := range c {
-		fmt.Println(i)
+	tick := time.Tick(250 * time.Millisecond)
+	boom := time.After(2000 * time.Millisecond)
+	for {
+		select {
+		case <-tick:
+			fmt.Println("tick.")
+		case <-boom:
+			fmt.Println("BOOM!")
+			return
+		}
 	}
-	fmt.Println("Le channel a été fermé : on sort de la boucle for.")
 }

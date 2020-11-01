@@ -5,14 +5,21 @@ import (
 	"time"
 )
 
-func say(s string) {
-	for i := 0; i < 6; i++ {
-		time.Sleep(1 * time.Millisecond)
-		fmt.Println(s)
-	}
+func say(s string, ch chan string) {
+	fmt.Println("ch <- s attend que quelqu'un lise le canal ch.")
+	ch <- s
+	fmt.Println("s a été envoyée sur ch.")
 }
 
 func main() {
-	go say("Je parle quand je veux !")
-	say("Arrête de parler en même temps que moi !")
+	ch := make(chan string)
+	go say("Bonjour", ch)
+
+	time.Sleep(10 * time.Millisecond)
+	fmt.Println("s := <-ch attend que quelqu'un envoie des données sur le canal ch.")
+
+	s := <-ch
+
+	time.Sleep(10 * time.Millisecond)
+	fmt.Printf("La string '%s' a été lue depuis le canal ch.\n", s)
 }

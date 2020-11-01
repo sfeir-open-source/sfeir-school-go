@@ -1,5 +1,5 @@
 
-# Orienté Objet - 24
+# Orienté Objet - 23
 
 ## Les interfaces
 
@@ -9,7 +9,7 @@ En Go, il n’y a pas de notion d’héritage entre les **struct**, mais la noti
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 24
+# Orienté Objet - 23
 
 ## Les interfaces
 
@@ -26,7 +26,7 @@ type Oiseau interface {
 
 ##==##
 
-# Orienté Objet - 25
+# Orienté Objet - 24
 
 ## Les interfaces
 
@@ -45,7 +45,7 @@ Les interfaces implicites découple la définition d'une interface de son implé
 
 ##==##
 <!-- .slide: class="with-code" -->
-# Orienté Objet - 25
+# Orienté Objet - 24
 
 ## Les interfaces
 
@@ -75,7 +75,7 @@ pour que le type T implémente I.
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 25
+# Orienté Objet - 24
 
 ## Les interfaces
 
@@ -104,7 +104,7 @@ type Volant interface { Vole() }
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 25
+# Orienté Objet - 24
 
 ## Les interfaces
 
@@ -134,7 +134,7 @@ type Volant interface { Vole() }
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 25
+# Orienté Objet - 24
 
 ## Les interfaces
 
@@ -166,7 +166,7 @@ type Volant interface { Vole() }
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 25
+# Orienté Objet - 24
 
 ## Les interfaces
 
@@ -195,7 +195,7 @@ type Volant interface { Vole() }
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 26
+# Orienté Objet - 25
 
 ## Les interfaces
 
@@ -227,7 +227,7 @@ c’est le type ***T** qui implémente **I**.
 
 ##==##
 
-# Orienté Objet - 26
+# Orienté Objet - 25
 
 ## Les interfaces
 
@@ -239,7 +239,7 @@ Sinon, **T** implémenterait des interfaces tandis que ***T** en implémenterait
 
 ##==##
 
-# Orienté Objet - 27
+# Orienté Objet - 26
 
 ## L’interface vide
 
@@ -255,7 +255,7 @@ Ex: *fmt*.Print prend des arguments de type **interface{}**
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 28
+# Orienté Objet - 27
 
 ## Assertion de type
 
@@ -270,7 +270,7 @@ Cette instruction affirme que la valeur d'interface **i** contient le type concr
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 28
+# Orienté Objet - 27
 
 ## Assertion de type
 
@@ -286,7 +286,7 @@ Si i ne détient pas **T**, aucune panique ne sera déclenchée, mais **ok** aur
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 29
+# Orienté Objet - 28
 
 ## Switch de type
 
@@ -301,10 +301,9 @@ default: // ici v a le même type que i
 ```
 <!-- .element: class="big-code" -->
 
-
 ##==##
 
-# Orienté Objet - 29 - exercice
+# Orienté Objet - 28 - exercice
 
 ## Les interfaces
 
@@ -315,3 +314,28 @@ default: // ici v a le même type que i
 3. Instancier le **FmtLogger** et appeler la fonction **recoverPanic** dans la fonction **main**.
 
 
+##==##
+
+# Orienté Objet - 28 - exercice
+
+## Panic - Recover
+
+L'équivalent d'un `try-catch` en Go est le `panic - defer recover`
+
+```Go
+func f() {
+    // handle panic with defer recover
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println("Recovered in f", r)
+        }
+    }()
+    fmt.Println("Calling g.")
+    g(0)
+    fmt.Println("Returned normally from g.")
+}
+
+func g(i int) {
+    panic("Panicking !")
+}
+```

@@ -1,13 +1,15 @@
-# Goroutines
-Une goroutine est un processus léger géré par le « Go runtime ».
+# Canaux (Channels)
+Les canaux sont des conduits typés à travers lesquels vous pouvez envoyer et recevoir des valeurs avec l'opérateur de canal, `<-`.
 
-    go f(x, y, z)
+    ch <- v    // Envoyer v sur le canal ch.
+    v := <-ch  // Recevoir de ch, et
+               // attribuer une valeur à v.
 
-démarre une nouvelle goroutine exécutant
+(Le flux de données vas dans le sens de la flèche.)
 
-    f(x, y, z)
+Comme les cartes et les tranches, les canaux doivent être créés avant l'utilisation :
 
-L'évaluation de `f, x, y` et `z` arrive dans la goroutine actuelle et l'exécution de `f` arrive dans la nouvelle goroutine.
+    ch := make(chan int)
 
-Les goroutines s'exécutent dans le même espace d'adressage, de sorte que les accès à la mémoire partagée doivent être synchronisés.
-Le paquet `sync` fournit des primitives utiles, bien que vous n'aurez pas beaucoup besoin d'y accéder car Go a d'autres primitives plus pratiques.
+Par défaut, l'envoi et la réception bloque jusqu'à ce que l'autre côté soit prêt.
+Cela permet de synchroniser les goroutines sans verrous explicites ou variables de condition.

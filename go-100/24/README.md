@@ -1,4 +1,5 @@
-# Interfaces
-Un type d'interface est définie comme un ensemble de signatures de méthode.
+# Implémentation des interfaces
 
-Une valeur de type d'interface peut contenir n'importe quelle valeur qui implémente ces méthodes.
+Un type implémente une interface en mettant en œuvre ses méthodes. Il n'y a aucune déclaration explicite d'intention, pas de mot-clé « `implements` ».
+
+Les interfaces implicites découple la définition d'une interface de son implementation qui pourraient alors apparaître dans n'importe quel package sans arrangement préalable.

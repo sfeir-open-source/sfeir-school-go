@@ -306,27 +306,3 @@ Implémentez la fonction **multiplicateurPar** pour qu'elle retourne une fonctio
 //fonction qui retourne une fonction qui retourne un int.
 func multiplicateurPar(x int) func(int) int { }
 ```
-
-<!-- .element: class="big-code" -->
-
-##==##
-
-# Pour aller plus loin - 20
-
-## Déclarations multiples
-
-Il est possible en Go de déclarer plusieurs variables sur une même ligne.
-
-`a, b, c := 1, "toto", 8`
-
-##==##
-
-# Pour aller plus loin - 20
-
-## Assignations multiples
-
-De même, il est possible d’assigner plusieurs variables sur une même ligne.
-
-C’est très pratique pour effectuer un _swap_ :
-
-`x, y = y, x`

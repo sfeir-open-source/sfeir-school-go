@@ -10,7 +10,7 @@ type TaskPriority int
 const (
     // PriorityMinor lower priority
     PriorityMinor TaskPriority = iota
-    // PriorityMedium medium priority
+    // PriorityMedium medium priority
     PriorityMedium
     // PriorityHigh high priority
     PriorityHigh

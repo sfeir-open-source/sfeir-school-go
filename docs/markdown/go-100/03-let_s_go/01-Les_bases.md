@@ -315,11 +315,11 @@ Pour cette raison, il est <span style="color:red">impossible</span> d’assigner
 
 **A savoir :** comme pour la déclaration, on peut assigner plusieurs variables sur une même ligne :
 
-x, y = 42, 3.14
+`x, y := 42.0, 3.14`
 
-Très pratique pour faire un swap :
+Très pratique pour faire un _swap_ :
 
-x, y = y, x
+`x, y = y, x
 
 
 ##==##

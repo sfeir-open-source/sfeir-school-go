@@ -1,28 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func say(s string, n int, ch chan string) {
-
+func count(n int, c chan int) {
+	x := 0
 	for i := 0; i < n; i++ {
-		ch <- s
+		c <- x
+		x++
 	}
-	ch <- "Goodbye"
-	close(ch)
+	close(c)
 }
 
 func main() {
-	ch := make(chan string)
-	go say("Bonjour", 3, ch)
-
-	s, ok := <-ch
-	fmt.Printf("%q %v\n", s, ok)
-	s, ok = <-ch
-	fmt.Printf("%q %v\n", s, ok)
-	s, ok = <-ch
-	fmt.Printf("%q %v\n", s, ok)
-	s, ok = <-ch
-	fmt.Printf("%q %v\n", s, ok)
-	s, ok = <-ch
-	fmt.Printf("%q %v\n", s, ok)
+	c := make(chan int, 2)
+	go count(10, c)
+	for i := range c {
+		fmt.Println(i)
+	}
+	fmt.Println("Le channel a été fermé : on sort de la boucle for.")
 }

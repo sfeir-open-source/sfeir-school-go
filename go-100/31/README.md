@@ -1,15 +1,8 @@
-# Canaux (Channels)
-Les canaux sont des conduits typés à travers lesquels vous pouvez envoyer et recevoir des valeurs avec l'opérateur de canal, `<-`.
+# Les channels avec buffer
+Les channels peuvent être bufferisées. Il suffit d'indiquer la longueur du buffer en second argument de `make` pour initialiser un canal avec buffer :
 
-    ch <- v    // Envoyer v sur le canal ch.
-    v := <-ch  // Recevoir de ch, et
-               // attribuer une valeur à v.
+    ch := make(chan int, 100)
 
-(Le flux de données vas dans le sens de la flèche.)
+L'envoi à un canal avec buffer bloque uniquement lorsque le buffer est plein. La réception bloque lorsque le buffer est vide.
 
-Comme les cartes et les tranches, les canaux doivent être créés avant l'utilisation :
-
-    ch := make(chan int)
-
-Par défaut, l'envoi et la réception bloque jusqu'à ce que l'autre côté soit prêt.
-Cela permet de synchroniser les goroutines sans verrous explicites ou variables de condition.
+Modifiez l'exemple pour trop remplir le buffer et voir ce qui se passe.

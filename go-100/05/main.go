@@ -18,9 +18,23 @@ func uneFonction() {
 	fmt.Printf("z = %v and its type is %[1]T\n", z)
 }
 
+
+func fibonacci(iter int) int {
+	n, prev := 1, 0
+	for i := 0; i < iter; i++ {
+		n, prev = n+prev, n
+	}
+	return n
+}
+
 func main() {
 	fmt.Printf("a = %v and its type is %[1]T\n", a)
 	fmt.Printf("b = %v and its type is %[1]T\n", b)
 	fmt.Printf("c = %v and its type is %[1]T\n", c)
 	uneFonction()
+
+	age, nom, enVie := 30, "John", true
+	fmt.Println(age, nom, enVie)
+
+	fmt.Println(fibonacci(20))
 }

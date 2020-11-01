@@ -1,5 +1,10 @@
-# Select
+# Select default
 
-La déclaration `select` permet à une goroutine d'attendre sur plusieurs opérations de communication simultanément.
+Le cas `default` dans un `select` est exécuté si aucun autre cas n'est prêt et permet donc d’éviter le blocage du `select`.
 
-Un `select` bloque jusqu'à ce que l'un de ses cas puisse s'exécuter, puis il l'exécute. Il en choisit un au hasard si plusieurs sont prêts.
+    select {
+    case i := <-c:
+        // utiliser i
+    default:
+        // exécuté si rien ne peut être lu de 'c'
+    }

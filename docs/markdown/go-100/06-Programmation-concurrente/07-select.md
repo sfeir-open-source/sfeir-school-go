@@ -1,4 +1,4 @@
-# Concurrence - 35
+# Concurrence - 34
 
 ## Select
 
@@ -18,7 +18,7 @@ select {
 
 <!-- .slide: class="with-code" -->
 
-# Concurrence - 35
+# Concurrence - 34
 
 ## Select
 
@@ -28,7 +28,7 @@ Un **select** bloque jusqu'à ce que l'un de ses cas puisse s'exécuter, puis il
 
 <!-- .slide: class="with-code" -->
 
-# Concurrence - 36
+# Concurrence - 35
 
 ## Select
 

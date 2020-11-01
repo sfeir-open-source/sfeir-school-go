@@ -2,13 +2,10 @@ package dao
 
 import (
 	"context"
-	"database/sql"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 
-	"github.com/golang-migrate/migrate/v4"
-	"github.com/golang-migrate/migrate/v4/database/postgres"
 	// importing postgres driver for sql connection
 	_ "github.com/lib/pq"
 	// importing file source for db migration
@@ -57,46 +54,7 @@ func GetTaskDAO(cnxStr, migrationPath string, daoType DBType) (TaskDAO, error) {
 		// TODO return a new DAO Mongo build with the configured session
 		return nil, nil
 	case DAOPostgres:
-		// postgresql connection
-		db, err := sql.Open("postgres", cnxStr)
-
-		// check errors
-		if err != nil {
-			return nil, err
-		}
-
-		// set max connection in pool
-		db.SetMaxOpenConns(poolSize)
-
-		// try to ping host
-		if err = db.Ping(); err != nil {
-			return nil, err
-		}
-
-		// check is db migration is necessary
-		if len(migrationPath) == 0 {
-			return NewTaskDAOPostgres(db), nil
-		}
-
-		//  playing database migration
-		driver, err := postgres.WithInstance(db, &postgres.Config{})
-		m, err := migrate.NewWithDatabaseInstance(
-			fileScheme+migrationPath,
-			"postgres", driver)
-
-		if err != nil {
-			return nil, err
-		}
-
-		// upgrade database if necessary
-		err = m.Up()
-		if err != nil {
-			if err != migrate.ErrNoChange {
-				return nil, err
-			}
-		}
-
-		return NewTaskDAOPostgres(db), nil
+		fallthrough
 	case DAOMock:
 		return NewTaskDAOMock(), nil
 	default:

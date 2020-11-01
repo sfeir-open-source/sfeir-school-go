@@ -1,8 +1,3 @@
-# Fermeture d'un canal
+# Lire un channel jusqu'à sa fermeture
 
-Un expéditeur peut close un canal pour indiquer qu'il n'y a plus de valeurs qui seront envoyés.
-Les récepteurs peuvent vérifier si un canal a été fermée par l'attribution d'un deuxième paramètre à l'expression de réception :
-
-    v, ok := <-ch
-
-`ok` est `false` si il n'y a plus de valeurs à recevoir et le canal est fermé.
+La boucle `for i := range c` reçoit les valeurs du canal à plusieurs reprises jusqu'à ce qu'il soit fermé.

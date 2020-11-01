@@ -1,4 +1,4 @@
-# Concurrence - 36 - exercice
+# Concurrence - 35 - exercice
 
 ## Les goroutines et select
 

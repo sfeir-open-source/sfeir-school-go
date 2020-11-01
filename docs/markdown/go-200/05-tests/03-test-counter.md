@@ -5,7 +5,7 @@
 ## Pour tester notre agrégateur de statistique
 
 ```go
-func TestStatistics(t *testing.T) {
+func TestStatistics(t *testing.T) {
     statistics := NewStatistics(2 _ statPeriod)
 
     // other go routine incrementing the counter

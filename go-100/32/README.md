@@ -1,8 +1,8 @@
-# Les channels avec buffer
-Les channels peuvent être bufferisées. Il suffit d'indiquer la longueur du buffer en second argument de `make` pour initialiser un canal avec buffer :
+# Fermeture d'un canal
 
-    ch := make(chan int, 100)
+Un expéditeur peut close un canal pour indiquer qu'il n'y a plus de valeurs qui seront envoyés.
+Les récepteurs peuvent vérifier si un canal a été fermée par l'attribution d'un deuxième paramètre à l'expression de réception :
 
-L'envoi à un canal avec buffer bloque uniquement lorsque le buffer est plein. La réception bloque lorsque le buffer est vide.
+    v, ok := <-ch
 
-Modifiez l'exemple pour trop remplir le buffer et voir ce qui se passe.
+`ok` est `false` si il n'y a plus de valeurs à recevoir et le canal est fermé.

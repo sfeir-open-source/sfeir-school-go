@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code" -->
 
-# Concurrence - 34
+# Concurrence - 33
 
 ## For range sur les channels
 

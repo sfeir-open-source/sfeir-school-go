@@ -1,20 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
-func do(i interface{}) {
-	switch v := i.(type) {
-	case int:
-		fmt.Printf("Le double de %v est %v\n", v, v*2)
-	case string:
-		fmt.Printf("%q a une longueur de %v octets\n", v, len(v))
-	default:
-		fmt.Printf("Je ne connais pas le type %T!\n", v)
+func say(s string) {
+	for i := 0; i < 6; i++ {
+		time.Sleep(1 * time.Millisecond)
+		fmt.Println(s)
 	}
 }
 
 func main() {
-	do(21)
-	do("hello")
-	do(true)
+	go say("Je parle quand je veux !")
+	say("Arrête de parler en même temps que moi !")
 }

@@ -1,12 +1,7 @@
 package dao
 
 import (
-	"context"
 	"database/sql"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
-
 	"github.com/golang-migrate/migrate/v4"
 	"github.com/golang-migrate/migrate/v4/database/postgres"
 	// importing postgres driver for sql connection
@@ -30,31 +25,6 @@ const (
 // GetTaskDAO returns a TaskDAO according to type and params
 func GetTaskDAO(cnxStr, migrationPath string, daoType DBType) (TaskDAO, error) {
 	switch daoType {
-	case DAOMongo:
-
-		// mongo connection
-
-		// connect with params
-		ctx, cancel := context.WithTimeout(context.Background(), timeout)
-		defer cancel()
-		client, err := mongo.Connect(ctx, options.Client().
-			ApplyURI(cnxStr).
-			SetSocketTimeout(timeout).
-			SetMaxPoolSize(poolSize))
-
-		// check error
-		if err != nil {
-			return nil, err
-		}
-
-		// ping to ensure connection is ok
-		ctx, cancel = context.WithTimeout(context.Background(), timeout)
-		defer cancel()
-		if err = client.Ping(ctx, readpref.Primary()); err != nil {
-			return nil, err
-		}
-
-		return NewTaskDAOMongo(client), nil
 	case DAOPostgres:
 		// postgresql connection
 		db, err := sql.Open("postgres", cnxStr)
@@ -97,6 +67,8 @@ func GetTaskDAO(cnxStr, migrationPath string, daoType DBType) (TaskDAO, error) {
 
 		// TODO return the new DAO PostgreSQL with the db connection
 		return nil, nil
+	case DAOMongo:
+		fallthrough
 	case DAOMock:
 		return NewTaskDAOMock(), nil
 	default:

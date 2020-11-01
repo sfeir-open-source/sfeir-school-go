@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code" -->
 
-# Concurrence - 32
+# Concurrence - 31
 
 ## Channels avec buffer
 

@@ -4,12 +4,12 @@ import (
 	"github.com/bshuster-repo/logrus-logstash-hook"
 	"github.com/sirupsen/logrus"
 	"os"
-	"time"
 )
 
 const (
 	// AppName is the application's name
-	AppName = "todolist"
+	AppName  = "todolist"
+	AppField = "app"
 
 	// LogStashFormatter is constant used to format logs as logstash format
 	LogStashFormatter = "logstash"
@@ -22,10 +22,8 @@ func InitLog(logLevel, formatter string) error {
 
 	switch formatter {
 	case LogStashFormatter:
-		logrus.SetFormatter(&logrustash.LogstashFormatter{
-			TimestampFormat: time.RFC3339,
-			Type:            AppName,
-		})
+		logrus.SetFormatter(logrustash.DefaultFormatter(
+			logrus.Fields{AppField: AppName}))
 	default:
 		logrus.SetFormatter(&logrus.TextFormatter{
 			ForceColors:   true,

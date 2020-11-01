@@ -2,18 +2,19 @@ package main
 
 import "fmt"
 
+func do(i interface{}) {
+	switch v := i.(type) {
+	case int:
+		fmt.Printf("Le double de %v est %v\n", v, v*2)
+	case string:
+		fmt.Printf("%q a une longueur de %v octets\n", v, len(v))
+	default:
+		fmt.Printf("Je ne connais pas le type %T!\n", v)
+	}
+}
+
 func main() {
-	var i interface{} = "hello"
-
-	s := i.(string)
-	fmt.Println(s)
-
-	s, ok := i.(string)
-	fmt.Println(s, ok)
-
-	f, ok := i.(float64)
-	fmt.Println(f, ok)
-
-	f = i.(float64) // panic
-	fmt.Println(f)
+	do(21)
+	do("hello")
+	do(true)
 }

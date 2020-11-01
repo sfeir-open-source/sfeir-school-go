@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code" -->
 
-# Concurrence - 31
+# Concurrence - 30
 
 ## Channels (canaux)
 
@@ -16,7 +16,7 @@ v := <- ch // Recevoir de ch, et attribuer la valeur à v.
 
 ##==##
 
-# Concurrence - 31
+# Concurrence - 30
 
 ## Channels (canaux)
 

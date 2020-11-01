@@ -1,17 +1,13 @@
-# Switch de type
-Un `switch` de type est une construction qui permet d'effectuer plusieurs assertions de type en série.
+# Goroutines
+Une goroutine est un processus léger géré par le « Go runtime ».
 
-Un `switch` de type est comme une instruction switch régulière, mais les cas d'un switch de type spécifient les types (pas les valeurs), et ces valeurs sont comparées au type concret de la valeur d'interface donnée.
+    go f(x, y, z)
 
-    switch v := i.(type) {
-    case T:
-        // here v has type T
-    case S:
-        // here v has type S
-    default:
-        // no match; here v has the same type as i
-    }
+démarre une nouvelle goroutine exécutant
 
-La déclaration dans un switch de type a la même syntaxe qu'une affirmation de type `i.(T)`, mais le type spécifique de `T` est remplacé par le mot-clé `type`.
+    f(x, y, z)
 
-Cette instruction `switch` teste si la valeur d'interface `i` détient une valeur de type `T` ou `S`. Dans chacun des cas de `T` et `S`, la variable `v` sera de type `T` ou `S` respectivement, et détient la valeur détenue par `i`. Dans le cas par défaut (où il n'y a pas de correspondance), la variable `v` est de même type d'interface et de valeur que `i`.
+L'évaluation de `f, x, y` et `z` arrive dans la goroutine actuelle et l'exécution de `f` arrive dans la nouvelle goroutine.
+
+Les goroutines s'exécutent dans le même espace d'adressage, de sorte que les accès à la mémoire partagée doivent être synchronisés.
+Le paquet `sync` fournit des primitives utiles, bien que vous n'aurez pas beaucoup besoin d'y accéder car Go a d'autres primitives plus pratiques.

@@ -168,7 +168,7 @@ func (tc *TaskController) Update(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		logger.WithField("error", err).Warn("unable to decode task to update")
-		SendJSONError(w, "Error while decoding task to create", http.StatusBadRequest)
+		SendJSONError(w, "Error while decoding task to update", http.StatusBadRequest)
 		return
 	}
 

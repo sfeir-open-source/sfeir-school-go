@@ -2,6 +2,7 @@ package web
 
 import (
 	"github.com/meatballhat/negroni-logrus"
+	"github.com/phyber/negroni-gzip/gzip"
 	"github.com/rs/cors"
 	"github.com/sfeir-open-source/sfeir-school-go/dao"
 	logger "github.com/sirupsen/logrus"
@@ -37,8 +38,8 @@ func BuildWebServer(db, migration string, daoType dao.DBType, statisticsDuration
 	// add CORS (all origins, all methods)
 	n.Use(cors.AllowAll())
 
-	// add as many middleware as you like
-	// ...
+	// add Gzip middleware
+	n.Use(gzip.Gzip(gzip.DefaultCompression))
 
 	// new controller
 	controller := NewTaskController(td)

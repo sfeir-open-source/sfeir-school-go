@@ -1,5 +1,8 @@
-# Attention à ne pas confondre T et *T
+# L'interface vide
+Le type d'interface qui ne spécifie aucune méthode est connu comme l'interface vide :
 
-En général, toutes les méthodes sur un type donné `T` doivent avoir soit un récepteur de valeur (`T`) soit un récepteur de pointeur (`*T`), mais pas un mélange des deux.
+    interface{}
 
-Sinon, `T` implémenterait des interfaces tandis que `*T` en implémenterait d’autres, ce qui deviendrait pénible à utiliser.
+Une interface vide peut contenir des valeurs de tout type. (Chaque type implémente au moins zéro méthode.)
+
+Les interfaces vides sont utilisés par du code qui gère les valeurs de type inconnu. Par exemple, `fmt.Print` prend un nombre d'arguments de type `interface{}`.

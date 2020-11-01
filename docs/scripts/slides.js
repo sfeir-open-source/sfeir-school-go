@@ -93,7 +93,7 @@ const go200 = [
       '00-presentation',
       '01-whitebox',
       '02-blackbox',
-      // '03-test-counter' // invisible on source slide before conversion
+      '03-test-counter',
       '04-coverage',
       '05-exercise',
     ],

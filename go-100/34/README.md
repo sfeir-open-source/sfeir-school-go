@@ -1,3 +1,5 @@
-# Lire un channel jusqu'à sa fermeture
+# Select
 
-La boucle `for i := range c` reçoit les valeurs du canal à plusieurs reprises jusqu'à ce qu'il soit fermé.
+La déclaration `select` permet à une goroutine d'attendre sur plusieurs opérations de communication simultanément.
+
+Un `select` bloque jusqu'à ce que l'un de ses cas puisse s'exécuter, puis il l'exécute. Il en choisit un au hasard si plusieurs sont prêts.

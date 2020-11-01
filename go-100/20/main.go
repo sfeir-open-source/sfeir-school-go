@@ -2,19 +2,30 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
-func fibonacci(iter int) int {
-	n, prev := 1, 0
-	for i := 0; i < iter; i++ {
-		n, prev = n+prev, n
-	}
-	return n
+type Vertex struct {
+	X, Y float64
+}
+
+//Scale utilise un récepteur de pointeur car il doit modifier la valeur de v.
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+//Abs utilise un récepteur de valeur. Dans les faits, on utiliserait plutôt
+//un récepteur de pointeur même si Abs n'a pas besoin de modifier la valeur de v,
+//car cela éviterait de créer une copie de v à chaque appel de la méthode.
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 func main() {
-	age, nom, enVie := 30, "John", true
-	fmt.Println(age, nom, enVie)
-
-	fmt.Println(fibonacci(20))
+	v := Vertex{3, 4}
+	pv := &v
+	fmt.Printf("Before scaling: %+v, Abs: %v\n", v, v.Abs())
+	pv.Scale(5)
+	fmt.Printf("After scaling: %+v, Abs: %v\n", v, v.Abs())
 }

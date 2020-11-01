@@ -5,8 +5,11 @@ import (
 	"math"
 )
 
+// déclaration d'un nouveau type de fonction
+type NumberFunc func (float64, float64) float64
+
 //compute prend une fonction en paramètre (qui prend deux float64 en paramètre et retourne un float64)
-func compute(fn func(float64, float64) float64) float64 {
+func compute(fn NumberFunc) float64 {
 	return fn(3, 4)
 }
 
@@ -20,15 +23,20 @@ func adder() func(int) int {
 }
 
 func main() {
-	// Valeurs de fonction
+
+	// déclaration et assignation de fonction
 	hypot := func(x, y float64) float64 {
 		return math.Sqrt(x*x + y*y)
 	}
+
+	// utilisation de la fonctiona déclarée
 	fmt.Println(hypot(5, 12))
+
+	// utilisation de compute
 	fmt.Println(compute(hypot))
 	fmt.Println(compute(math.Pow))
 
-	// Closures
+	// closures
 	pos, neg := adder(), adder()
 	for i := 0; i < 10; i++ {
 		fmt.Println(

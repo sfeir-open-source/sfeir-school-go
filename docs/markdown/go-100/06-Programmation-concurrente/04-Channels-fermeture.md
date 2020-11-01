@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code" -->
 
-# Concurrence - 33
+# Concurrence - 32
 
 ## Fermeture de channels
 
@@ -22,7 +22,7 @@ v, ok := <-ch
 
 ##==##
 
-# Concurrence - 33
+# Concurrence - 32
 
 ## Fermeture de channels
 

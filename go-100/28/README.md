@@ -1,18 +1,17 @@
-# Assertions de type
-Un assertions de type donne accès à la valeur sous-jacente concrète d'une valeur d'interface.
+# Switch de type
+Un `switch` de type est une construction qui permet d'effectuer plusieurs assertions de type en série.
 
-    t := i.(T)
+Un `switch` de type est comme une instruction switch régulière, mais les cas d'un switch de type spécifient les types (pas les valeurs), et ces valeurs sont comparées au type concret de la valeur d'interface donnée.
 
-Cette instruction affirme que la valeur d'interface `i` contient le type concret `T` et assigne la valeur sous-jacent `T` à la variable `t`.
+    switch v := i.(type) {
+    case T:
+        // here v has type T
+    case S:
+        // here v has type S
+    default:
+        // no match; here v has the same type as i
+    }
 
-Si `i` ne détient pas `T`, la déclaration va déclencher une panique.
+La déclaration dans un switch de type a la même syntaxe qu'une affirmation de type `i.(T)`, mais le type spécifique de `T` est remplacé par le mot-clé `type`.
 
-Pour tester si une valeur d'interface détient un type spécifique, une assertion de type peut retourner deux valeurs: la valeur sous-jacente et une valeur booléenne qui indique si l'affirmation réussi.
-
-    t, ok := i.(T)
-
-Si `i` détient `T`, alors `t` sera la valeur sous-jacente et `ok` sera vrai.
-
-Si non, `ok` sera faux et `t` sera la valeur zéro de type `T`, et aucune panique se produit.
-
-Notez la similitude entre cette syntaxe et celle de la lecture d'une carte.
+Cette instruction `switch` teste si la valeur d'interface `i` détient une valeur de type `T` ou `S`. Dans chacun des cas de `T` et `S`, la variable `v` sera de type `T` ou `S` respectivement, et détient la valeur détenue par `i`. Dans le cas par défaut (où il n'y a pas de correspondance), la variable `v` est de même type d'interface et de valeur que `i`.

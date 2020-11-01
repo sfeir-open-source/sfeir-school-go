@@ -1,16 +1,6 @@
-# Méthodes et pointeur d'indirection
-En comparant, vous remarquerez peut-être que des fonctions avec un argument pointeur doivent prendre un pointeur :
+# Récepteur nil
 
-    var v Vertex
-    ScaleFunc(v)  // Compile error!
-    ScaleFunc(&v) // OK
+Si une méthode est appelée via un pointeur ayant la valeur `nil`, la méthode sera appelée avec un récepteur `nil`.
 
-tandis que les méthodes avec des récepteurs de pointeur prennent une valeur ou un pointeur comme récepteur quand ils sont appelés :
-
-    var v Vertex
-    v.Scale(5)  // OK
-    p := &v
-    p.Scale(10) // OK
-
-Pour la déclaration `v.Scale(5)`, même si `v` est une valeur et non un pointeur, la méthode avec le récepteur de pointeur est appelée automatiquement.
-Autrement dit, à titre de commodité, Go interprète la déclaration `v.Scale(5)` comme `(&v).scale(5)` car la méthode `Scale` possède un récepteur de pointeur.
+Dans certains langages, cela déclencherait une exception de pointeur nul,
+mais en Go il est courant d'écrire des méthodes qui gèrent avec élégance le fait d'être appelé avec un récepteur `nil`.

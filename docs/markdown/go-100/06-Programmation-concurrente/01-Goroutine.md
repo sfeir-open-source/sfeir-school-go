@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code" -->
 
-# Concurrence - 30
+# Concurrence - 29
 
 ## Goroutine
 

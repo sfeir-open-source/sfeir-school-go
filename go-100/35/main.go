@@ -15,6 +15,9 @@ func main() {
 		case <-boom:
 			fmt.Println("BOOM!")
 			return
+		default:
+			fmt.Println("    .")
+			time.Sleep(50 * time.Millisecond)
 		}
 	}
 }

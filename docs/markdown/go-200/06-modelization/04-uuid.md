@@ -15,7 +15,7 @@ func NewTask(title, description string) *Task {
     return &Task{
         ID:             uuid.New().String(),
         CreationDate:   time.Now(),
-        DueDate:        time.Now().Add(24 _ time.Hour),
+        DueDate:        time.Now().Add(24 * time.Hour),
         Status:         StatusTodo,
         Priority:       PriorityMedium,
         Title:          Title,

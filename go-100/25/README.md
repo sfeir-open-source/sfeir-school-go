@@ -1,5 +1,5 @@
-# Implémentation des interfaces
+# Attention à ne pas confondre T et *T
 
-Un type implémente une interface en mettant en œuvre ses méthodes. Il n'y a aucune déclaration explicite d'intention, pas de mot-clé « `implements` ».
+En général, toutes les méthodes sur un type donné `T` doivent avoir soit un récepteur de valeur (`T`) soit un récepteur de pointeur (`*T`), mais pas un mélange des deux.
 
-Les interfaces implicites découple la définition d'une interface de son implementation qui pourraient alors apparaître dans n'importe quel package sans arrangement préalable.
+Sinon, `T` implémenterait des interfaces tandis que `*T` en implémenterait d’autres, ce qui deviendrait pénible à utiliser.

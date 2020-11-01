@@ -21,7 +21,7 @@ func main() {
 	fmt.Printf(f, x)
 	fmt.Printf(f, str)
 
-	// Convertion de type
+	// Conversion de type
 	i := 42
 	f64 := float64(i)
 	fmt.Printf(f, i)
