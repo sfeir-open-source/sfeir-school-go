@@ -319,7 +319,7 @@ Pour cette raison, il est <span style="color:red">impossible</span> d’assigner
 
 Très pratique pour faire un _swap_ :
 
-`x, y = y, x
+`x, y = y, x`
 
 
 ##==##

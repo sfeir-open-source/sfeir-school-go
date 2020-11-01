@@ -6,4 +6,4 @@
 - [Awesome Go ressources](https://github.com/avelino/awesome-go)
 - [Cloudflare, huge outage due to leap second](https://blog.cloudflare.com/how-and-why-the-leap-second-affected-cloudflare-dns)
 - [Go lib search engine](https://go.libhunt.com)
-- [Just for func](http://justforfunc.com)
+- [Francesc Campoy, Just for func](http://justforfunc.com)

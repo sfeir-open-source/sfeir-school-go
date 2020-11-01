@@ -71,7 +71,7 @@ dockerWatch: ## Watch the status of the docker container
 	@watch -n1 'docker ps | grep todolist'
 
 dockerLogs: ## Print the logs of the container
-	docker-compose logs -f
+	docker-compose -f docker/docker-compose.yml logs -f
 
 help: ## Print this message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
