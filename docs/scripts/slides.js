@@ -17,7 +17,7 @@ const go100 = [
   ['00-school', ['00-title', ...speakers]],
   ['01-intro', ['00-title', '01-Le_but_de_go']],
   ['02-installation', ['00-title', '01-Installation_de_l_environnement']],
-  ['03-let_s_go', ['01-Les_bases', '02-if', '03-les_boucles', '04-Defer_Panic_Recover']],
+  ['03-let_s_go', ['00-title', '01-Les_bases', '02-if', '03-les_boucles', '04-Defer_Panic_Recover']],
   [
     '04-Let_s_Go_further',
     ['00-title', '01-Déclaration_de_types_et_structures', '02-Les_pointeurs', '03-Les_tableaux_slices_et_map'],
@@ -87,17 +87,7 @@ const go200 = [
       '06-exercise',
     ],
   ],
-  [
-    '05-tests',
-    [
-      '00-presentation',
-      '01-whitebox',
-      '02-blackbox',
-      '03-test-counter',
-      '04-coverage',
-      '05-exercise',
-    ],
-  ],
+  ['05-tests', ['00-presentation', '01-whitebox', '02-blackbox', '03-test-counter', '04-coverage', '05-exercise']],
   ['06-modelization', ['00-title', '01-struct', '02-enums', '03-struct-tags', '04-uuid', '05-dates', '06-exercise']],
   [
     '07-databases',

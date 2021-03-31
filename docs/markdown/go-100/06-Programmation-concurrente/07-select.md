@@ -1,3 +1,5 @@
+<!-- .slide: class="with-code" -->
+
 # Concurrence - 34
 
 ## Select
@@ -12,6 +14,7 @@ select {
         fmt.Println("quit")
 }
 ```
+
 <!-- .element: class="big-code" -->
 
 ##==##
@@ -37,9 +40,10 @@ Le cas **default** dans un **select** est exécuté si aucun autre cas n'est pr�
 ```Go
 select {
     case i := <-c:
- // utiliser i
+      // utiliser i
     default:
- // exécuté si rien ne peut être lu de 'c'
+      // exécuté si rien ne peut être lu de 'c'
 }
 ```
+
 <!-- .element: class="big-code" -->

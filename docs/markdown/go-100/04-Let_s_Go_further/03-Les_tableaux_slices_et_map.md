@@ -8,7 +8,11 @@ Le type **[n]T** est un tableau de n valeurs de type **T**.
 
 L’expression :
 
-`var a [10]int`
+```go
+var a [10]int
+```
+
+<!-- .element: class="big-code" -->
 
 déclare une variable **a** comme un tableau de dix entiers.
 
@@ -51,9 +55,15 @@ La valeur zéro d’un slice est **nil**.
 
 ## Les slices
 
-Les slices peuvent être créés avec la fonction **make**. Cela alloue un tableau vide et retourne un slice qui référence ce tableau :
+Les slices peuvent être créés avec la fonction **make**.
 
-`a := make([]int, 5) // len(a)=5`
+Cela alloue un tableau vide et retourne un slice qui référence ce tableau :
+
+```go
+a := make([]int, 5) // len(a)=5
+```
+
+<!-- .element: class="big-code" -->
 
 ##==##
 
@@ -157,8 +167,7 @@ Si le tableau de support de s est trop petit pour contenir toutes les valeurs do
 La forme **range** de la boucle **for** permet d’itérer sur tous les éléments d’un slice, d’un tableau, ou d’une map.
 
 Deux valeurs sont renvoyées pour chaque itération :
-l'indice
-une **copie** de l'élément à cet indice.
+l'indice et une **copie** de l'élément à cet indice.
 
 ##==##
 
@@ -168,13 +177,27 @@ une **copie** de l'élément à cet indice.
 
 ## For … range
 
-`for i, v := range s { }`
+```go
+for i, v := range s { … }
+```
 
-Est équivalent à :
+<!-- .element: class="big-code" -->
 
-`for i := 0; i < len(s); i++ { v := s[i] // s[i] est ici modifiable }`
+Correspond à :
+
+```go
+for i := 0; i < len(s); i++ {
+  v := &s[i]
+}
+```
+
+<!-- .element: class="big-code" -->
+
+mais ici \*v est modifiable
 
 ##==##
+
+<!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 17
 
@@ -182,11 +205,19 @@ Est équivalent à :
 
 On peut omettre l’indice en le remplaçant par “\_” :
 
-`for _, v := range s { }`
+```go
+for _, v := range s { … }
+```
+
+<!-- .element: class="big-code" -->
 
 On peut aussi omettre la valeur.
 
-`for i := range s { }`
+```go
+for i := range s { … }
+```
+
+<!-- .element: class="big-code" -->
 
 ##==##
 
@@ -213,15 +244,23 @@ Une map est une liste de clés-valeurs. Une map se déclare :
 
 Les maps doivent être créées avec make. Leur valeur-zéro est nil.
 
-`m = make(map[string]Vector)`
+```go
+m = make(map[string]Vector)
+```
+
+<!-- .element: class="big-code" -->
 
 ##==##
+
+<!-- .slide: class="with-code" -->
 
 # Pour aller plus loin - 18
 
 ## Maps
 
-Comme les structs, une map peut être instanciée littéralement. Il faut cependant indiquer la valeur de chaque clé :
+Comme les structs, une map peut être instanciée littéralement.
+
+Il faut cependant indiquer la valeur de chaque clé :
 
 ```Go
 var m = map[string]Vector{
@@ -234,6 +273,8 @@ var m = map[string]Vector{
 
 ##==##
 
+<!-- .slide: class="with-code" -->
+
 # Pour aller plus loin - 18
 
 ## Maps
@@ -242,8 +283,13 @@ var m = map[string]Vector{
 - Suppression : `delete(m, key)`
 - Récupération :
 
-  - `elem = m[key]` //elem prend la valeur-zéro de son type si la clé n'est pas présente.
-  - `elem, ok = m[key]` //ok est true si la clé est présente, sinon false.
+```go
+  elem = m[key]     // elem prend la valeur-zéro de son type si la clé n'est pas présente.
+
+  elem, ok = m[key] // ok est true si la clé est présente, sinon false.
+```
+
+<!-- .element: class="big-code" -->
 
 Notes:
 Insérer ou mettre à jour un élément de carte m :
@@ -274,13 +320,32 @@ elem, ok := m[key]
 
 ##==##
 
+<!-- .slide: class="with-code" -->
+
 # Pour aller plus loin - 19
 
 ## Un peu plus sur les fonctions
 
-En Go, les fonctions sont aussi des valeurs. Elles peuvent être passés comme toute autre valeur.
+En Go, les fonctions sont aussi des valeurs, elles peuvent être utilisées comme arguments de fonctions ou valeurs de retour.
 
-Les valeurs de fonction peuvent être utilisées comme arguments de fonctions ou valeurs de retour. On dit que les fonctions sont **first class citizen** en Go
+On dit que les fonctions sont **first class citizen** en Go.
+
+```go
+type F func(a int) int
+
+func compose(g, h F) F {
+	return func(n int) int {
+		return g(h(n))
+	}
+}
+
+var square, increment, incThenSquare F
+
+square = func(n int) int { return n * n }
+increment = func(n int) int { return n + 1 }
+
+incThenSquare = compose(square, increment)
+```
 
 ##==##
 
@@ -288,7 +353,9 @@ Les valeurs de fonction peuvent être utilisées comme arguments de fonctions ou
 
 ## Closures
 
-Les fonctions de Go peuvent être des **closures**. Une **closure** (fermeture) est une valeur de la fonction qui fait référence à des variables à partir de l'extérieur de son corps.
+Les fonctions de Go peuvent être des **closures**.
+
+Une **closure** (fermeture) est une valeur de la fonction qui fait référence à des variables à partir de l'extérieur de son corps.
 
 La fonction peut accéder et assigner les variables référencées, dans ce sens, la fonction est «liée» aux variables.
 
@@ -303,6 +370,8 @@ La fonction peut accéder et assigner les variables référencées, dans ce sens
 Implémentez la fonction **multiplicateurPar** pour qu'elle retourne une fonction qui multiplie son argument par un nombre donné.
 
 ```Go
-//fonction qui retourne une fonction qui retourne un int.
+// fonction qui retourne une fonction qui retourne un int.
 func multiplicateurPar(x int) func(int) int { }
 ```
+
+<!-- .element: class="big-code" -->
