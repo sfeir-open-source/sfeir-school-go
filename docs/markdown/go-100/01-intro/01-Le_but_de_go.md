@@ -26,7 +26,7 @@ Notes:
 
 # Avant de se lancer
 
-Déjà adopté par des grands
+## Déjà adopté par des grands
 
 - Google
 - Docker
@@ -40,8 +40,6 @@ Déjà adopté par des grands
 ##==##
 
 # Le language
-
-## Déjà adopté par des grands
 
 - Né en 2009 chez Google (après les processeurs multi-coeurs) et OSS
 - Binaire compilé autoporteur (début plugin depuis Go 1.8)

@@ -8,6 +8,6 @@
 
 <h2>Frédéric <span>SARRON</span></h2>
 
-### Stack Head Developer
+### Dev
 
 <!-- .element: class="icon-rule icon-first" -->
