@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 14
+# Pour aller plus loin - 03
 
 ## Les pointeurs
 
@@ -20,7 +20,7 @@ Ici, p est un pointeur vers un entier.
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 14
+# Pour aller plus loin - 03
 
 ## Les pointeurs
 
@@ -40,7 +40,7 @@ p = &i      // p pointe vers i
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 14
+# Pour aller plus loin -03
 
 ## Les pointeurs
 
@@ -59,7 +59,7 @@ fmt.Println(*p)   // écrit la valeur de i (=3) par le pointeur p
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 14
+# Pour aller plus loin - 03
 
 ## Les pointeurs vers les structures
 
@@ -117,7 +117,7 @@ Si vous appréciez la formation, Envoyez un Tweet !
 
 <!-- .slide:-->
 
-# Pour aller plus loin - 14 - exercice
+# Pour aller plus loin - 03 - exercice
 
 ## Les pointeurs et les structures
 
