@@ -1,4 +1,4 @@
-# Concurrence - 33 - exercice
+# Concurrence - 06 - exercice
 
 ## Les goroutines
 

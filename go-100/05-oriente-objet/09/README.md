@@ -1,4 +1,4 @@
-# Switch de type
+# Methodes 
 Un `switch` de type est une construction qui permet d'effectuer plusieurs assertions de type en série.
 
 Un `switch` de type est comme une instruction switch régulière, mais les cas d'un switch de type spécifient les types (pas les valeurs), et ces valeurs sont comparées au type concret de la valeur d'interface donnée.

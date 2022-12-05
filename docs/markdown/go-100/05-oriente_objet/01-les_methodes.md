@@ -1,5 +1,5 @@
 
-# Orienté Objet - 20
+# Orienté Objet - 01
 
 ## Les méthodes
 
@@ -10,7 +10,7 @@ Cependant, on peut définir des méthodes sur les types.
 
 ##==##
 <!-- .slide: class="with-code" -->
-# Orienté Objet - 20
+# Orienté Objet - 01
 
 ## Les méthodes
 
@@ -28,7 +28,7 @@ La méthode **Abs** possède un récepteur de type **Vertex** nommé **v**.
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 20
+# Orienté Objet - 01
 
 ## Les méthodes
 
@@ -47,7 +47,7 @@ func Abs(v Vertex) float64 {
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 20
+# Orienté Objet - 01
 
 ## Les méthodes
 
@@ -72,7 +72,7 @@ a := Abs(v)
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 20
+# Orienté Objet - 01
 
 ## Les méthodes
 
@@ -91,7 +91,7 @@ func (f MyFloat) IsPositive() bool {
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 20
+# Orienté Objet - 01
 
 ## Les méthodes
 
@@ -113,7 +113,7 @@ puisque float64 est un type défini dans un autre package.
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 20
+# Orienté Objet - 01
 
 ## Les méthodes, récepteur de pointeur
 
@@ -138,7 +138,7 @@ Avec un récepteur de valeur, la méthode Scale fonctionnerait sur une copie de 
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 21
+# Orienté Objet - 02
 
 ## Les méthodes, récepteur de pointeur
 
@@ -155,7 +155,7 @@ Si on a `func ScaleFunc(v *Vertex, f float64)`
 
 ##==##
 
-# Orienté Objet - 21
+# Orienté Objet - 02
 
 Choix d'un récepteur de valeur ou pointeur
 
@@ -171,7 +171,7 @@ Il y a deux raisons d'utiliser un récepteur de pointeur :
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 22
+# Orienté Objet - 03
 
 ## Le récepteur nil
 
@@ -187,7 +187,7 @@ p.SomeMethod()
 ##==##
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 22
+# Orienté Objet - 03
 
 ## Le récepteur nil
 
@@ -206,7 +206,7 @@ ok := p.IsPositive() // pas d’erreur. ok = false
 
 ##==##
 
-# Orienté Objet - 22 - exercice
+# Orienté Objet - 03 - exercice
 
 ## Les méthodes et le récepteur nil
 

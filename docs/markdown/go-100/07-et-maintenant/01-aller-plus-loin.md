@@ -2,9 +2,9 @@
 
 ## Pour aller plus loin
 
-- [golang.org](https://golang.org) (documentation, wiki, référence des packages, etc.)
-- blog [frenchgo.fr](https://frenchgo.fr) (news & infos sur le Go)
-- livre blanc [Comprendre Go](https://www.sfeir.com/livre-blanc/comprendre-go) de SFEIR
-- livre [The Go Programming Language](https://www.youtube.com/user/gocoding)
-- chaîne youtube : [The Go Programming Language](https://www.youtube.com/user/gocoding)
-- chaîne youtube et blog : [Just for func](http://justforfunc.com)
+- [Go.dev](https://go.dev) (documentation, wiki, référence des packages, etc.)
+- Blog [frenchgo.fr](https://frenchgo.fr) (news & infos sur le Go)
+- Livre blanc [Comprendre Go](https://www.sfeir.com/fr/livre-blanc-sur-le-langage-go/) de SFEIR
+- Livre [The Go Programming Language](https://www.youtube.com/user/gocoding)
+- Chaîne youtube : [The Go Programming Language](https://www.youtube.com/user/gocoding)
+- Chaîne youtube et blog : [Just for func](https://www.youtube.com/c/justforfunc)

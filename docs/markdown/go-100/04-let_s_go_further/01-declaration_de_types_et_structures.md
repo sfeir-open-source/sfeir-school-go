@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 12
+# Pour aller plus loin - 01
 
 ## Déclaration de type
 
@@ -18,7 +18,7 @@ C’est exactement ce qui est fait dans le package time de Go :
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 12
+# Pour aller plus loin - 01
 
 ## Déclaration de type
 
@@ -40,7 +40,7 @@ Il est possible de repasser au type sous-jacent par exemple int64(d)
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 13
+# Pour aller plus loin - 02
 
 ## Les structures
 
@@ -59,7 +59,7 @@ type Vector struct {
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 13
+# Pour aller plus loin - 02
 
 ## Les structures
 
@@ -77,7 +77,7 @@ v3 := Vector{}      // X:0 et Y:0
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 13
+# Pour aller plus loin - 02
 
 ## Les structures
 

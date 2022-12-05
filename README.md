@@ -17,7 +17,7 @@ A [SFEIR School](https://www.sfeir.com/formation/school/)
 
 ## GO-100
 
-GO-100 is a directed tour of the language, see [Go tour](https://tour.golang.org/list).
+GO-100 is a directed tour of the language, see [Go tour](https://go.dev/tour/list).
 The purpose of this first course is to learn the basics of the language to be able to build simple application.
 
 ## GO-200

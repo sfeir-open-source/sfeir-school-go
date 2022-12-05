@@ -1,6 +1,6 @@
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 15
+# Pour aller plus loin - 04
 
 ## Les tableaux
 
@@ -18,7 +18,7 @@ déclare une variable **a** comme un tableau de dix entiers.
 
 ##==##
 
-# Pour aller plus loin - 15
+# Pour aller plus loin - 04
 
 ## Les tableaux
 
@@ -31,7 +31,7 @@ La longueur d'un tableau fait partie de son type, de sorte que les tableaux ne p
 
 ##==##
 
-# Pour aller plus loin - 16
+# Pour aller plus loin - 05
 
 ## Les slices
 
@@ -51,7 +51,7 @@ La valeur zéro d’un slice est **nil**.
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 16
+# Pour aller plus loin - 05
 
 ## Les slices
 
@@ -67,7 +67,7 @@ a := make([]int, 5) // len(a)=5
 
 ##==##
 
-# Pour aller plus loin - 16
+# Pour aller plus loin - 05
 
 ## Les slices
 
@@ -83,7 +83,7 @@ récupère les éléments du slice de **low** à **high-1** inclus (ou **high** 
 
 <!-- .slide: class="two-column-layout with-code" -->
 
-# Pour aller plus loin - 16
+# Pour aller plus loin - 05
 
 ## Les slices
 
@@ -125,7 +125,7 @@ cap(b) == 3
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 16
+# Pour aller plus loin - 05
 
 ## Les slices
 
@@ -143,7 +143,7 @@ b = b[1:]                 // len(b)=4, cap(b)=4
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 16
+# Pour aller plus loin - 05
 
 ## Les slices
 
@@ -160,7 +160,7 @@ Si le tableau de support de s est trop petit pour contenir toutes les valeurs do
 
 ##==##
 
-# Pour aller plus loin - 17
+# Pour aller plus loin - 06
 
 ## For … range
 
@@ -173,7 +173,7 @@ l'indice et une **copie** de l'élément à cet indice.
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 17
+# Pour aller plus loin - 06
 
 ## For … range
 
@@ -199,7 +199,7 @@ mais ici \*v est modifiable
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 17
+# Pour aller plus loin - 06
 
 ## For … range
 
@@ -221,7 +221,7 @@ for i := range s { … }
 
 ##==##
 
-# Pour aller plus loin - 17 - exercice
+# Pour aller plus loin - 06 - exercice
 
 ## Les slices et le range
 
@@ -234,7 +234,7 @@ Notes:
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 18
+# Pour aller plus loin - 07
 
 ## Maps
 
@@ -254,7 +254,7 @@ m = make(map[string]Vector)
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 18
+# Pour aller plus loin - 07
 
 ## Maps
 
@@ -275,7 +275,7 @@ var m = map[string]Vector{
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 18
+# Pour aller plus loin - 07
 
 ## Maps
 
@@ -322,7 +322,7 @@ elem, ok := m[key]
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 19
+# Pour aller plus loin - 08
 
 ## Un peu plus sur les fonctions
 
@@ -349,7 +349,7 @@ incThenSquare = compose(square, increment)
 
 ##==##
 
-# Pour aller plus loin - 19
+# Pour aller plus loin - 08
 
 ## Closures
 
@@ -363,7 +363,7 @@ La fonction peut accéder et assigner les variables référencées, dans ce sens
 
 <!-- .slide: class="with-code" -->
 
-# Pour aller plus loin - 19 - exercice
+# Pour aller plus loin - 08 - exercice
 
 ## Closures
 

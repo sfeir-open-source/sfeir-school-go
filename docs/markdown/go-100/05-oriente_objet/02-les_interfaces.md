@@ -1,4 +1,4 @@
-# Orienté Objet - 23
+# Orienté Objet - 04
 
 ## Les interfaces
 
@@ -8,7 +8,7 @@ En Go, il n’y a pas de notion d’héritage entre les **struct**, mais la noti
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 23
+# Orienté Objet - 04
 
 ## Les interfaces
 
@@ -25,7 +25,7 @@ type Oiseau interface {
 
 ##==##
 
-# Orienté Objet - 24
+# Orienté Objet - 05
 
 ## Les interfaces
 
@@ -42,7 +42,7 @@ Les interfaces implicites découple la définition d'une interface de son implé
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 24
+# Orienté Objet - 06
 
 ## Les interfaces
 
@@ -71,7 +71,7 @@ pour que le type T implémente I.
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 24
+# Orienté Objet - 06
 
 ## Les interfaces
 
@@ -103,7 +103,7 @@ type Volant interface { Vole() }
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 24
+# Orienté Objet - 06
 
 ## Les interfaces
 
@@ -135,7 +135,7 @@ type Volant interface { Vole() }
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 24
+# Orienté Objet - 06
 
 ## Les interfaces
 
@@ -166,7 +166,7 @@ type Volant interface { Vole() }
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 24
+# Orienté Objet - 06
 
 ## Les interfaces
 
@@ -197,7 +197,7 @@ type Volant interface { Vole() }
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 25
+# Orienté Objet - 06
 
 ## Les interfaces
 
@@ -229,7 +229,7 @@ c’est le type **\*T** qui implémente **I**.
 
 ##==##
 
-# Orienté Objet - 25
+# Orienté Objet - 06
 
 ## Les interfaces
 
@@ -239,7 +239,7 @@ Sinon, **T** implémenterait des interfaces tandis que **\*T** en implémenterai
 
 ##==##
 
-# Orienté Objet - 26
+# Orienté Objet - 07
 
 ## L’interface vide
 
@@ -255,7 +255,7 @@ Ex: _fmt_.Print prend des arguments de type **interface{}**
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 27
+# Orienté Objet - 08
 
 ## Assertion de type
 
@@ -273,7 +273,7 @@ Cette instruction affirme que la valeur d'interface **i** contient le type concr
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 27
+# Orienté Objet - 08
 
 ## Assertion de type
 
@@ -293,7 +293,7 @@ Si i ne détient pas **T**, aucune panique ne sera déclenchée, mais **ok** aur
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 28
+# Orienté Objet - 08
 
 ## Switch de type
 
@@ -311,7 +311,7 @@ switch v := i.(type) {
 
 ##==##
 
-# Orienté Objet - 28 - exercice
+# Orienté Objet - 09 - exercice
 
 ## Les interfaces
 
@@ -323,7 +323,7 @@ switch v := i.(type) {
 
 ##==##
 
-# Orienté Objet - 28 - exercice
+# Orienté Objet - 09 - exercice
 
 ## Panic - Recover
 

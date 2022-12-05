@@ -9,6 +9,7 @@ const speakers = [
   'OGE',
   'APO',
   'FSA',
+  'JBO'
 ].map((trigram) => `speakers/${trigram}`);
 
 // go100 & go200 : canonical structure for ordered 2-levels filesystem tree
@@ -16,21 +17,21 @@ const speakers = [
 const go100 = [
   ['00-school', ['00-title', ...speakers]],
   ['01-intro', ['00-title', '01-Le_but_de_go']],
-  ['02-installation', ['00-title', '01-Installation_de_l_environnement']],
-  ['03-let_s_go', ['00-title', '01-Les_bases', '02-if', '03-les_boucles', '04-Defer_Panic_Recover']],
+  ['02-installation', ['00-title', '01-installation_de_l_environnement']],
+  ['03-let_s_go', ['00-title', '01-Les_bases', '02-if', '03-les_boucles', '04-defer_panic_recover']],
   [
-    '04-Let_s_Go_further',
-    ['00-title', '01-Déclaration_de_types_et_structures', '02-Les_pointeurs', '03-Les_tableaux_slices_et_map'],
+    '04-let_s_go_further',
+    ['00-title', '01-declaration_de_types_et_structures', '02-Les_pointeurs', '03-Les_tableaux_slices_et_map'],
   ],
-  ['05-Orienté_objet', ['00-title', '01-Les_méthodes', '02-Les_interfaces']],
+  ['05-oriente_objet', ['00-title', '01-les_methodes', '02-Les_interfaces', '03-generics']],
   [
-    '06-Programmation-concurrente',
+    '06-programmation-concurrente',
     [
       '00-title',
-      '01-Goroutine',
-      '02-Channels',
-      '03-Buffered-channels',
-      '04-Channels-fermeture',
+      '01-goroutine',
+      '02-channels',
+      '03-buffered-channels',
+      '04-channels-fermeture',
       '05-range',
       '06-exercice',
       '07-select',
