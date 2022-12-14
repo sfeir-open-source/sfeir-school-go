@@ -1,13 +1,34 @@
-# Goroutines
-Une goroutine est un processus léger géré par le « Go runtime ».
+# Les génériques
 
-    go f(x, y, z)
+Etant donné une structure de type liste chaînée suivante :
 
-démarre une nouvelle goroutine exécutant
+```golang
+type LinkNode[T any] struct {
+    Value T
+    Next  *LinkNode[T]
+}
 
-    f(x, y, z)
+func NewLinkNode[T any](value T) *LinkNode[T] {
+    return &LinkNode[T]{
+            Value: value,
+            Next:  nil,
+        }
+}
 
-L'évaluation de `f, x, y` et `z` arrive dans la goroutine actuelle et l'exécution de `f` arrive dans la nouvelle goroutine.
+type LinkedList[T any] struct {
+    Head   *LinkNode[T]
+    length int
+}
 
-Les goroutines s'exécutent dans le même espace d'adressage, de sorte que les accès à la mémoire partagée doivent être synchronisés.
-Le paquet `sync` fournit des primitives utiles, bien que vous n'aurez pas beaucoup besoin d'y accéder car Go a d'autres primitives plus pratiques.
+func NewLinkedList[T any]() *LinkedList[T] {
+    return &LinkedList[T]{
+            Head:   nil,
+            length: 0,
+	  }
+}
+```
+
+Ajouter les méthodes suivantes à cette structure de donnée :
+
+* Ajouter en tête
+* Retourner un élément par son index (premier élément index `0`)

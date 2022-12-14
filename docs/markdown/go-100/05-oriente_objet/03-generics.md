@@ -1,90 +1,96 @@
 # Orienté Objet - 10
 
-## Les Fonctions Génériques
+## Les Generics
 
-Les fonctions génriques permettent de manipuler plusieurs type de paramètres.
+Le but des types et fonctions génériques est de permettre de définir :
 
-```golang
-func MyFunc[T any | int64 | float64](collection []T) T {}
+ * Des caractéristiques spéciales de structures de données (liste chaînée, comparable, etc.)
+ * Des actions réutilisables sur des types particuliers (tri, filtre, etc.)
+
+Par crainte de dégrader les performances ou complexifier le langage
+ [les génériques](https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#operations-based-on-type-sets) étaient dédiés initialement à Go 2.0
+mais sont apparus avec la version 1.18 (15/03/2022)
+
+##==##
+
+# Orienté Objet - 10
+
+## Les fonctions génériques
+
+<!-- .slide: class="with-code" -->
+
+Une première version des génériques est déjà possible grâces aux `interface{}`.
+
+Mais les types et fonctions génériques vont un cran plus loin.
+
+```Go
+func Index[T comparable](s []T, x T) int
+```
+
+Les fonctions génériques permettent de fonctionner avec plusieurs type de paramètres.
+
+Les types apparaissent `[]` avant la déclaration des paramètres de la fonction.
+
+Le type `comparable` est une contrainte qui permet d'utiliser les opérateur `==` et `!=`
+sur les valeurs des types.
+
+##==##
+
+# Orienté Objet - 10
+
+## Les fonctions génériques
+
+<!-- .slide: class="with-code" -->
+
+Il existe d'autres contraintes et on peut créer ses propres contraintes.
+
+```Go
+// Ordered is a type constraint that matches any ordered type.
+// An ordered type is one that supports the <, <=, >, and >= operators.
+type Ordered interface {
+    ~int | ~int8 | ~int16 | ~int32 | ~int64 |
+        ~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr |
+        ~float32 | ~float64 |
+        ~string
+}
 ```
 
 ##==##
 
-<!-- .slide: class="with-code" -->
-
 # Orienté Objet - 10
 
-## Les Fonctions Génériques
-
-Exemple sans Génériques:
-
-```golang
-
-func FilterInterface(collection []interface{}, predicate func(iten interface{}, index int) bool) []interface{} {
- result := make([]interface{}, 0)
- for i, item := range collection {
-  if predicate(item, i) {
-   result = append(result, item)
-  }
- }
-
- return result
-
-}
-
-func main() {
-
- listInterface := append(make([]interface{}, 0), 1, "2", "3", 4)
- resultInterface := FilterInterface(listInterface, func(data interface{}, index int) bool {
-  if nbr, ok := data.(int); ok != false {
-   return nbr%2 == 0
-  }
-  return false
- })
- fmt.Printf("%v", resultInterface)
-
-```
+## Les types génériques
 
 <!-- .slide: class="with-code" -->
 
-# Orienté Objet - 10 - exercices
-## Les Fonctions Génériques
+En plus des fonctions génériques, Go implémente aussi les types génériques.
 
-Le même exemple avec les Génériques:
+Un type peut être paramétré, ce qui peut être intéressant pour implémenter des
+structures génériques.
 
-```golang
+Voici l'exemple d'un noeud d'une liste chaînée générique en Go :
 
-func Filter[V comparable](collection []V, predicate func(item V, index int) bool) []V {
- result := []V{}
-
- for i, item := range collection {
-  if predicate(item, i) {
-   result = append(result, item)
-  }
- }
-
- return result
+```Go
+type LinkNode[T any] struct {
+	Value T
+	Next  *LinkNode[T]
 }
 
-type MyStruct struct {
- myNbr int
-}
-
-func main() {
-
- list := []MyStruct{{myNbr: 1}, {myNbr: 2}, {myNbr: 3}, {myNbr: 4}}
-
- result := Filter(list, func(nbr MyStruct, index int) bool {
-  return nbr.myNbr%2 == 0
- })
- fmt.Printf("%v", result)
-
- listInt := []int{1, 2, 3, 4}
-
- resultInt := Filter(listInt, func(nbr int, index int) bool {
-  return nbr%2 == 0
- })
-
- fmt.Printf("%v", resultInt)
+func NewLinkNode[T any](value T) *LinkNode[T] {
+	return &LinkNode[T]{
+		Value: value,
+		Next:  nil,
+	}
 }
 ```
+
+##==##
+
+# Orienté Objet - 10 - Exercice
+
+Etant donné la structure de liste chaînée précédente,
+ajouter les méthodes suivantes à la structure de donnée :
+
+* Ajouter en tête
+* Retourner un élément par son index (premier élément index `0`)
+
