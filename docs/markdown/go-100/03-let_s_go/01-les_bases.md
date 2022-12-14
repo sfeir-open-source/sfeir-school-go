@@ -60,7 +60,7 @@ Heureusement un même code Go peut être compilé pour Linux, MacOs, Windows, BS
 GOOS=linux GOARCH=amd64
 
 FSA:
-Si vous ne voyez pas les caractères étendues ou eloji c'est le terminal qui est incompatible.
+Si vous ne voyez pas les caractères étendues ou emoji c'est le terminal qui est incompatible.
 ##==##
 
 <!-- .element: class="with-code" -->

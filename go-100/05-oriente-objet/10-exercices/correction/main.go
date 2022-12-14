@@ -1,50 +1,73 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"math"
 )
 
-type MyStruct struct {
-	myInt int
+type LinkNode[T any] struct {
+	Value T
+	Next  *LinkNode[T]
 }
 
-type number interface {
-	int | float64
-}
-
-// TOOD: créer une méthode map qui prend une liste générique en paramètre ainsi qu'une fonction et retourne la liste modifiée
-func Map[T any, R any](collection []T, apply func(item T, index int) R) []R {
-	var result []R
-	// result := make([]T, len(collection))
-	for i, item := range collection {
-		result = append(result, apply(item, i))
-		//result[i] = apply(item, i)
+func NewLinkNode[T any](value T) *LinkNode[T] {
+	return &LinkNode[T]{
+		Value: value,
+		Next:  nil,
 	}
-	return result
+}
+
+type LinkedList[T any] struct {
+	Head   *LinkNode[T]
+	length int
+}
+
+func NewLinkedList[T any]() *LinkedList[T] {
+	return &LinkedList[T]{
+		Head:   nil,
+		length: 0,
+	}
+}
+
+// InsertAtHead ajoute un élément en tête de liste
+func (l *LinkedList[T]) InsertAtHead(value T) {
+	newNode := NewLinkNode(value)
+	newNode.Next = l.Head
+	l.Head = newNode
+	l.length++
+}
+
+// Get retourne un élément par son index ou retourne une erreur
+func (l *LinkedList[T]) Get(index int) (T, error) {
+	// gestion du out of range
+	var t T
+	if index < 0 || index > l.length-1 {
+		return t, errors.New("index out of bound")
+	}
+	// cas general: trouver l'élément au bon index et retourner sa valeur
+	cur := l.Head
+	for i := 0; i < index; i++ {
+		cur = cur.Next
+	}
+	return cur.Value, nil
 }
 
 func main() {
-	myStructs := []MyStruct{
-		{myInt: 1},
-		{myInt: 2},
-		{myInt: 3},
-		{myInt: 4},
-	}
-	// Mulitiplier chaque élement du tableau par lui même
-	StructsSquared := Map(myStructs, func(item MyStruct, index int) int {
-		return item.myInt * item.myInt
-	})
-	fmt.Println("New element of struct")
-	fmt.Print(StructsSquared)
+	link := NewLinkedList[int]()
+	link.InsertAtHead(4)
+	link.InsertAtHead(3)
+	link.InsertAtHead(2)
+	link.InsertAtHead(1)
 
-	myFloats := []float64{
-		1.2, 2.4, 3.6, 4.8, 10.5,
-	}
-	// Garder la partie entière chaque élement du tableau
-	myFloatsFloored := Map(myFloats, func(item float64, index int) float64 {
-		return math.Floor(item)
-	})
-	fmt.Println("\n Floor of Ints")
-	fmt.Print(myFloatsFloored)
+	link2 := NewLinkedList[string]()
+	link2.InsertAtHead("d")
+	link2.InsertAtHead("c")
+	link2.InsertAtHead("b")
+	link2.InsertAtHead("a")
+
+	v, _ := link.Get(2)
+	fmt.Println("Element at index 2 is ", v)
+
+	v2, _ := link2.Get(2)
+	fmt.Println("Element at index 2 is ", v2)
 }

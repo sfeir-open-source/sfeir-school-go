@@ -1,17 +1,18 @@
+
 <!-- .slide: class="speaker-slide" -->
 
 # Présentation
 
 ![company](./assets/common/images/logo_sfeir_blanc.png)
 
-![speaker](./assets/common/images/speakers/SebastienFriess.webp)
+![speaker](./assets/common/images/speakers/JulienBouquet.webp)
 
-<h2>Sébastien <span>FRIESS</span></h2>
+<h2>Julien <span>BOUQUET</span></h2>
 
-### Developer backend & cloud
+### Cloud Developer
 
 <!-- .element: class="icon-rule icon-first" -->
 
-### @sebastienfriess
+### @julien_bouquet
 
 <!-- .element: class="icon-twitter icon-second" -->

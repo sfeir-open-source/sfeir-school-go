@@ -16,14 +16,14 @@ const speakers = [
 // array of [directory, [file]] pairs
 const go100 = [
   ['00-school', ['00-title', ...speakers]],
-  ['01-intro', ['00-title', '01-Le_but_de_go']],
+  ['01-intro', ['00-title', '01-le_but_de_go']],
   ['02-installation', ['00-title', '01-installation_de_l_environnement']],
-  ['03-let_s_go', ['00-title', '01-Les_bases', '02-if', '03-les_boucles', '04-defer_panic_recover']],
+  ['03-let_s_go', ['00-title', '01-les_bases', '02-if', '03-les_boucles', '04-defer_panic_recover']],
   [
     '04-let_s_go_further',
-    ['00-title', '01-declaration_de_types_et_structures', '02-Les_pointeurs', '03-Les_tableaux_slices_et_map'],
+    ['00-title', '01-declaration_de_types_et_structures', '02-les_pointeurs', '03-les_tableaux_slices_et_map'],
   ],
-  ['05-oriente_objet', ['00-title', '01-les_methodes', '02-Les_interfaces', '03-generics']],
+  ['05-oriente_objet', ['00-title', '01-les_methodes', '02-les_interfaces', '03-generics']],
   [
     '06-programmation-concurrente',
     [

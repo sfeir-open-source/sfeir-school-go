@@ -1,26 +1,50 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-type MyStruct struct {
-	myInt int
+type LinkNode[T any] struct {
+	Value T
+	Next  *LinkNode[T]
 }
 
-// TOOD: créer une méthode map qui prend une liste générique en paramètre ainsi qu'une fonction et retourne la liste modifiée
+func NewLinkNode[T any](value T) *LinkNode[T] {
+	return &LinkNode[T]{
+		Value: value,
+		Next:  nil,
+	}
+}
+
+type LinkedList[T any] struct {
+	Head   *LinkNode[T]
+	length int
+}
+
+func NewLinkedList[T any]() *LinkedList[T] {
+	return &LinkedList[T]{
+		Head:   nil,
+		length: 0,
+	}
+}
+
+// InsertAtHead ajoute un élément en tête de liste
+func (l *LinkedList[T]) InsertAtHead(value T) {
+	//TODO
+}
+
+// Get retourne un élément par son index ou retourne une erreur
+func (l *LinkedList[T]) Get(index int) (T, error) {
+	//TODO
+}
 
 func main() {
-	myStructs := []MyStruct{
-		{myInt: 1},
-		{myInt: 2},
-		{myInt: 3},
-		{myInt: 4},
-	}
-	// Mulitiplier chaque élement du tableau par lui même
-	fmt.Print(myStructs)
+	link := NewLinkedList[int]()
+	link.InsertAtHead(4)
+	link.InsertAtHead(3)
+	link.InsertAtHead(2)
+	link.InsertAtHead(1)
 
-	myInts := []float64{
-		1.2, 2.4, 3.6, 4.8,
-	}
-	// Garder la partie entière chaque élement du tableau
-	fmt.Print(myInts)
+	v, _ := link.Get(2)
+	fmt.Println("Element at index 2 is ", v)
 }
