@@ -19,7 +19,7 @@ func curl() string {
 func main() {
 	defer trackTimeElapsed(time.Now())
 
-	const reqCount = 20
+	const reqCount = 5
 	for i := 0; i < reqCount; i++ {
 		result := curl()
 		fmt.Printf(url+" responded with HTTP status %s\n", result)

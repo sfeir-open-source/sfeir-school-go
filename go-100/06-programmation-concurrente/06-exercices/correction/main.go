@@ -22,7 +22,7 @@ func main() {
 
 	c := make(chan string)
 
-	const reqCount = 20
+	const reqCount = 5
 	for i := 0; i < reqCount; i++ {
 		go curl(c)
 	}
