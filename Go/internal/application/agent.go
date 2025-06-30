@@ -12,7 +12,6 @@ func InitAgent(port LLMPort) AgentPort {
 	return &Agent{
 		llmPort: port,
 	}
-
 }
 
 type Agent struct {

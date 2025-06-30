@@ -26,6 +26,7 @@ func (c Checker) ResolveDNS(opts domain.CheckHostOptions) error {
 	return nil
 }
 
+// DELETE PING PORT
 func (c Checker) PingHost(opts domain.CheckPingOptions) error {
 	conn, err := net.DialTimeout("tcp", fmt.Sprintf("%s:%d", opts.Host, 80), 2*time.Second)
 	if err != nil {
