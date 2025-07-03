@@ -15,3 +15,7 @@ type CheckPortOptions struct {
 type CheckAllOptions struct {
 	Host string
 }
+
+type CheckWeatherOptions struct {
+	City string
+}

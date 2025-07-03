@@ -1,8 +1,8 @@
 package application
 
 import (
-	"go-agent/internal/domain"
 	"fmt"
+	"go-agent/internal/domain"
 	"net"
 	"time"
 )
